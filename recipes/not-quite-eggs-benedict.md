@@ -1,0 +1,74 @@
+---
+title: Not Quite Eggs Benedict
+slug: not-quite-eggs-benedict
+source_url: https://en.wikibooks.org/wiki/Cookbook:Not_Quite_Eggs_Benedict
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 4160
+date: '2025-07-22'
+cuisine: []
+course:
+- Breakfast
+diet: []
+difficulty: Medium Difficulty
+technique: []
+recipe_type: []
+ingredients:
+- bacon
+- bread
+- butter
+- cayenne
+- cow milk
+- egg
+- lemon juice
+- maple syrup
+categories:
+- Breakfast recipes
+- Medium Difficulty recipes
+- Recipes
+- Recipes using bacon
+- Recipes using bread
+- Recipes using butter
+- Recipes using cayenne
+- Recipes using cow milk
+- Recipes using egg
+- Recipes using lemon juice
+- Recipes using maple syrup
+---
+
+# Not Quite Eggs Benedict
+
+This recipe serves 1 for a full meal or 2 for a light breakfast.
+
+## Ingredients
+
+- 2 eggs
+- 2 Tbsp milk
+- 1 Tbsp chopped parsley
+- Salt
+- Black pepper
+- 4 slices bacon
+- ¼ cup butter, melted
+- 1 Tbsp cold water
+- 2–3 tsp lemon juice
+- Cayenne pepper
+- Crusty bread
+- 1 Tbsp maple syrup (optional)
+
+## Procedure
+
+### Eggs
+
+1. Separate eggs. Mix whites with milk and parsley, then add salt and pepper. Beat with a fork until slightly bubbly. Set aside.
+2. Cook bacon on medium-high heat in a large, nonstick skillet and set on paper towels or napkins to drain. Pour off all but 1-2 tablespoons fat. Turn heat down to medium-low and add egg whites.
+
+### Hollandaise sauce
+
+1. As the egg whites cook, mix egg yolks with water in double boiler on medium to medium-high heat. The water in the double boiler should simmer, not boil. Stir constantly with a fork until yolks increase in size and thickness and turn a pale, opaque yellow.
+2. Remove from heat and slowly stir in melted butter. Then add lemon juice and salt and cayenne pepper to taste.
+3. Place cooked egg whites on a plate, top with bacon, then cover with Hollandaise sauce. Serve with warm crusty bread for dipping in the sauce.
+
+## Notes, tips, and variations
+
+- The amount of butter in this recipe is less than in standard recipes for Hollandaise sauce. This is the smallest amount that still produces an acceptable sauce. If fat is not a concern, however, increase the amount to ⅓–½ cup.
+- Egg whites usually cook in the same amount of time as the sauce, but keep an eye on them and remove them to a separate plate if they finish cooking before the sauce is done.

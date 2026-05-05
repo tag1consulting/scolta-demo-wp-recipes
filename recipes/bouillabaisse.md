@@ -1,0 +1,96 @@
+---
+title: Bouillabaisse
+slug: bouillabaisse
+source_url: https://en.wikibooks.org/wiki/Cookbook:Bouillabaisse
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 26503
+date: '2025-10-18'
+cuisine:
+- French
+course: []
+diet: []
+difficulty: Easy
+technique: []
+recipe_type:
+- stew
+ingredients:
+- bouquet garni
+- cayenne
+- egg yolk
+- fennel
+- fish
+- garlic
+categories:
+- Easy recipes
+- French recipes
+- Recipes
+- Recipes for stew
+- Recipes using bouquet garni
+- Recipes using cayenne
+- Recipes using egg yolk
+- Recipes using fennel
+- Recipes using fish
+- Recipes using garlic
+---
+
+# Bouillabaisse
+
+**Bouillabaisse** is a traditional fish stew originating from the port city of Marseille. It is made by boiling several species of fish with herbs and vegetables. The broth is then served as a soup poured over bread seasoned with *rouille* (a spicy French mayonnaise) with the fish and vegetables served separately. The exact proportions of these ingredients vary by cook and region.
+
+The *Charte de la Bouillabaisse Marseillaise* (the Charter of Marseillaise Bouillabaisse ) was signed in 1980 by 11 restaurants in France in an attempt to standardize the definition of a bouillabaisse. According to the charter, bouillabaisse must be prepared with at least four of the following fish: monkfish, John Dory, galinette (or gunard), mullett, rascasse, conger eel, and chapon (rascasse rouge, or red scorpion fish). Most versions will contain at least rascasse to be considered authentic.
+
+## Ingredients
+
+This recipe comes from one of the most traditional Marseille restaurants, *Grand Bar des Goudes* on *Rue Désirée-Pelleprat*.
+
+### Broth
+
+- 660 g whole cleaned sea robin
+- 660 g whole cleaned scorpionfish
+- 660 g whole cleaned red gurnard
+- 660 g whole cleaned conger
+- 660 g whole cleaned lotte, or monkfish
+- 660 g whole cleaned John Dory
+- 1 live octopus (optional), cleaned and cut into pieces
+- 10 sea urchins
+- 1 kg of potatoes, peeled and cut into large slices
+- 7 cloves of garlic
+- 3 onions, sliced
+- 5 ripe tomatoes, peeled, quartered and without seeds
+- 1 cup of olive oil
+- 1 bouquet garni
+- 1 branch of fennel
+- 8 threads of saffron
+- 10 slices of country bread
+- Salt
+- Cayenne pepper
+
+### *Rouille*
+
+- 1 egg yolk
+- 2 cloves of garlic
+- 1 cup of olive oil
+- 10 threads of saffron
+- Salt
+- Cayenne pepper
+
+## Procedure
+
+1. Scale the fish and wash them, if possible, in sea water. Cut them into large slices, leaving the bones.
+2. Warm the olive oil in a large, deep saucepan.
+3. Add the onions, along with 6 cloves of crushed garlic, the octopus pieces and tomatoes. Brown at low heat turning gently for 5 minutes.
+4. Add the fish slices; first the large slices then the smaller ones. Cover with boiling water and add salt, pepper, fennel, the *bouquet garni* and saffron. Simmer at a low heat, stirring from time to time so the fish doesn't stick to the pan. Correct the seasoning. Remove the bouillabaise from the heat once the oil and water have thoroughly blended with the other ingredients. This should take about twenty minutes.
+5. Prepare the *rouille*: Use a mortar to crush the garlic cloves into a fine paste after removing the stems. Add the egg yolk and the saffron, then blend in the olive oil little by little to make a mayonnaise, stirring it with the pestle.
+6. Cook the potatoes in salted water for 15 to 20 minutes. Open the sea urchins with a pair of scissors and remove the roe with a small spoon.
+7. Arrange the fish on a platter. Add the sea urchin roe into the broth and stir.
+8. Rub several slices of bread with garlic and spread a tablespoon of *rouille* on each. Place at least two slices per serving bowl.
+9. Remove the fish and potatoes from the broth and place them on a large serving platter.
+10. Pour the hot broth in each bowl containing a slice of bread smothered in *rouille*. Then serve the fish and the potatoes on a separate platter.
+
+## Notes, tips, and variations
+
+- Finding all the species of fish listed above may be difficult. If so, substitute any combination of four of five species with firm, white flesh.
+- Serve this dish without rouille to reduce the fat and cholesterol in this dish.
+
+## References

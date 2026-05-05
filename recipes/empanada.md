@@ -1,0 +1,155 @@
+---
+title: Empanada
+slug: empanada
+source_url: https://en.wikibooks.org/wiki/Cookbook:Empanada
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 4021
+date: '2026-04-23'
+cuisine:
+- Argentine
+- Chilean
+- Colombian
+- Tex-Mex
+course:
+- Main course
+diet: []
+difficulty: Difficult
+technique:
+- Deep fried
+recipe_type:
+- pastries
+ingredients:
+- bay leaf
+- butter
+- clove
+- cornstarch
+- egg
+- garlic
+- ground beef
+- ground cinnamon
+- ground cumin
+- margarine
+- vegetable oil
+- wheat flour
+categories:
+- Argentine recipes
+- Chilean recipes
+- Colombian recipes
+- Deep fried recipes
+- Difficult recipes
+- Main course recipes
+- Recipes
+- Recipes for pastries
+- Recipes using bay leaf
+- Recipes using butter
+- Recipes using clove
+- Recipes using cornstarch
+- Recipes using egg
+- Recipes using garlic
+- Recipes using ground beef
+- Recipes using ground cinnamon
+- Recipes using ground cumin
+- Recipes using margarine
+- Recipes using vegetable oil
+- Recipes using wheat flour
+- Recipes with metric units
+- Tex-Mex recipes
+---
+
+# Empanada
+
+In Spain, Latin America, and the Philippines, an empanada is essentially a stuffed pastry. They are likely originally from Galicia, Spain, where they were prepared rather like Cornish pasties as a portable and hearty meal for working people and often filled with leftovers or staple ingredients. Tuna and chicken are varieties still seen in Galicia.
+
+The filling usually consists primarily of beef. It may also contain ham and cheese, *humita* corn with Béchamel sauce, or spinach. Fruit is used to create dessert empanadas, which are usually baked, but may be fried.
+
+In some Argentinean provinces, empanadas can be spiced with peppers, more akin to those of the rest of South America. Every household in Argentina has its own special recipe for empanada filling. The fillings vary from region to region, with some being sweet and others spicy. The below is a recipe for a sweet empanada filling typical of those found in the province of Santa Fe.
+
+Chilean empanadas also use a wheat flour-based dough, but the meat filling is slightly different and often contains more onion. Chileans consider the Argentine filling *seco*, or dry. Fried empanadas of shrimp/prawns and cheese are a favourite dish of the coastal areas, like Viña del Mar. "Pino" is the name of the filling used in Chilean empanadas. Much like filling for Argentine empanadas, each Chilean household has their own pino. The one below is like the Argentine but includes more onions and does not have the cinnamon, nutmeg, or cloves, and uses less sugar.
+
+In Colombia, common empanadas are filled with chopped meat, pieces of potato, and yellow rice, and are eaten with a spicy sauce made of cilantro and ají pepper, stuffed in a corn-based pastry and fried.
+
+Empanadas are usually eaten with your hands (like a taco or burrito).
+
+## Ingredients
+
+### Dough
+
+- 1 tsp salt
+- 2–3 cups cold water
+- 1 kg (about 8 cups) flour
+- 2 eggs
+- 200 g (about 1 cup) butter or margarine
+- Olive oil
+- Cornstarch
+
+### Argentinian filling (*Relleno*)
+
+- 1 kg ground beef
+- 1 large onion
+- 2 tbsp vegetable oil
+- 2 tbsp sugar
+- 1 ½ tsp black pepper
+- 1 ½ tsp paprika
+- 1 tsp salt
+- ½ tsp ground cumin (*comino*), optional. Cumin is very invasive and gives the filling a whole different flavor.
+- ½ tsp ground cinnamon
+- ¼ tsp nutmeg
+- ¼ tsp cloves
+- ½ cup raisins
+- Green olives (optional)
+- Diced hard-boiled egg (optional)
+- Diced boiled potatoes (optional)
+
+### Chilean filling (*Pino*)
+
+- 1 kg ground beef
+- 2 cloves garlic
+- 3 large onion
+- 2 tbsp olive oil
+- 1 tbsp sugar
+- 1 ½ tsp black pepper
+- 1 ½ tsp paprika
+- 1 tsp salt
+- ½ tsp ground cumin (*comino*)
+- 1 bay leaf
+- ½ cup raisins
+- Black olives
+- Diced hard-boiled egg
+
+## Procedure
+
+### Dough
+
+1. Dissolve salt in water.
+2. Mix eggs, flour, butter and 1 cup of water to form a dough. While kneading the dough, gradually add in more water until the dough is soft and stretchy. If the dough becomes sticky, add more flour.
+3. Once the dough is the desired consistency, allow to rest for a couple minutes, then roll it out to a thickness of ~2–3 mm (1/10 inch).
+4. Cut the dough into discs roughly 10–15 cm (4–6 inches) in diameter.
+
+### Argentinian filling
+
+1. Dice onion into small pieces and sauté in vegetable oil in a large frying pan. Add ground beef, and brown it.
+2. While beef is browning, mix in salt, sugar and spices.
+3. Once meat has finished cooking, remove from heat and add raisins.
+4. If desired add sliced olives, egg, or potatoes.
+
+### Chilean filling
+
+1. Dice onion into small pieces and sauté in olive oil in a large frying pan. Mince garlic and add to the onions. Add and brown ground beef.
+2. While beef is browning, mix in salt, sugar, spices and bay leaf.
+3. Allow to simmer for about 20 minutes for flavours to blend.
+4. Remove bay leaf, and add olives and raisins.
+
+### Assembly
+
+1. Place 1–2 tablespoons of empanada filling into the center of one of the dough discs (*tapa*).
+2. If Chilean empanadas are being made add one piece of the diced hardboiled egg next to the filling.
+3. Wet the outer edge of the tapa with cold water and fold the tapa in half to encase the filling, ensuring there is no air left inside (the wet portion will help the dough stick together, air will burst out when cooked).
+4. Holding the empanada in the palm of one hand, with the round edge pointing outwards, pinch and twist over a small (finger-sized) portion of the dough at the top. Continue pinching and twisting around the outer edge until you reach the bottom of the empanada, so that the open edge is sealed shut. You can also use a fork to smash together the lips of the outer edge, but it is not the traditional way and the filling can burst through.
+5. Repeat for the remaining filling and dough.
+6. To cook the empanadas, deep fry in vegetable oil on medium heat until golden brown. Alternatively, you can brush them with butter and bake on a cookie sheet in the oven at 400 °F for 8–10 minutes or until light brown.
+7. Allow empanadas to cool and then eat.
+
+## Notes, tips, and variations
+
+- For a flakier crust, before cutting it into discs, lightly coat the dough with olive oil and dust with cornstarch. Fold the dough in half (with the cornstarch on the inside) and again coat with oil and cornstarch. Fold again and roll out to a thickness of ~2–3 mm (1/10 inch).

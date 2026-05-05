@@ -1,0 +1,55 @@
+---
+title: Soy Milk I
+slug: soy-milk-i
+source_url: https://en.wikibooks.org/wiki/Cookbook:Soy_Milk_I
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 15968
+date: '2025-10-20'
+cuisine: []
+course: []
+diet:
+- Vegan
+difficulty: Easy
+technique: []
+recipe_type:
+- plant milk
+ingredients:
+- soy
+categories:
+- Easy recipes
+- Recipes
+- Recipes for plant milk
+- Recipes using soy
+- Vegan recipes
+---
+
+## Ingredients
+
+- 125 g dried soybeans
+- About 3.5 L water
+
+## Equipment
+
+- Hand blender
+- Large pot with, ideally, a transparent lid
+- Large can to hold the milk
+- Wooden spoon or another tool for stirring
+- Clean cheesecloth or dish cloth
+- Sealable container for the okara (optional, you can also elect to dump or compost it, or ferment it)
+
+## Procedure
+
+1. Put the soybeans and 1 L of water into the pot, and let them soak for 8–12 hours.
+2. Strip the soaked beans of their hulls by rubbing or crushing them between your fingers. Remove the hulls and pour away the excess water. While the hulls have about the same density as the beans and bean splinters, you can exploit their high flow resistance for separating the two: Fill some water into the bowl, then pour it away quickly enough to drag the hulls with it, but not so quickly that the beans will follow. This process resembles the winnowing of dry chaff from seeds. It's no problem if a few hulls remain.
+3. Add ½ L of fresh water and blend until you get a creamy substance. Add another ½ liter and blend until totally smooth.
+4. Bring the raw milk to a boil while stirring, then reduce the temperature to minimum, put the lid on top, and simmer for 20 minutes. Attention: May overboil, check frequently. Removing the lid will allow vapor to escape and reduce the foam. Another possibility is to pour a little bit of cold water on top of the lid.
+5. The bitter odor of the raw milk should now be gone. Remove the pot from the stove and add 1 liter of cold water.
+6. Line the inside of the can with the cheesecloth so it is completely covered, and the edges of the cloth hang over the edge of the can. The following process will not work if the body of the can is much wider than the opening, though. In this case, use a large bowl instead.
+7. Carefully pour the cooked, unfiltered milk into the can. Then fold the cheesecloth together at the top and lift it up out of the can so that the filtered milk drips into the can. Rotate the bottom of the cloth against the top and use your hands to exert additional pressure upon the soy mass. Be careful not to burn yourself.
+8. When you're no longer able to extract significant amounts of milk from the soy mass, open the cheesecloth, and put the resulting rubberlike, crumbly okara ball into the prepared container. Store it in a cool place for up to 3 days; you may also freeze it.
+
+## Notes, tips, and variations
+
+- The soy milk can be kept in the refrigerator for about 5 days. You can also use it to make tofu right away.
+- The okara requires much more heat processing than the milk in order to be digestible. Boil it or bake it for at least one hour before eating it. The heat exposure during the baking of bread which contains okara is usually enough. Alternatively, it can be fermented into a special variety of tempeh.

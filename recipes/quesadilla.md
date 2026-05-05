@@ -1,0 +1,84 @@
+---
+title: Quesadilla
+slug: quesadilla
+source_url: https://en.wikibooks.org/wiki/Cookbook:Quesadilla
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 4032
+date: '2025-11-14'
+cuisine:
+- Mexican
+- Southwestern
+- Tex-Mex
+course:
+- Appetizer
+diet: []
+difficulty: Easy
+technique: []
+recipe_type:
+- quesadillas
+- sandwiches
+ingredients:
+- cheese
+- chile
+- cilantro
+- cooking spray
+- monterey jack
+categories:
+- Appetizer recipes
+- Easy recipes
+- Mexican recipes
+- Recipes
+- Recipes for quesadillas
+- Recipes for sandwiches
+- Recipes using cheese
+- Recipes using chile
+- Recipes using cilantro
+- Recipes using cooking spray
+- Recipes using monterey jack
+- Southwestern recipes
+- Tex-Mex recipes
+---
+
+# Quesadilla
+
+Similar to a sandwich, the amount of ingredients for a **quesadilla** depends on how many you are serving and how big you want to make a particular quesadilla. Here are ingredients for one serving using the typical size of tortillas most commonly available in stores in the southwestern U.S. (and in many other areas and countries). Other locally available thin flat breads may work instead of work of tortillas, but please know, the tortillas are intended to be similar to a 'wrap' to allow the eating of the filling.
+
+## Ingredients
+
+### Base
+
+- 2 flour tortillas, 6 inches (15 cm) in diameter
+- ⅓ cup grated meltable cheese (preferably a Monterey Jack and cheddar blend or a Tex Mex blend)
+- ¼ cup filling (see options below)
+- Cooking spray
+
+### Fillings
+
+- Salsa
+- Sarza criolla
+- Chile peppers
+- Chopped tomatoes and cilantro
+- Cooked meat or seafood
+- Fresh spinach, washed and torn into small pieces
+- Canned black beans, rinsed and well drained
+
+## Procedure
+
+1. Warm both tortillas in the microwave to the point of flexibility, keeping one warm.
+2. Preheat a frying pan or griddle over medium-low heat. Grease with oil or cooking spray, and place one of the tortillas in the pan.
+3. Sprinkle the shredded cheese over the tortilla.
+4. Top the cheese with any combination of the fillings, ideally warmed and very well drained. Make sure they are evenly distributed across the tortilla.
+5. Allow the cheese to melt. The tortilla may brown in spots but it should not be cooked to the point of changing color substantially.
+6. Press the other tortilla over the top of the tortilla in the pan, making sure it sticks a bit.
+7. Flip the quesadilla and allow to warm until it joins as a unit.
+8. Remove from pan and cut in eight wedges.
+9. Eat immediately, or remove to a fairly low-temperature 'keep warm' area, below the melting temperature of the cheese.
+
+## Notes, tips, and variations
+
+- Quesadillas are not usually not very good re-heated.
+- In some regions of Mexico a quesadilla is a simple corn tortilla with cheese, non-fried.
+- One traditional quesadilla filling consists of grilled chicken, beef, or pork, finely minced, sprinkled with a teaspoon of finely minced onion and half of teaspoon of cilantro, with a small amount of some lime squeezed on top.
+- Corn tortillas can be used in a pinch at home, but they may not hold together or work as well as flour tortillas.
+- See Crab Quesadillas with Mango Salsa for a variation.

@@ -1,0 +1,89 @@
+---
+title: Pasties
+slug: pasties
+source_url: https://en.wikibooks.org/wiki/Cookbook:Pasties
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 106716
+date: '2025-10-26'
+cuisine: []
+course: []
+diet: []
+difficulty: Medium Difficulty
+technique:
+- Baked
+- Baking
+- Deep fried
+recipe_type:
+- pastries
+ingredients:
+- beef round
+- fish
+- milk
+- wheat flour
+categories:
+- Baked recipes
+- Baking recipes
+- Cornish recipes
+- Deep fried recipes
+- Medium Difficulty recipes
+- Recipes
+- Recipes for pastries
+- Recipes using beef round
+- Recipes using fish
+- Recipes using milk
+- Recipes using wheat flour
+---
+
+# Pasties
+
+A **pasty** (Cornish: *pasti*, *hoggan*, incorrectly written as *pastie*) is a type of pie, originally from Cornwall, in the United Kingdom. It is a baked savory pastry case traditionally filled with sliced meat and vegetables. The ingredients are uncooked before being placed in the unbaked pastry case. Pasties with traditional ingredients are specifically called **Cornish pasties**. Traditionally, pasties have a semicircular shape, achieved by folding a circular pastry sheet over the filling. The circular edge is then crimped to form a seal.
+
+This recipe is from Cornish Recipes, Ancient & Modern, 22nd Edition, The Cornwall Federation of Women's Institutes 1965. First collected & published by Edith Martin, Tregavethan, Truro, 1929, for The Cornwall F.of W. I.
+
+## Ingredients
+
+- 1 medium swede (rutabaga, yellow turnip) or similar root vegetable, peeled, cut into chunks, and then thinly sliced
+- 4 large potatoes, prepared same as the swede
+- 4 medium onions, halved and thinly sliced
+- 2 pounds (900 g) beef round (skirt), sliced across the grain into roughly 1x2 cm strips
+- Pastry for Cornish Pasties
+- 1 tbsp plain flour (optional)
+- 1 tbsp milk (optional)
+- Salt to taste
+- Pepper to taste
+
+## Procedure
+
+1. Preheat oven to 400°F 200°C Gas Mark 6.
+2. Lightly dust the prepared meat in seasoned flour (optional but makes a thicker gravy of the enclosed juices).
+3. Divide the pastry into 4 equal portions. Roll each into circles.
+4. Layer meat and vegetables on one half of each pastry circle to within 1 inch of the edge. Season generously.
+5. Brush milk onto the edge of the pastry circles (optional).
+6. Bring the other half of the dough over the top of the mixture.
+7. Pinch and twist to seal the dough around the edges.
+8. Make a couple of small slashes in the top of the pastry to allow steam to escape.
+9. Brush pasties with the remaining milk (optional).
+10. Use pastry trimmings to make the intended eater's initial(s) on one end of the pasty. This is the Cornish housewife's traditional way of making and identifying individual pasties to suit each family member e.g. less seasoning for young children or more meat for a hard-working son or anaemic daughter. Also, it enabled tin-miners and fishermen to identify their pasties if they had had to put them down somewhere half-eaten to attend to some urgent work.
+11. Place the pasties on a lightly-greased baking tray (or a double thickness of aluminium foil directly onto the oven shelf).
+12. Bake for about 45 minutes on the middle shelf of the preheated oven.
+13. Best taken with a pint of bitter or stout or a large mug of strong tea.
+
+## Tips, notes, and variations
+
+- Try adding sweet-corn or different types of beans.
+- To rewarm, place on a cookie sheet in the oven and make a tent with foil over them so only the inside is heated, and not the pie crust. By a campfire, just lay on a hot rock or on a plate tilted towards the fire; before long they are warm and ready to eat.
+- Use a pie crust that doesn't crumble too easily, or the whole thing will fall apart.
+
+### Variants
+
+- Apple variant: Add peeled and thinly sliced apples sprinkled with soft brown sugar.
+- Broccoli variant: Parboil, drain, and salt the broccoli. Fill pastries well with the broccoli. A little cheddar cheese is good in this, instead of salt.
+- Chicken variant: Add diced breast and leg meat, and continue as above.
+- Date variant: Chop some stoned dates, and fill well.
+- Eggy variant: Add diced green or smoked bacon (back is best), fresh parsley, and 1–2 eggs, according to size of pasty. Top-crimp from each end, and funnel beaten egg in before closing.
+- Pork variant: Add pork, potatoes, onion, a pinch of salt, and fresh sage or thyme.
+- Sorrel variant: Scald sorrel leaves, fill pasty, and serve with sugar and cream.
+- Jam variant: Any kind of jam can be used. Make the pasties smaller than normal, otherwise a lot of jam is needed!
+- Mackerel variant: Allow 1 or 2 mackerels for each pasty, cleaned and boiled as normal. Skin and bone them, lay on pasty, fill with fresh parsley, lightly season and close. Herring are good as well.
+- Windy variant: A method of using the pastry remnants. Just make an empty pasty, but omit the steam slit, split open while still hot and fill with jam, cheese and chutney, or whatever takes your fancy!

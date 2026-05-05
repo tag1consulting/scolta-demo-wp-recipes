@@ -1,0 +1,60 @@
+---
+title: Poisson Braise (Ivorian Grilled Fish)
+slug: poisson-braise-ivorian-grilled-fish
+source_url: https://en.wikibooks.org/wiki/Cookbook:Poisson_Braise_(Ivorian_Grilled_Fish)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 457161
+date: '2025-07-22'
+cuisine:
+- African
+course: []
+diet: []
+difficulty: Medium Difficulty
+technique: []
+recipe_type: []
+ingredients:
+- lemon juice
+- swordfish
+- yellow bell pepper
+- zucchini
+categories:
+- African recipes
+- Medium Difficulty recipes
+- Recipes
+- Recipes using lemon juice
+- Recipes using swordfish
+- Recipes using yellow bell pepper
+- Recipes using zucchini
+---
+
+# Poisson Braise (Ivorian Grilled Fish)
+
+**Poisson braise** is an Ivory Coast dish, usually eaten after work. It is also an affordable meal that can be enjoyed with any cold drink of your choice.
+
+## Ingredients
+
+- 6 tablespoons extra-virgin olive oil
+- 5 cloves of garlic, finely chopped
+- 1 cup fresh lemon juice
+- 3 pinches salt or to taste
+- 3 pinches grated red or black pepper
+- 4 tablespoons all-purpose fish seasonings (e.g. grated garlic, cilantro,basil, thyme, paprika, salt, and pepper)
+- 4 ea. (32 oz) swordfish fillets, deboned
+- 2 large tomatoes, neatly diced
+- 2 medium-size onions, neatly diced
+- 2 medium-size yellow bell peppers, neatly diced
+- 2 medium-size zucchini, neatly diced
+- 2 dashes tabasco sauce
+- 1 can (14 oz) tomato paste
+
+## Procedure
+
+1. Combine 4 tablespoons of the extra- virgin olive oil in a large bowl, then add all the finely chopped garlic, lemon juice, 2 pinches of salt, 2 pinches of either the red or black pepper, and all of the fish seasonings. Mix them together very well to make a marinade.
+2. Add the fish to the marinade, cover, and marinate in the fridge for about an hour.
+3. Combine the tomatoes, onions, yellow pepper, zucchini, tabasco sauce, remaining extra-virgin olive oil, salt, and pepper in a bowl. Set aside.
+4. Remove the fish from the fridge.
+5. Heat a greased stovetop grill or skillet over medium heat. Add the fish and cook for at least 5 minutes. Flip and cook the other side for about another 4 minutes.
+6. While the fish is cooking, put half of the tomato paste mixture onto a sheet pan and bake in a 350°F oven for about 7 minutes.
+7. Put the remaining half tomato paste mixture on the plate followed by each one of the sword fish fillets. Garnish with the slice from the remaining lemon.
+8. Serve with a side dish such as white rice or attieke.

@@ -1,0 +1,139 @@
+---
+title: Tonkotsu Ramen
+slug: tonkotsu-ramen
+source_url: https://en.wikibooks.org/wiki/Cookbook:Tonkotsu_Ramen
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 223193
+date: '2025-09-05'
+cuisine:
+- Japanese
+course: []
+diet: []
+difficulty: Difficult
+technique: []
+recipe_type:
+- pasta
+ingredients:
+- all-purpose flour
+- apple
+- cornstarch
+- egg
+- fresh ginger
+- green onion
+- kansui
+- mirin
+- pork
+- sugar
+categories:
+- Difficult recipes
+- Japanese recipes
+- Recipes
+- Recipes for pasta
+- Recipes using all-purpose flour
+- Recipes using apple
+- Recipes using cornstarch
+- Recipes using egg
+- Recipes using fresh ginger
+- Recipes using green onion
+- Recipes using kansui
+- Recipes using mirin
+- Recipes using pork
+- Recipes using sugar
+- Recipes with metric units
+- Soup recipes
+---
+
+# Tonkotsu Ramen
+
+**Tonkotsu ramen** is a dish of ramen noodles served in rich and fatty pork broth usually garnished with a variation of toppings (most of the time pork cutlets, green onions, and hard-boiled eggs split in two). There are many variations to this recipe. Some people add some chicken bones or beef bones to create a unique combination of flavors. A lot of the ingredients aren't available in just any grocery stores, but you shouldn't have a lot of trouble finding them at the Asian grocers in your local international district. You would be surprised on how much better tasting it is than the store bought instant ramen brands.
+
+## Ingredients
+
+### Marinated eggs
+
+- 12 eggs in shells
+- 1 lb diced pork hock meat
+- 3 green onions, cut into 1-inch pieces
+- 1 thumb-sized piece of ginger, sliced
+- 2 large cloves of garlic, sliced
+- ½ cup soy sauce
+- 2 tbsp cooking wine/sake/sherry
+- 2 tbsp sugar
+- ½ cup water
+
+### Soup
+
+- 6 pork hock bones
+- 3 green onion
+- 1 Fuji apple
+- 2 medium-sized yellow onions
+- 1½ tbsp fresh grated ginger or 2 tsp prepackaged ginger paste
+- 3 cloves of garlic, quartered
+- 2 tbsp sesame oil
+- 12–16 cups water
+
+### Noodles
+
+- 500 grams all-purpose flour or medium-strength flour
+- 5 grams powdered kansui (see notes)
+- 200 ml water
+- Potato or corn starch
+
+### Chashu
+
+- 500 grams side pork
+- 50 ml soy sauce
+- 50 ml mirin
+- 1 tbsp sugar
+- 500 ml water
+
+## Procedure
+
+### Marinated eggs
+
+1. Bring a pot of water to a rolling boil. If desired, use a small thumb tack to prick a pin hole in the base of every egg, then add eggs to the pot. The water should cover the eggs.
+2. Wait for the water to come back to a full boil, then cook for 7–9 minutes. 9 minutes will give you a fully hard boiled egg, while 7 minutes makes a jammier egg.
+3. Drain the pot and eggs and plunge the eggs in ice water to stop the cooking. This also makes the shells a bit easier to peel.
+4. In a small pot, sauté pork, garlic, onions, and ginger until slightly browned. Add soy sauce, cooking alcohol, sugar, and water, and simmer for 10 minutes until pork is cooked through and flavors meld. Remove from stove.
+5. Remove pork to eat separately. Pour everything else into a bowl large enough to hold marinade and eggs. Carefully, peel the eggs, and place in marinade. Try to make sure the marinade covers all of the eggs. If not, try transferring the sauce into a large ziplock bag, and place the eggs in the bag and seal.
+6. Place the bag in a bowl, and put everything in the refrigerator overnight or at least for a few hours.
+
+### Soup
+
+1. Using a butcher knife, separate off the pork hock bones.
+2. Rinse well in running water to wash off the blood. Boil in large pot for 15 minutes and make sure you barely cover the bones with the water.
+3. Skim off as much scum/foam as much possible as it forms.
+4. Drain in colander and use a brush to remove any bloody meat.
+5. Use a saw and cut halfway down the center of the bones. Then use hammer to break bone.
+6. The bones will be filled with marrow. Simmer for several hours until the marrow dissolves out from the bones.
+7. Scum will form at the start. Carefully skim the scum off. Maintain a low boil over medium heat.
+8. After scum has stopped forming, simmer for 6 hours or more. Add more water if the water level drops.
+9. 2 hours after the pork bones have started simmering, the soup should become progressively white and cloudy. If tasted at this stage, the soup will not taste good since it will still have a raw flavor.
+10. After the soup has simmered for 6 hours, the inside of the bones should be empty and the soup should have a rich smell just like a ramen place.
+
+### Chashu
+
+1. Brown the meat in a pan and then simmer in a pot for 2 hours in a sauce made from the remaining ingredients. Allow to cool in the pot. The char siu should be a nice amber color. Slice with care since it will be very tender and tend to fall apart.
+
+### Noodles
+
+1. Mix the flour and kansui together, then add the water. It may feel as if the amount of water is insufficient—this is normal.
+2. Mix in bowl until a mealy consistency is achieved. The dough will be very stiff. Use you body weight to form the dough into a ball.
+3. Transfer to kneading surface and knead. Knead vigorously for 10 minutes. It is okay if the dough cracks or does not knead together well.
+4. Form into ball, cover with plastic wrap and allow to rest in the refrigerator for at least 30 minutes. Make sure that the dough does not dry out.
+5. After the dough has rested, roll the dough out with a rolling pin to a thickness of 5 mm and then insert into pasta machine. Start out with the highest thickness and then continue on the lower settings until the desired thickness is achieved. If a pasta machine is not used, roll out the dough to the desired thickness with the rolling pin. Take into account that the noodles will expand 1.3 times when boiled.
+6. The dough will not be that sticky, so a small amount of flour or potato (or corn) starch is sufficient for flouring.
+7. A wooden box is best for storing the noodles, but if one is not available, use a metal tray lined with wax paper (to prevent sticking) and store in the refrigerator.
+
+### Assembly
+
+1. Bring a pot of water to a boil, and add the noodles. Cook the noodles to each person’s preference, then drain. For people who like curly noodles, firmly squeeze the noodles until the desired effect is achieved.
+2. Warm a large soup bowl, and add the drained noodles. Add broth, then top with char siu and marinated egg. Add salt for flavor—use sparingly at first and then add more if desired.
+
+## Notes, tips, and variations
+
+- Kansui is a Japanese mixture of alkaline salts. Try the Koon Chun brand, which comes in a clear glass bottle labeled “potassium carbonate & sodium bi-carbonate solution”. The UPC is 0-20717-80230-8.
+- Any leftover char siu can be eaten with beer. If you ever have trouble slicing soft pork, chill the whole piece in the refrigerator until cold, and it makes slicing easier. Reheating is easy, in either the microwave or oven, even stove top.
+- Make sure you keep up on scooping out the foamy gunk from the broth—you don't want all that stuff all over your ramen.
+- Don't be afraid to experiment with different types and balances of garnishes!

@@ -1,0 +1,61 @@
+---
+title: Rwandan Goat Brochette
+slug: rwandan-goat-brochette
+source_url: https://en.wikibooks.org/wiki/Cookbook:Rwandan_Goat_Brochette
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 457303
+date: '2025-07-22'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Rwandan Goat Brochette
+
+**Rwandan goat brochette**, also known as Brochettes de Chèvre, is a popular street food in Rwanda consisting of tender grilled goat meat skewers. This flavorful dish is often enjoyed with a side of vegetables and served with a spicy sauce.
+
+## Ingredients
+
+- 2 pounds goat meat, cut into 1-inch cubes
+- 1 onion, finely chopped
+- 4 cloves of garlic, minced
+- 2 tablespoons vegetable oil
+- 1 teaspoon paprika
+- 1 teaspoon cayenne pepper
+- 1 teaspoon black pepper
+- 1 teaspoon salt
+- Juice of 1 lemon
+
+## Equipment
+
+- Grill or barbecue
+- Mixing bowl
+- Cutting board
+- Knife
+- Wooden or metal skewers
+
+## Procedure
+
+1. In a mixing bowl, combine the chopped onion, minced garlic, vegetable oil, paprika, cayenne pepper, black pepper, salt, and lemon juice. Stir well to create a marinade.
+2. Add the goat meat cubes to the marinade and mix until the meat is thoroughly coated. Cover the bowl and let it marinate in the refrigerator for at least 2 hours, or overnight for best results.
+3. Preheat your grill or barbecue to medium-high heat.
+4. Thread the marinated goat meat cubes onto the skewers, leaving a little space between each cube.
+5. Place the skewers on the preheated grill and cook for about 15–20 minutes, turning occasionally, until the meat is cooked to your desired level of doneness and nicely charred.
+6. Remove the skewers from the grill and let them rest for a few minutes before serving.
+
+## Notes, tips, and variations
+
+- If you prefer less heat, you can adjust the amount of cayenne pepper in the marinade.
+- It's important to cut the goat meat into evenly sized cubes to ensure even cooking.
+- Soaking wooden skewers in water for about 30 minutes before threading the meat can prevent them from burning on the grill.
+- For more tender meat, choose cuts from the leg or shoulder of the goat.
+- If a grill or barbecue is not available, you can also cook the brochettes on a stovetop grill pan or under the broiler in the oven
+- Feel free to add additional spices or herbs to the marinade, such as ginger, thyme, or rosemary, to customize the flavor according to your preference.
+- You can substitute goat meat with other meats like beef, lamb, or chicken, if preferred.
+- Leftovers can be refrigerated in an airtight container for up to 3 days. Reheat gently before serving.
+- Goat meat is a lean source of protein.

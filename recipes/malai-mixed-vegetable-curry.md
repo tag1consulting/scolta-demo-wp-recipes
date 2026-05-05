@@ -1,0 +1,79 @@
+---
+title: Malai Mixed Vegetable Curry
+slug: malai-mixed-vegetable-curry
+source_url: https://en.wikibooks.org/wiki/Cookbook:Malai_Mixed_Vegetable_Curry
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 98281
+date: '2025-07-22'
+cuisine:
+- Indian
+course: []
+diet:
+- Vegetarian
+difficulty: Medium Difficulty
+technique: []
+recipe_type: []
+ingredients:
+- carrot
+- cashew
+- cilantro
+- garam masala
+- green bell pepper
+- sour cream
+- whipping cream
+categories:
+- Indian recipes
+- Medium Difficulty recipes
+- Recipes
+- Recipes using carrot
+- Recipes using cashew
+- Recipes using cilantro
+- Recipes using garam masala
+- Recipes using green bell pepper
+- Recipes using sour cream
+- Recipes using whipping cream
+- Vegetarian recipes
+---
+
+# Malai Mixed Vegetable Curry
+
+**Malai mixed vegetable**, is a creamy side dish for Indian bread.
+
+## Ingredients
+
+- 3 green capsicums (bell peppers)
+- 1 each orange, yellow, and red capsicum
+- 1 cup paneer cubes
+- Cashew nuts
+- 4 large tomatoes
+- 1 cup chopped carrot
+- 1 cup peas
+- 3–4 green chillies (depending on spice requirement), finely chopped
+- Dried parsley and cilantro
+- 1 Tbsp butter or oil
+- Garam masala
+- Red chilli powder
+- Salt to taste
+- Turmeric
+- 1 quart whipping cream
+- 1 Tbsp sour cream
+- Cilantro for garnishing
+
+## Procedure
+
+1. Cut the bell peppers into ½-inch pieces.
+2. Sauté paneer until golden brown; set aside.
+3. Soak a handful of cashew nuts in warm water.
+4. Grind the tomatoes and the soaked cashew into a fine paste. Keep this paste aside.
+5. Sauté the chopped vegetables, green chillies, and dried parsley in the butter/oil until they are cooked. You could also microwave the vegetables for ~10 minutes without water, and then sauté them in butter for a minute.
+6. Add the tomato paste to the vegetables and cook for 5 minutes.
+7. Add the garam masala, red chilli powder, salt, and turmeric according to taste; simmer for 2 minutes.
+8. Add the whipping cream and the sour cream, and let it cook until the cream thickens.
+9. Add the paneer and mix well.
+10. Garnish with cilantro and cashew nuts.
+11. Serve hot with naan or roti.
+
+## Notes, tips, and variations
+
+- You could choose other vegetables like zucchini or broccoli if you like.

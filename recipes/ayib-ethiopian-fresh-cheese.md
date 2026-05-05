@@ -1,0 +1,63 @@
+---
+title: Ayib (Ethiopian Fresh Cheese)
+slug: ayib-ethiopian-fresh-cheese
+source_url: https://en.wikibooks.org/wiki/Cookbook:Ayib_(Ethiopian_Fresh_Cheese)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 457203
+date: '2025-07-22'
+cuisine:
+- Ethiopian
+course: []
+diet: []
+difficulty: Easy
+technique: []
+recipe_type: []
+ingredients:
+- cheese
+- lemon juice
+categories:
+- Easy recipes
+- Ethiopian recipes
+- Recipes
+- Recipes using cheese
+- Recipes using lemon juice
+---
+
+# Ayib (Ethiopian Fresh Cheese)
+
+**Ayib** is a traditional Ethiopian cottage cheese that is enjoyed as a side dish or ingredient in various Ethiopian dishes. It has a mild and creamy flavor with a crumbly texture. Ayib is simple to make and requires only a few ingredients. This detailed recipe will guide you through the process of making delicious Ayib at home.
+
+## Ingredients
+
+- 1 liter (4 cups) whole milk
+- ¼ cup lemon juice or vinegar
+- ¼ teaspoon salt
+
+## Equipment
+
+- Large pot
+- Cheesecloth or muslin cloth
+- Colander
+- Bowl
+
+## Procedure
+
+1. Pour the milk into a large pot and heat it over medium-low heat. Stir occasionally to prevent the milk from scorching or sticking to the bottom of the pot.
+2. Heat the milk until it reaches a gentle simmer. Avoid boiling the milk to prevent it from scorching or curdling.
+3. Once the milk is simmering, reduce the heat to low and slowly add the lemon juice or vinegar while stirring continuously. The acid will cause the milk to curdle and separate into curds and whey.
+4. Continue stirring gently for a few more minutes to encourage the curds to form. The whey should become more transparent, and the curds will start to clump together.
+5. Line a colander with a double layer of cheesecloth or muslin cloth. Place the colander over a large bowl to collect the whey.
+6. Carefully pour the curdled milk into the lined colander, allowing the whey to drain through the cheesecloth. The curds will remain in the cloth.
+7. Gather the corners of the cheesecloth and tie them together to create a bundle. Hang the bundle over a faucet or handle, allowing any remaining whey to drip off for about 1 hour.
+8. After the hour is up, gently squeeze the cheesecloth to remove any remaining whey and shape the cheese.
+9. Transfer the ayib to a clean bowl and sprinkle it with salt. Mix well to incorporate the salt evenly.
+10. Cover the bowl and refrigerate for at least 2 hours to allow it to firm up and develop its flavor.
+11. Once chilled, the ayib is ready to be enjoyed as a side dish or used as an ingredient in various Ethiopian recipes.
+
+## Notes, tips, and variations
+
+- Ayib can be stored in the refrigerator for up to 3–4 days. Keep it covered to maintain its freshness.
+- Adjust the amount of salt according to your taste.
+- If you prefer a creamier consistency, you can add a small amount of cream or yogurt to the curdled milk before straining it.
+- The leftover whey can be used in cooking or baking as a substitute for water or milk in recipes.

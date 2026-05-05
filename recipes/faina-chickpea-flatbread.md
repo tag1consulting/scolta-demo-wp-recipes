@@ -1,0 +1,45 @@
+---
+title: Faina (Chickpea Flatbread)
+slug: faina-chickpea-flatbread
+source_url: https://en.wikibooks.org/wiki/Cookbook:Faina_(Chickpea_Flatbread)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 224062
+date: '2025-07-22'
+cuisine: []
+course: []
+diet: []
+difficulty: Easy
+technique:
+- Baked
+recipe_type:
+- flatbread
+ingredients:
+- chickpea flour
+categories:
+- Baked recipes
+- Easy recipes
+- Recipes
+- Recipes for flatbread
+- Recipes using chickpea flour
+- Recipes with metric units
+---
+
+# Faina (Chickpea Flatbread)
+
+**Faina** is a type of flatbread made with chickpea flour (*harina de garbanzos*). It can be eaten plain or with a slice of pizza, in which case it is called *pizza a caballo* (pizza on horseback); this is very popular in Uruguayan and Argentine pizzerias. In these countries, a distinction is made between *faina de orilla*, which has crisp edges that look fried, and *Faina del medio*, which has a consistency similar to Yorkshire Pudding.
+
+## Ingredients
+
+- 250 g chickpea flour
+- 2 generous Tbsp wheat flour
+- 1 tsp salt
+- 500 ml lukewarm water
+- 2 tbsp oil
+
+## Procedure
+
+1. Mix chickpea flour, wheat flour, salt and water in a bowl. Beat slowly with a wire whisk; alternatively, you may mix in a food processor. Add 2 tbsp oil.
+2. Place some oil in a round baking dish (approx 45 cm in diameter) and preheat this in the oven for a few minutes. Remove dish from oven and pour the faina mixture into the hot dish.
+3. Place back into the oven for about 20 minutes, until the upper crust is golden, and the edges are dry (they should have a fried appearance).
+4. Remove from the oven, and let rest for 2–3 minutes. Sprinkle with pepper and cut into wedges.

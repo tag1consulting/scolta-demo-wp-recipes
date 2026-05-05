@@ -1,0 +1,66 @@
+---
+title: Torta de Acelga (Chard Pie)
+slug: torta-de-acelga-chard-pie
+source_url: https://en.wikibooks.org/wiki/Cookbook:Torta_de_Acelga_(Chard_Pie)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 108439
+date: '2025-10-26'
+cuisine: []
+course: []
+diet:
+- Vegetarian
+difficulty: Medium Difficulty
+technique: []
+recipe_type:
+- pastries
+- pies and tarts
+ingredients:
+- bread crumb
+- chard
+- cheese
+- egg
+- puff pastry
+categories:
+- Gibraltarian recipes
+- Medium Difficulty recipes
+- Recipes
+- Recipes for pastries
+- Recipes for pies and tarts
+- Recipes using bread crumb
+- Recipes using chard
+- Recipes using cheese
+- Recipes using egg
+- Recipes using puff pastry
+- Vegetarian recipes
+---
+
+# Torta de Acelga (Chard Pie)
+
+**Torta de acelga** (chard pie) is believed to be based on a spinach pie eaten in parts of Italy and is also very similar to the Greek 'spanakopita'. A very similar pie is eaten in the Ligurian Region during Easter, called Torta Pascualina. This pie is traditionally eaten on Good Friday in Gibraltar.
+
+## Ingredients
+
+- 1 small package puff pastry
+- 6 bunches of acelga (chard)
+- 6 eggs
+- Breadcrumbs
+- Grated cheese
+- Parsley
+- 2 teaspoons minced garlic
+- Seasoning to taste
+
+## Procedure
+
+1. Remove the stems of the acelga (these stems will become useful for another recipe called Potaje de acelga).
+2. Wash the leaves very well to remove any grit or soil. Boil the acelga leaves, drain really well, and chop them. Fry them for a few minutes in hot olive oil then set aside.
+3. Roll out the pastry and lay on an oven-proof pie dish leaving sufficient pastry to close the pie later.
+4. Beat the eggs and add all the ingredients to make a nice filling.
+5. Add to the acelga and mix all together.
+6. Fill the pie dish with this “relleno” or filling and close the pie with the pastry.
+7. Bake in the oven at 150°C (300°F) for about 30 minutes or until the pie is nice and golden.
+
+## Notes, tips, and variations
+
+- You can boil the acelga the night before to save time.
+- You can make a pastry by mixing one glass each of olive oil and water then adding flour until a soft dough is achieved, but this dough won't be as flaky as puff pastry.

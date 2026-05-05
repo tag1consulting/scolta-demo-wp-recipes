@@ -1,0 +1,65 @@
+---
+title: Turmeric Chicken and Asparagus Stir-Fry
+slug: turmeric-chicken-and-asparagus-stir-fry
+source_url: https://en.wikibooks.org/wiki/Cookbook:Turmeric_Chicken_and_Asparagus_Stir-Fry
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 482433
+date: '2026-04-02'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Turmeric Chicken and Asparagus Stir-Fry
+
+This recipe, adapted from the New York Times, comes together relatively quickly. The ingredients can be prepared in advance to save time, picking up at the first steps of the procedure.
+
+## Ingredients
+
+### Sauce
+
+- ¼ cup water
+- 3 tbsp honey
+- ¾ tsp ground black pepper
+- ½ tsp kosher salt
+
+### Chicken
+
+- 2 tbsp all-purpose flour
+- 1½ tsp powdered turmeric
+- 1 tsp kosher salt
+- 1 lb boneless skinless chicken thigh, cut in 1 inch (2–3 cm) pieces
+
+### Cooking
+
+- 1–3 tbsp coconut or neutral oil
+- 1 lb asparagus, trimmed and thinly sliced on the bias
+- Kosher salt
+- 1 tsp rice vinegar
+- 1 ea. lime, juiced
+
+## Special equipment
+
+- Seasoned wok or cast-iron skillet
+
+## Procedure
+
+1. Combine the water, honey, pepper, and salt to make the sauce. Set aside.
+2. Combine the flour, turmeric, and salt together. Sprinkle over the chicken, and immediately toss to coat the chicken well.
+3. Heat the oil in your pan over medium-high heat. Add the chicken, and cook, tossing as needed, until golden brown all over. If it starts darkening too quickly, lower the heat.
+4. Add the asparagus to the pan, and season with a pinch of salt. Cook for 1–2 minutes, or until tender but still crisp. Note that the asparagus will continue cooking.
+5. Stir in the prepared sauce, and simmer everything until the chicken is cooked through and the sauce has thickened to your taste (about 2–3 minutes).
+6. Remove from the heat, and stir in the rice vinegar and lime juice. Adjust the seasoning with additional salt, pepper, vinegar, and lime to taste.
+
+## Notes, tips, and variations
+
+- If you use a regular stainless steel skillet, have uneven heat distribution, or add the chicken on too-low heat, the meat may stick to the pan.
+- If you want to make this recipe gluten-free, you can replace the wheat flour with cornstarch. This will slightly change the texture of the meat and the sauce, making it somewhat more like the technique of velveting.
+- Adding all the dry ingredients to the chicken at once without tossing immediately can cause them to clump.
+
+## References

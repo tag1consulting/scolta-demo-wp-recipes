@@ -1,0 +1,92 @@
+---
+title: Algerian Coca
+slug: algerian-coca
+source_url: https://en.wikibooks.org/wiki/Cookbook:Algerian_Coca
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 473348
+date: '2025-10-26'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Algerian Coca
+
+Cookbook | Recipes | Ingredients | Equipment | Techniques | Cookbook Disambiguation Pages | Recipes | Algerian recipes
+
+**Algerian coca** (كوكة) is a savory pastry that is popular in Algeria, particularly in the city of Oran. It is similar to a thin-crust pizza or a flatbread, often topped with a variety of ingredients such as onions, tomatoes, peppers, and sometimes meat or fish.
+
+## Ingredients
+
+### Dough
+
+- 500 g (4 cups) all-purpose flour
+- 1 teaspoon salt
+- 1 tablespoon sugar
+- 1 packet (7 g) active dry yeast
+- 250 ml (1 cup) warm water
+- 3 tablespoons olive oil
+
+### Topping
+
+- 2 large onions, thinly sliced
+- 2 large tomatoes, thinly sliced
+- 1 bell pepper, thinly sliced
+- 2–3 cloves garlic, minced
+- 2 tablespoons olive oil
+- 1 teaspoon paprika
+- 1 teaspoon ground cumin
+- Salt and pepper to taste
+
+### Garnish
+
+- Black olives, whole or sliced
+- Chopped fresh parsley (optional)
+
+## Equipment
+
+- Large mixing bowl
+- Skillet or sauté pan
+- Rolling pin
+- Baking sheet
+- Parchment paper
+- Oven
+
+## Procedure
+
+### Dough preparation
+
+1. In a bowl, dissolve the sugar in warm water, then sprinkle the yeast. Let sit 10 minutes until frothy.
+2. In a large mixing bowl, combine the flour and salt. Make a well in the center and pour in the yeast mixture and olive oil. Mix until a dough forms.
+3. Turn the dough out onto a floured surface and knead for about 10 minutes until it becomes smooth and elastic.
+4. Place the dough in a lightly oiled bowl, cover with a clean kitchen towel, and let it rise in a warm place for about 1 hour or until it doubles in size.
+
+### Topping preparation
+
+1. Heat the olive oil over medium heat in a large skillet. Add the sliced onions and cook until they become soft and translucent, about 10 minutes.
+2. Add the garlic, paprika, cumin, salt, and pepper to the onions. Stir well and cook for another 2–3 minutes.
+3. Add the sliced tomatoes and bell peppers to the skillet. Cook for another 5–7 minutes until the vegetables are soft but not mushy. Remove from heat and let it cool slightly.
+
+### Assembly
+
+1. Preheat your oven to 200°C (400°F).
+2. Press the risen dough to deflate it, then divide it into two equal portions. Roll out each portion into a thin rectangle or oval shape, about ¼ inch thick.
+3. Transfer the rectangles to one or more baking sheets lined with parchment paper. Spread the cooked vegetable mixture evenly over the rolled-out dough.
+4. Bake in the preheated oven for about 20–25 minutes, or until the edges are golden brown and the dough is cooked through.
+
+### Garnish and serve
+
+1. Remove the coca from the oven and let it cool slightly. Garnish with chopped fresh parsley and olives if desired.
+2. Cut into squares or slices and serve warm.
+
+## Notes, Tips, and Variations
+
+- You may substitute homemade dough with store-bought puff pastry for a quicker version.
+- Traditional versions may include canned tuna, anchovies, or cooked ground meat layered under the vegetables.
+- The filling can be made ahead and stored in the refrigerator for up to 2 days.
+- Serve with a fresh salad for a complete meal.

@@ -1,0 +1,52 @@
+---
+title: Bánh chưng
+slug: banh-chung
+source_url: https://en.wikibooks.org/wiki/Cookbook:B%C3%A1nh_ch%C6%B0ng
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 481384
+date: '2026-04-25'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Bánh chưng
+
+**Bánh chưng** (literally "steamed cake") is a traditional Vietnamese dish which is made from glutinous rice, mung beans and pork, all wrapped in *lá dong* (*Stachyphrynium placentarium*) and tied tightly with strings (*Maclurochloa* sp.). It is traditionally eaten during Lunar New Year (*Tết*).
+
+## Ingredients
+
+- 1½ cups mung beans, washed and soaked in water for 4 hours, or better overnight
+- 5½ cups sticky rice, washed and soaked in water for 4 hours, or better overnight, and seasoned with salt
+- 500 g pork belly
+- 2½ tsps salt
+- 2½ tsps black pepper, preferably freshly ground
+- 3 tbsps fried shallot
+- 1 tbsp vegetable oil
+- 3 shallots, minced
+- 2 tbsps fish sauce
+- 1 kg banana leaves, fresh or thawed
+
+### Procedure
+
+- To make the fillings for *bánh chưng*, soak the mung beans in water for at least 4 hours, or better overnight.
+- Place the mung beans in a pot and fill with water until covered.
+- Bring the pot to a boil and then reduce heat to a simmer.
+- Cook until the beans are soft and easily mashable for about 20 minutes.
+- Mash the beans into a paste. Season to taste with 1 tsp salt, stock powder, fried shallots, 1 tsp pepper and 1 tbsp vegetable oil.
+- For the meat, use both lean pork and pork fat. Cut them into large cubes, then season with ½ tsp salt and 1½ tsp pepper. Also add the minced shallots and 2 tbsps fish sauce. Mix well and let it marinate for a few hours.
+- Take about a cup of the mashed mung beans, spread it out on a thin plastic film, add a few pieces of lean pork and pork fat and shape it into a round or squared piece.
+- Tear the banana leaves into very large pieces, around 18 to 20 inches.
+- Lay out two sheets of partially overlapping banana leaves on a flat surface. Place a cup of sticky rice, which has been soaked in water overnight and seasoned with salt, at the center of the leaves. Place the fillings on top of the rice and then cover it up with another cup of sticky rice. Fold the leaves and wrap it up tightly like a present.
+- To prevent water penetrating into the cake during the boiling process, it is important to wrap up the cake two times. For the inner layer, make sure that the darker side of the banana leaf faces the rice so that it can tint the cake with a nice subtle green color later on. However, for the outer layer, the darker side of the banana leaf should face outside to give it a beautiful green package.
+- After the cake has been wrapped up, tie the cake tightly with twines.
+- Arrange the cakes tightly in a large stockpot and fill with water. Bring the stockpot to a boil and let it simmer until the cakes feel plump and the rice is congealed for about 6 to 8 hours.
+- To enjoy the cake, just removes the twines and unwrap the cake. Because the cake is sticky, it might be difficult to cut it with a knife. Cut the cake into wedges or slices using a thread or dental floss.
+- *Bánh chưng* is often eaten with pickled onions (*dưa hành*), pickled vegetables in fish sauce (*dưa món*), or dipped in sugar for a sweet treat. They can also be sliced, pan fried until golden, and served with sugar or sweet chili sauce.
+
+## References

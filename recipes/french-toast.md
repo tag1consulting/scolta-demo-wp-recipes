@@ -1,0 +1,121 @@
+---
+title: French Toast
+slug: french-toast
+source_url: https://en.wikibooks.org/wiki/Cookbook:French_Toast
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 8324
+date: '2026-04-16'
+cuisine: []
+course:
+- Breakfast
+- Dessert
+diet:
+- Kid-friendly
+- Vegetarian
+difficulty: Easy
+technique:
+- Pan fried
+recipe_type: []
+ingredients:
+- bread
+- cooking spray
+- cream
+- egg
+- fruit preserves
+- ground cinnamon
+- maple syrup
+- sugar
+categories:
+- Breakfast recipes
+- Easy recipes
+- Kid-friendly recipes
+- Pan fried recipes
+- Recipes
+- Recipes for dessert
+- Recipes using bread
+- Recipes using cooking spray
+- Recipes using cream
+- Recipes using egg
+- Recipes using fruit preserves
+- Recipes using ground cinnamon
+- Recipes using maple syrup
+- Recipes using sugar
+- Recipes with metric units
+- Vegetarian recipes
+---
+
+# French Toast
+
+Cookbook | Recipes | Ingredients | Equipment | Techniques | Cookbook Disambiguation Pages | Recipes | Vegetarian | Breakfast
+
+**French toast**, sometimes referred to as "eggy bread" in the United Kingdom, is a common breakfast or dessert item made by frying a piece of bread soaked in an egg batter. French toast was developed as a way to use day-old stale bread. The literal translation of *pain perdu* is lost bread, referring to old or stale bread. When lacking stale bread, toasting your bread lightly will help it absorb more of the egg and milk batter.
+
+French toast is usually served with toppings similar to those used for pancakes, waffles, and toast. It can also be served as part of a fried breakfast with savory foods like sausages, tomato (or ketchup), baked beans, fried mushrooms etc.
+
+This recipe is easily scalable.
+
+## Ingredients
+
+### French toast
+
+- 1 egg
+- About ¼ cup (60 ml / 2 oz) milk or cream (more for softer, less eggy French toast; less for firmer, more eggy toast)
+- 2–3 slices bread (see notes)
+- Butter, margarine, or cooking oil
+
+### Optional flavorings
+
+- ½ teaspoon vanilla extract or similar
+- ¼–1 teaspoon nutmeg, cinnamon or other powdered spices suitable for sweet foods
+- ½ teaspoon sugar or honey
+- ¼ teaspoon salt
+- ¼ teaspoon pepper
+
+### Suggested toppings
+
+- Maple syrup
+- Jam, jelly, fruit syrup
+- Whipped cream
+- Powdered sugar
+- Nuts
+- Honey
+- Bacon
+- Raspberries, strawberries, blueberries, and/or bananas
+
+## Procedure
+
+1. In a bowl, mix eggs and milk, and optional ingredients.
+2. Heat up a frying pan, skillet, or griddle to medium-low heat.
+3. Grease the pan with butter, margarine, or cooking spray.
+4. Soak a slice of bread in the egg-milk mixture and place on pan; repeat until pan is full or desired amount is placed.
+5. Cook, turning once, until both sides of the bread are browned and the inside is cooked through.
+6. Serve on plates, with toppings as desired.
+
+## Notes, tips, and variations
+
+- The goal is to get both sides of the French toast nicely browned, while making sure the center is cooked. Using excessive heat could scorch the outside of the toast while leaving the inside undercooked.
+
+- If making a small batch, soak the two slices until almost all of the mixture has been absorbed. If the bowl is small, place the two slices on top of each other, and keep switching and flipping them, so that all four sides will absorb the mixture.
+
+- The cooking process is too short to use most raw spices, but some fresh herbs might be very tasty.
+
+- If using sandwich bread, a plastic sandwich container may be used for the egg-milk mixture. This allows maximum use of the mixture, as the container is a good size and shape.
+
+- Toast your bread before dipping it into the mix to create a solid base.
+- The following types of bread are good used for French toast. Hard crust breads are recommended. Softer breads will create a soggy toast.
+  - Sourdough
+  - Challah
+  - Schiacciata
+  - Portuguese sweet bread ("Massa Suvada"). This bread will take your french toast to new heights.
+  - Whole-wheat raisin bread or schiacciata.
+  - King's Hawaiian Sweet Bread
+  - Panettone (bread with raisin, but may be too sweet for some)
+  - Brioche (weaved bread)
+  - Chinese bakery loaves of bread. Ask to get it cut thick or uncut.
+
+## References
+
+- How to make toast (archive) Recommended bread types.
+- World's Best French Toast Recipe on YouTube
+- How to Make French Toast on YouTube

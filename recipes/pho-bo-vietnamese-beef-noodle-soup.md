@@ -1,0 +1,110 @@
+---
+title: Phở Bò (Vietnamese Beef Noodle Soup)
+slug: pho-bo-vietnamese-beef-noodle-soup
+source_url: https://en.wikibooks.org/wiki/Cookbook:Ph%E1%BB%9F_B%C3%B2_(Vietnamese_Beef_Noodle_Soup)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 112869
+date: '2025-07-22'
+cuisine:
+- Vietnamese
+course:
+- Soup
+diet: []
+difficulty: Medium Difficulty
+technique: []
+recipe_type:
+- broth and stock
+ingredients:
+- basil
+- bean sprout
+- beef
+- cardamom
+- chile
+- cilantro
+- cinnamon stick
+- clove
+- fish sauce
+- fresh ginger
+- green onion
+- hoisin sauce
+- lime
+- pasta and noodles
+- peanut oil
+- star anise
+categories:
+- Medium Difficulty recipes
+- Recipes
+- Recipes for broth and stock
+- Recipes for soup
+- Recipes using basil
+- Recipes using bean sprout
+- Recipes using beef
+- Recipes using cardamom
+- Recipes using chile
+- Recipes using cilantro
+- Recipes using cinnamon stick
+- Recipes using clove
+- Recipes using fish sauce
+- Recipes using fresh ginger
+- Recipes using green onion
+- Recipes using hoisin sauce
+- Recipes using lime
+- Recipes using pasta and noodles
+- Recipes using peanut oil
+- Recipes using star anise
+- Vietnamese recipes
+---
+
+# Phở Bò (Vietnamese Beef Noodle Soup)
+
+Along with phở gà, **phở bò** (Vietnamese beef noodle soup) could easily be called Vietnam's national dish. Most often served in the early morning, it is available on any street corner, everywhere in Vietnam, all day, and is a staple of most Vietnamese restaurants outside of the country. The broth is the star of this meal and can vary from North to South and is in some cases a closely guarded family secret. Experimenting with the ingredients is a must as long as they are traditionally South-East Asian in origin.
+
+## Ingredients
+
+### Broth
+
+- 2 large white onions, cut into quarters
+- 1 tablespoon vegetable or peanut oil
+- 5 lbs beef bones (choose ones with a bit of meat on them)
+- 1 small knob of ginger, chopped
+- 1 small cinnamon stick
+- 2 whole cardamom pods
+- 4 whole cloves
+- 1 star anise pod
+- 1 tablespoon whole black peppercorns
+
+### Serving
+
+- Phở noodles (thin, flat rice noodles), soaked in hot water until soft and drained
+- Finely sliced white onion
+- Finely sliced scallions
+- Chopped coriander leaf
+- Finely sliced beef sirloin (ask your butcher)
+
+### Condiments
+
+- Whole chile peppers
+- Bean sprouts
+- Limes, cut into wedges
+- Thai basil
+- Nước mắm
+- Hot sauce
+- Hoisin sauce
+- Black pepper
+
+## Procedure
+
+1. Fry onions in oil until lightly browned. Remove and drain.
+2. Rinse the beef bones, place in a stockpot, cover with cold water, and bring slowly to a boil. Reduce heat and simmer, uncovered, for 10–15 minutes. For a clear broth skim off foam.
+3. After this initial cooking, add cooked onions, ginger, cinnamon, cardamom, star anise, cloves, garlic and peppercorns. Bring to a boil again and gently simmer the stock, partially covered, for a minimum of 6 hours but up to 12 hours if you can, skimming regularly. If necessary, add more water to keep the bones covered.
+4. Strain stock to remove the vegetable and spices and discard them. Return the broth to the stove to keep it boiling hot.
+5. In a large soup bowl, place a handful of cooked phở noodles, top with thinly sliced raw beef, and ladle on generous amounts of very hot broth, which will cook the raw beef. Garnish with sliced onions, scallions and coriander, and serve immediately.
+
+## Serving
+
+Place condiments on a large serving plate. It's not necessary to add any of the condiments to the soup, but adding a few basil leaves, a squeeze of lime, and some bean sprouts, is customary. Many Vietnamese will also take small bites of very hot chili peppers while eating the soup to spice up the meal. Proceed with caution! The fish sauce, hot sauce, and hoisin sauce, can either be added directly into the soup or placed in a small bowl for dipping the meat and noodles.
+
+## Notes, tips, and variations
+
+- Traditionally, the Vietnamese prefer fatty meat in their soup. Some other serving ingredients include beef tendon, beef shank, beef tripe and meatballs.

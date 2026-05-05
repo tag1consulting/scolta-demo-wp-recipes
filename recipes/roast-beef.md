@@ -1,0 +1,177 @@
+---
+title: Roast Beef
+slug: roast-beef
+source_url: https://en.wikibooks.org/wiki/Cookbook:Roast_Beef
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 94944
+date: '2025-08-11'
+cuisine:
+- Australian
+- English
+- Irish
+- New Zealand
+- Scottish
+- Welsh
+course:
+- Main course
+diet: []
+difficulty: Medium Difficulty
+technique:
+- Roasted
+recipe_type: []
+ingredients:
+- all-purpose flour
+- beef rib
+- dehydrated broth
+categories:
+- Australian recipes
+- Cornish recipes
+- English recipes
+- Gibraltarian recipes
+- Irish recipes
+- Main course recipes
+- Medium Difficulty recipes
+- New Zealand recipes
+- Northern Irish recipes
+- Recipes
+- Recipes using all-purpose flour
+- Recipes using beef rib
+- Recipes using dehydrated broth
+- Recipes with metric units
+- Roasted recipes
+- Scottish recipes
+- Welsh recipes
+---
+
+# Roast Beef
+
+**Roast beef**, or a roast dinner, is a traditional and classic meal across Britain, the Commonwealth, and Ireland, with the focus on some form of roasted meat, vegetables, gravy, and Yorkshire puddings. Roast dinners are traditionally served on Sunday, but can also be eaten throughout the week. The precise recipe of a roast dinner will vary considerably from person to person, so below is a broad overview of common elements that can be adapted and made your own. As a roast dinner is a combination of a number of elements, below links to already established recipes to be combined into the roast dinner itself. Enjoy!
+
+## History
+
+Roast Beef has been a staple of many countries diets for centuries, as noted, for example in the English ballad, "The Roast Beef of Old England, written between 1731 and 1751:
+
+:   *When mighty Roast Beef was the Englishman's food*
+:   *It ennobled our brains and enriched our blood.*
+:   *Our soldiers were brave and our courtiers were good*
+:   *Oh the Roast Beef of old England and old English Roast Beef*
+
+## Ingredients
+
+### Roast beef
+
+- 1 joint (about 3 pounds / 1.5 kg) of good quality beef rib or rolled rib beef
+- Extra beef bones (optional)
+- ½ cup sifted all-purpose flour
+- 1 teaspoon (5 ml) salt (rock salt preferred)
+- 1 pinch of ground black pepper (as much as can be held between the finger/thumb)
+- ¼ cup olive oil or other good cooking oil
+- 2 cups water
+- 1 onion
+- 1 glass of full-bodied red wine
+
+### Gravy
+
+- 1 teaspoon (45 ml) red jam (mix with a little water and strain out the seeds if using raspberry or blackberry)
+- 1 pinch of nutmeg
+- 1 teaspoon (5 ml) Lea and Perrin's Worcestershire sauce and/or Maggi stock cube
+- 1 glass of red wine
+
+### Roast potatoes
+
+- 3 lb (1.5 kg) potatoes (preferably Maris Piper)
+- 1 tablespoon (15 ml) all-purpose flour
+- 2 tablespoons (30 ml) goose fat
+
+### Recommended accompaniments
+
+- Yorkshire pudding
+- Roast parsnips
+- Boiled or steamed green beans
+- Cabbage with a little bacon
+
+### Condiments
+
+- Horseradish sauce or creamed horseradish
+- English mustard (preferably mixed from dry ground mustard. Colemans in the yellow tin is still the best)
+
+## Procedure
+
+### Roasting
+
+1. On the morning of cooking, get the beef joint out of the fridge, and let it stand to warm up to room temperature.
+2. Preheat the oven to 200°C (400°F) and place a roasting tin in the oven to heat up. If you have a spare one, place another onion in the tin as it heats up. Try and use a cast-iron roasting tin since it conducts heat better.
+3. Combine some plain flour, a little rock-salt and a good pinch of ground pepper. 'Dust' the fatty edges of the joint with the mixture, moistening the fat first by wiping it with a damp cloth, so the flour sticks better.
+4. In a large frying pan, heat some olive oil, then sear (i.e. briefly fry) the fatty edges of the meat until they are a dark brown colour. You may need to hold the joint with a fork whilst you do this to ensure an 'all over tan'. It is a good idea, at this point, to brown the surface of the meat itself. This will trigger Maillard reactions (browning of sugars and amino acids), giving the meat a brown colour, and improving the flavour immensely. At the same time add the spare bones to the frying pan, and make sure these are also well browned.
+5. Remove joint and bones from the frying pan. Lower the heat, add the red wine to the frying pan, and deglaze it well. Be careful as the wine might catch on fire!
+6. Using the spare beef bones, make a 'bed' for the joint on the bottom of the hot roasting tin, adding a coarsely chopped onion to the bed. The idea is to keep the joint a little raised from the bottom of the tin. It does not need to sit in the cooking juices. Add a cupful of water and pour the contents of the deglazed frying pan, including the onion, over the joint.
+7. Place the joint on its bed, or on the rack, and put near the top shelf of the oven. Leave the meat to cook, without opening the oven for about 15 minutes at 200°C (400°F).
+8. Open the oven and baste the joint. Reduce the oven temperature to about 180°C (350°F). You no longer need to baste the joint now.
+9. Depending on the way you like your beef, leave the joint in the oven for the following time:
+   - Rare: 15 minutes per pound (~450g)
+   - Medium: 20 minutes per pound (~450g)
+   - Well-done: 25 minutes per pound (~450g)
+
+### Resting
+
+1. Once the cooking has completed, take the joint out of the roasting tin and place it on its own separate dish.
+2. Cover the joint loosely with lots of tin-foil, and leave it to rest for about 15 minutes in a warm part of the kitchen. If the joint can be stood up, sprinkle a very little rock salt over the top to enhance the taste.
+
+### Gravy
+
+1. Place the roasting dish on the stove (if need be light 2 rings, one for either end) and allow the juice to heat up a little. Add the red wine to the dish, and thoroughly deglaze the dish on a high heat. This will also evaporate the alcohol from the wine.
+2. Add a little water (if you are cooking vegetables, add a little of their water) and the Worcestershire sauce. Bring to a low boil.
+3. Stir in the red jam, mustard, and nutmeg. If you are really feeling naughty, you can add some crème fraîche!
+4. Continue to heat everything on the stove, adding water (or cream or more red wine) until the gravy begins to thicken just a little. Carefully sieve the lot, reserving the gravy in a bowl.
+
+### Roast potatoes
+
+Start preparing the potatoes about 1 hour before the beef joint roasting will be finished:
+
+1. Peel the potatoes, and trim them so that they are (more or less) the same size. Retain the peelings.
+2. Put the potatoes into a large saucepan of boiling salted water with a little olive oil. If you can, place the peelings in a muslin or cheesecloth sack and add to the boiling water to give the potatoes a little more taste (thanks to Heston Blumenthal for this brilliant idea).
+3. While you are doing this, heat the goose fat in a large metal oven-safe frying pan.
+4. Boil the potatoes for 5 minutes only—no more. Take them off the heat, drain them, and return them to the saucepan dry.
+5. Immediately add the flour to the saucepan and cover with a well-fitting lid. Holding the lid in place, violently shake the saucepan for about 15 seconds. The purpose of this dramatic action is to coat the potatoes with the flour and produce a rough and slightly spiky exterior to the potatoes. This will help them roast better and yield a crispy exterior. Using a large metal spoon, lift the potatoes one-by-one out of the saucepan, and place them in the pan of hot goose fat. Roll them around gently so that they take on a little colour. This may take 5–10 minutes.
+6. When they have all been in the frying pan, drain the oil from the pan, and separate the potatoes a little, or move them carefully onto a rack **above** a roasting dish in the oven. Don't place them flat onto a roasting dish or they will tend to become soggy. There should be a gap of about 1 inch (2.5cm) between each potato. This is vital to let air to circulate thus enabling them to become crispy.
+7. Bake the potatoes in the oven with the beef. The temperature of the oven really depends on what stage the roast beef is at, about 180°C (350°F). They will take about 30–40 minutes to cook and they should have a golden brown crust.
+8. About twice during the cooking process, take out the tray of potatoes, and with a fork, gently turn them through 90 or so degrees so they become cooked all over. This is not as easy as it sounds, as the potatoes may have formed a crust, so work carefully. When finished, they will be crispy on the outside, and delightfully fluffy on the inside.
+9. The potatoes will produce steam, so when you are ready to serve them, try and find a serving dish where the potatoes can be laid out next to each other, rather than piled upon each other. This will stop any steam they produce from making them soggy. Sometimes, laying them around the beef joint will serve the purpose.
+
+### Serving
+
+1. Carve thin slices of the meat. Serve with the roast potatoes, as well as 3 or more side vegetables such as roast parsnips, green beans, and cabbage with a little bacon.
+2. Don't forget some good quality (or better still home made) creamed horseradish sauce, and Coleman's mustard. Yorkshire pudding also goes very well with this dish.
+
+## Notes, tips and variations
+
+### Buying
+
+- Best buy a 'joint' of Rib, Wing Rib or Sirloin Beef (I believe in the U.S. it is called Prime Rib, and is usually excellent) from a reliable butcher, and preferably not from a supermarket. If rolled, the Sirloin should come preferably 'bone in'. The word 'joint' is used in the U.K. to refer to any large lump of meat for roasting, whether or not it actually contains a joint (hip or shoulder) of an animal.
+- A boneless 3 pound or 1.5 kg 'joint' will be enough for 4 people with some left over. If the meat is bone-in (still has bones in it) then double the weight required.
+- Also best you don't buy simply for the number of people expected at table. Cold roast beef is also delicious. Allow for 'fridge thieves', cold lunches and at least 3 rounds of Beef and Horseradish Sandwiches in the days to come. So, let's be straight here, the larger the joint, the better!
+
+### Identifying
+
+- All meat, and in particular, beef must be well hung. At least 20 days, so the colour of the meat is more a dark maroon, rather than bright red. If a ribbed joint looks just a little shrivelled, that's fine too.
+- Make sure your joint has a good quantity of 'marbling' (cream-coloured fat both around the outside, as well as some through the meat itself). If the joint is coloured bright red, steer clear. It has not been hung long enough. It may be cheaper, but such a cut will sacrifice quality.
+- Supermarket meat has often been treated with a harmless chemical to make it look bright red, before it is sealed in plastic. It is difficult to determine the condition of such meat so unless you have no choice, buy from a specialist butcher.
+
+### When to buy
+
+- If you're planning your roast beef for a Sunday lunch, please remember to buy the joint by Thursday lunchtime. Most butchers sell out fast thereafter as the weekend quickly approaches.
+- When purchased, place the roast high in the fridge on a dish together with the bones and a quartered onion, and cover with foil. Turn it over occasionally making sure you don't drain any juices which may seep out. It's best not to freeze the roast.
+
+### Cooking
+
+- If you don't have extra bones to make a bed, place a roasting rack in the tin. Alternatively, you can sit the joint on roughly chopped sweet vegetables (e.g. carrots, onions, leeks, a small amount of celery).
+- Too much celery will add a bitter note to the gravy.
+- Resting the meat is absolutely essential, as the juices, which has been drawn towards the surface of the joint will "relax" and diffuse back into the joint. The resting time also gives you time to make a delicious gravy and start baking the Yorkshire pudding, if that is required.
+- Remember you need *enough* gravy for the number of people at the table, and they will take loads of gravy.... it's that good!
+
+### Carving
+
+- A large sharp carving knife is of course essential, and it may well need a little resharpening during the carving process (remember to wipe the blade on a cloth before re-attacking the meat lest you smother the first slice in metal shavings!)
+- If you are carving the joint with the bone in, it is regarded as "*de rigueur*" to carve from the outside of the joint parallel to the bone. Very difficult to do, difficult to produce uniform, thin slices, and extremely dangerous as often a small slice of finger or knuckle will add to the taste !!
+- I suggest carving *across* the shortest cross section of the joint, with the joint lying on its side. It is much easier, neater, and affords greater control over the thickness and size of slices you carve. A purist may disagree, but who cares!

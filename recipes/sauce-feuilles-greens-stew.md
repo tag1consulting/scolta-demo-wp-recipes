@@ -1,0 +1,66 @@
+---
+title: Sauce Feuilles (Greens Stew)
+slug: sauce-feuilles-greens-stew
+source_url: https://en.wikibooks.org/wiki/Cookbook:Sauce_Feuilles_(Greens_Stew)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 457355
+date: '2025-07-22'
+cuisine:
+- African
+course: []
+diet: []
+difficulty: Medium Difficulty
+technique: []
+recipe_type: []
+ingredients: []
+categories:
+- African recipes
+- Medium Difficulty recipes
+---
+
+# Sauce Feuilles (Greens Stew)
+
+**Sauce feuilles** is a delicious West African dish made with a variety of greens and typically served with a side of rice or fufu. It is a popular dish in West African cuisine. The stew is often cooked with palm oil, which gives it a distinct taste and vibrant color.
+
+## Ingredients
+
+- 1 bunch of spinach
+- 1 bunch of kale or collard greens
+- 1 bunch of bitterleaf (substitute with more spinach if unavailable)
+- 1 medium-sized onion, chopped
+- 3 cloves of garlic, minced
+- 2 tomatoes, diced
+- 2 scotch bonnet chile peppers, chopped (adjust according to spice preference)
+- 1 pound meat or fish (chicken, beef, and smoked fish are commonly used)
+- ¼ cup palm oil
+- 1 tablespoon ground crayfish (optional)
+- 1 tablespoon dried shrimp or prawns (optional)
+- 1 tablespoon bouillon powder or cubes
+- Salt to taste
+
+## Equipment
+
+- Large pot
+- Wooden spoon or spatula
+- Knife for chopping
+- Cutting board
+- Blender or food processor (optional)
+
+## Procedure
+
+1. Wash the spinach, kale (or collard greens), and bitterleaf thoroughly to remove any dirt or grit. Remove any tough stems from the greens and chop them into small pieces. Set aside.
+2. If using meat, cut it into bite-sized pieces. If using smoked fish, remove any bones and shred into smaller pieces.
+3. Season the meat or fish with salt and any other desired seasonings.
+4. Heat the palm oil in a large pot over medium heat. If you prefer a milder flavor, you can mix palm oil with vegetable oil. Add the chopped onions and minced garlic to the pot and sauté until they become translucent and fragrant.
+5. Add the diced tomatoes and scotch bonnet peppers. Cook for a few minutes until the tomatoes soften.
+6. Add the seasoned meat or fish to the pot and cook until it is browned and cooked through. If using smoked fish, add it towards the end to prevent overcooking.
+7. Add the chopped spinach, kale (or collard greens), and bitterleaf to the pot. Stir well to combine with the meat or fish and aromatics. If the pot is too dry, you can add a little water to prevent sticking. Cover the pot and let the greens cook down for about 10–15 minutes or until they are wilted and tender.
+8. Add the ground crayfish (if using), dried shrimp or prawns (if using), and bouillon powder or cubes to the pot. Stir well to incorporate the flavors.
+9. Taste the stew and adjust the seasoning with salt and additional spices if needed.
+10. Reduce the heat to low, cover the pot, and simmer for another 10–15 minutes to allow the flavors to meld together.
+11. Garnish with additional chopped onions or fresh herbs, if desired, and enjoy.
+
+## Note, tips, and variations
+
+- Remember, the ingredients and measurements can be adjusted according to your taste preferences and availability.

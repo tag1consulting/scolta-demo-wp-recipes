@@ -1,0 +1,55 @@
+---
+title: Cola III
+slug: cola-iii
+source_url: https://en.wikibooks.org/wiki/Cookbook:Cola_III
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 479567
+date: '2026-02-11'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Cola III
+
+**Cola** is a type of soda that flavored with citrus and spices. The word "cola" derives from kola nuts, a plant originating in West Africa and originally used as a source of caffeine to make this soda. Most modern recipes do not contain kola nuts.
+
+This recipe is derived from the 1923 recipe that Pepsi submitted during its bankruptcy filings, which currently exists in the public domain. The recipe has been downscaled to quantities suitable for a home kitchen.
+
+Note that consuming high levels of caffeine can be very dangerous. If you are scaling the recipe up or down, make sure you scale the caffeine accordingly so that the per-serving caffeine amount stays the same or is lower. Absolutely do not use more than triple the listed proportion of caffeine.
+
+## Ingredients
+
+- ¾ tsp (3.75 ml) 150+ proof unflavored food-grade spirit OR a mixture of ½ tsp (2.5 ml) water with ¼ tsp (1.25 ml) food-grade gum arabic
+- 1 drop petit grain (lemon leaf and twig oil)
+- 2 drops coriander oil
+- 2 drops nutmeg oil
+- 4 drops cinnamon oil
+- 5 drops orange oil
+- 6 drops lemon oil
+- ¼ tsp (0.75 ml) phosphoric acid
+- ¾ tsp (3.75 ml) caramel color
+- ¾ tsp (3.75 ml) strained lime juice
+- 10 fl oz (300 ml) water
+- 10 fl oz (300 ml) white sugar
+- 25 mg caffeine (optional)
+- Carbonated water as needed
+
+## Procedure
+
+1. Combine the spirits and oils together in a small cup, mixing well. Set aside.
+2. Combine the phosphoric acid, caramel color, lime juice, water, and sugar in a saucepan. Bring to a boil, then boil until it becomes a thick syrup.
+3. Remove the syrup from the heat, and stir in the caffeine and oil mixture. Let cool.
+4. To make the finished soda, combine 1 volume of syrup with 5 volumes of carbonated water.
+
+## Notes, tips, and variations
+
+- Use a clean eye dropper to measure drops. Do not use a pipette, an eye dropper previously used for dispensing medication, or a spoon to measure drops.
+- Use water from a carbonating machine or a brand of pure carbonated water such as Polar Original Sparkling Water, Great Value Seltzer Water, or Signature Select Seltzer Water. Do not use a brand of mineral water such as Perrier, San Pellegrino, or Mineragua because the added minerals will ruin the taste. Avoid flavored sparkling water such as La Croix or Spindrift because the preexisting fruit flavors will ruin the drink.
+- You can make cherry cola by adding 1 tsp (5 ml) of cherry extract to the oil-spirits mixture.
+- You can make vanilla cola by adding 1 tsp (5 ml) of vanilla extract to the oil-spirits mixture.

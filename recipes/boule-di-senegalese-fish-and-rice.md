@@ -1,0 +1,61 @@
+---
+title: Boule-Di (Senegalese Fish and Rice)
+slug: boule-di-senegalese-fish-and-rice
+source_url: https://en.wikibooks.org/wiki/Cookbook:Boule-Di_(Senegalese_Fish_and_Rice)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 457331
+date: '2025-07-22'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Boule-Di (Senegalese Fish and Rice)
+
+**Boule-di**, also known as **boule** (pronounced "boo-lay"), is a traditional West African dish that originated in Senegal. It is a hearty and flavorful one-pot meal made with a combination of fish, vegetables, and rice. This dish is popular for its aromatic spices, vibrant colors, and rich taste.
+
+## Ingredients
+
+- 2 pounds firm white fish fillets (such as cod or tilapia)
+- 2 tablespoons vegetable oil
+- 1 large onion, finely chopped
+- 4 garlic cloves, minced
+- 1 can (14 ounces) diced tomatoes
+- 1 red bell pepper, diced
+- 1 green bell pepper, diced
+- 2 carrots, diced
+- 1 cup frozen okra, sliced
+- 1 tablespoon tomato paste
+- 1 teaspoon paprika
+- 1 teaspoon ground cayenne pepper (adjust to your preferred level of spiciness)
+- 1 teaspoon ground black pepper
+- 1 teaspoon dried thyme
+- Salt to taste
+- 2 cups long-grain rice
+- 4 cups fish or vegetable broth
+- Chopped fresh parsley or cilantro (for garnish)
+
+## Equipment
+
+- Large pot or Dutch oven with a lid
+- Wooden spoon or spatula
+- Cutting board
+- Knife
+- Measuring cups and spoons
+- Paper towels
+
+## Procedure
+
+1. Rinse the fish fillets under cold water and pat them dry with paper towels. Cut the fish into medium-sized chunks and set aside.
+2. Heat the vegetable oil in a large pot or Dutch oven over medium heat. Add the chopped onions and minced garlic, and sauté until they turn translucent and fragrant.
+3. Add the diced tomatoes, red and green bell peppers, carrots, and frozen okra to the pot. Stir well to combine with the onions and garlic.
+4. Add the tomato paste, paprika, cayenne pepper, black pepper, dried thyme, and salt to the pot. Stir everything together to evenly distribute the spices and coat the vegetables.
+5. Gently place the fish chunks on top of the vegetable mixture. Then add the rice, spreading it evenly over the fish and vegetables.
+6. Carefully pour the fish or vegetable broth into the pot, making sure it covers the fish and rice mixture. The liquid should be about 1 inch above the ingredients.
+7. Bring the mixture to a boil over medium-high heat. Once it starts boiling, reduce the heat to low and cover the pot with a lid. Allow to simmer for about 20–25 minutes, or until the rice is tender and the fish is cooked through.
+8. Remove the pot from heat and let it sit for a few minutes with the lid on. This allows the flavors to meld together. Serve hot, garnished with fresh parsley or cilantro.

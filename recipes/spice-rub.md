@@ -1,0 +1,47 @@
+---
+title: Spice Rub
+slug: spice-rub
+source_url: https://en.wikibooks.org/wiki/Cookbook:Spice_Rub
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 200054
+date: '2025-07-22'
+cuisine: []
+course: []
+diet: []
+difficulty: Very Easy
+technique: []
+recipe_type:
+- spice mixes
+ingredients:
+- cayenne
+categories:
+- Recipes
+- Recipes for spice mixes
+- Recipes using cayenne
+- Very Easy recipes
+---
+
+# Spice Rub
+
+A **spice rub** is a mixture of salt, herbs, and spices. It can be as simple as a large amount of pepper, like in Steak au Poivre, or as complex as 100 spices. One formula for a good spice rub is a base, such as paprika, and then add on from there. However, beware commercial spice mixtures. Many of them are salt-based because salt fills volume, is cheap, and fills in for spices they can't get.
+
+In order to make a successful rub, you need to balance flavors. You can often make rubs in bulk because spices last close to forever, and this avoids having to make another batch every two days—when you find a good rub, you will use it often. Also, if you're making a rub for one certain item, you'll want to pick flavors that work well with what you're making it for. Pork goes well with brown sugar, rosemary, and chipotles. Chicken goes with the same things as pork and things like lemon, lime, orange, cayenne pepper, and dry mustard powder. Beef works well with all of these. Paprika seems to work with just about everything.
+
+Here is a recipe for an all-purpose rub.
+
+## Ingredients
+
+- 1 cup paprika
+- ¼ cup salt
+- ¼ cup black pepper
+- ½ cup chipotle powder
+- ½ cup brown sugar
+- ¾ cup dehydrated lemon peel
+- ¼ cup dried rosemary
+- 2 tbsp cayenne pepper
+
+## Procedure
+
+1. Combine all ingredients in an airtight container.
+2. Stored in a cool, dark place this will last for a long time.

@@ -1,0 +1,56 @@
+---
+title: Caramel Sauce II
+slug: caramel-sauce-ii
+source_url: https://en.wikibooks.org/wiki/Cookbook:Caramel_Sauce_II
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 452216
+date: '2025-10-26'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Caramel Sauce II
+
+To create the texture of **caramel sauce**, you need a 1:1 ratio of fat and liquid. In this recipe, heavy cream (40% fat) is used along with butter to create this ratio. If you want to substitute milk you will need to use less milk and more butter to keep the ratio. You can also substitute soy-milk and margarine to make a vegan caramel sauce, but make sure to keep the fat:liquid ratio.
+
+You can easily halve this recipe if you wish. If it is sealed in clean canning jars, the sauce can be stored for 3 months without refrigeration. Or, store refrigerated for up to 6 months.
+
+## Ingredients
+
+- 2 cups water
+- 4 cups white granulated sugar
+- 2 Tbsp corn syrup (optional)
+- 1 pinch salt
+- 2 cups heavy whipping cream
+- ½ cup (1 stick) unsalted butter, chopped into 1-inch cubes
+
+## Procedure
+
+1. Dissolve the water, sugar and corn syrup in a saucepan over medium-high heat until fully dissolved.
+2. Stop stirring and let the solution boil over medium heat. Check on the solution every 5 minutes. You will see the bubbles slow down and get larger. When the bubbles begin to reach ½–¾ inch in size, start monitoring the solution carefully.
+3. When the solution begins to turn amber, get your cream and butter and watch it constantly.
+4. When the solution has turned a shade of caramel that you like (darker is deeper and will start to take on a little bitterness), step back and add the cream at arms length, stirring constantly and scraping the sides of the pan.
+5. Add the butter and stir until incorporated. Pour the sauce into a serving dish for immediate serving with bread, drizzled on ice cream, as a garnish or for use in other desserts.
+6. If you desire, follow standard canning procedures and distribute into canning jars. Allow to cool until the buttons are depressed. Any jars with buttons that are not depressed should be refrigerated and consumed first. To reheat the caramel sauce, microwave the jars (without covers) for 10–30 seconds depending how soft and hot you want it.
+
+## Variations
+
+The following are all variations that can be made at different stages of the recipe above.
+
+- **Caramel chews:** Replace the cream with ¾ cup half-and-half. Pour the finished hot caramel mixture onto a silicone mat or parchment paper to cool. When it is cool enough to handle, fold and knead the caramel a few times, then break into bite size pieces. Allow to cool completely before wrapping individually.
+- **Turtles**: Replace the cream with ¾ cup half-and-half. Pour the finished hot caramel mixture over 4 cups of your favorite nut on a silicone mat or parchment paper to cool. When it is cool enough to handle, fold and knead the caramel until the nuts are fully distributed, then break into bite size pieces. Melt chocolate over a double boiler or in the microwave and dip the turtles or simply drizzle chocolate on top.
+- **Toffee**: Instead of cream, use 7 sticks of butter (a total of 8 sticks or 4 cups, so you have equal parts butter and sugar). Mix in chopped nuts if desired, and pour the finished hot caramel mixture onto a silicone mat, parchment paper, or molds. Once cool, drizzle or dip with chocolate and chopped nuts.
+- **Nut brittle**: Do not use any cream or butter. Stir ½ tsp baking soda into the caramel mixture, then pour the molten caramel over 4 cups of your favorite nuts on a silicone mat or parchment paper and let it cool. When it has reached room temperature, break it up with a mallet or by dropping the sheet on the counter. Wrap and store in an air-tight container.
+- **Sugar art**: You can do this at any point during the hard crack or caramel stages. Remove the sugar from the heat and allow to cool for one minute. Using a spoon, let the syrup drip off. If it drips in globs, let it cool longer. If it drips in a continuous stream, you can start making art. Drizzle the syrup in patterns over a silicone mat or parchment paper and allow to cool, then carefully peel off. Or, spray bowls and other (clean) objects with cooking spray and drizzle the syrup to create domes and other shapes. Allow to cool to room temperature, then serve soon or store in an air tight container. These will eventually soften and droop from humidity in the air.
+
+## Safety
+
+- Adding liquid to sugar that is over 300°F is dangerous! Some of the liquid will immediately flash to super-hot steam. To avoid steam burns, stay back from the pot and pour liquids at arms length. Use an oven mitt for your hand.
+- When you add your liquid to the hot sugar it will boil violently. To avoid messy and dangerous boil-overs, a 2.5 quart heavy bottomed sauce pan or pot is the minimum, but 3-4 quarts is recommended
+- Use a heat proof spatula or spoon such as wood or silicone.

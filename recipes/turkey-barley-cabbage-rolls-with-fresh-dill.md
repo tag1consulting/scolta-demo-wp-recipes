@@ -1,0 +1,57 @@
+---
+title: Turkey & Barley Cabbage Rolls with Fresh Dill
+slug: turkey-barley-cabbage-rolls-with-fresh-dill
+source_url: https://en.wikibooks.org/wiki/Cookbook:Turkey_%26_Barley_Cabbage_Rolls_with_Fresh_Dill
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 477181
+date: '2026-04-12'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+## Ingredients
+
+- ½ cup pearl barley
+- 1½ cups vegetable or chicken broth
+- 1 medium green cabbage
+- 1 lb (450 g) lean ground turkey
+- 1 small onion, finely chopped
+- 2 cloves garlic, minced (or ½ tsp garlic powder)
+- 1 egg (optional, helps bind filling)
+- ¼ cup chopped fresh dill, loosely packed (plus extra for garnish)
+- 1 tsp salt
+- ½ tsp black pepper
+- 1 can (796 mL) no-salt-added crushed or diced tomatoes
+- 1 tbsp tomato paste (optional, for richness)
+- 1 tbsp canola oil (optional, for sautéing)
+- 1 tbsp apple cider vinegar
+- 1 tsp paprika
+- 1 tsp maple syrup or brown sugar (optional)
+
+## Procedure
+
+1. Simmer barley in the broth until tender (about 30–40 minutes). Drain excess liquid if needed and set aside to cool.
+2. Bring a large pot of water to a boil. Core the cabbage and place it in the pot. Simmer for 5–10 minutes, removing leaves as they soften. Reserve 10–12 large leaves for rolling.
+3. In a large bowl, make the filling by combining the cooked barley, ground turkey, onion, garlic, egg, dill, salt, and pepper.
+4. Spread a cabbage leaf out flat on a work surface. Place 2–3 tablespoons of filling near the base of each cabbage leaf. Fold in the sides and roll up tightly to enclose the filling. Repeat with the remaining filling and cabbage leaves.
+5. Prepare the sauce by mixing the crushed tomatoes, tomato paste, canola oil, paprika, and apple cider vinegar in a bowl or large measuring cup. Add a the sugar or maple syrup if you like your sauces a bit sweeter.
+6. Spread a few spoonfuls of the sauce on the bottom of a large baking dish or pot. Arrange the cabbage rolls over the tomatoes, seam-side down. Pour the rest of the sauce over top of the rolls Sprinkle with extra dill if desired.
+7. For the oven method, cover with foil and bake at 175 °C (350 °F) for 1 hour. For the stovetop method, simmer gently, covered, on low heat for 1 hour.
+
+## Notes, tips, and variations
+
+- Fresh dill provides a distinctive, bright flavor. If preferred, substitute with oregano, thyme, or parsley.
+- To bind without egg, substitute with 1 tbsp tomato paste or a splash of broth.
+- For added heat, mix chilli flakes or a dash of hot sauce into the tomato sauce.
+- Pearl barley gives a chewier texture than white rice—great for those who enjoy hearty fillings.
+
+## See also
+
+- Cookbook:Cabbage Rolls
+- Cookbook:Cabbage Rolls in Yogurt Sauce (Sarmi)

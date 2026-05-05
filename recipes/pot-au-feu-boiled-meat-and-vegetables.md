@@ -1,0 +1,101 @@
+---
+title: Pot-au-feu (Boiled Meat and Vegetables)
+slug: pot-au-feu-boiled-meat-and-vegetables
+source_url: https://en.wikibooks.org/wiki/Cookbook:Pot-au-feu_(Boiled_Meat_and_Vegetables)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 295904
+date: '2026-04-12'
+cuisine:
+- French
+course: []
+diet: []
+difficulty: Medium Difficulty
+technique:
+- Boiled
+recipe_type:
+- stew
+ingredients:
+- bay leaf
+- beef
+- bouquet garni
+- carrot
+- celery
+- celery root
+- clove
+- green cabbage
+- leek
+categories:
+- Boiled recipes
+- French recipes
+- Medium Difficulty recipes
+- Recipes
+- Recipes for stew
+- Recipes using bay leaf
+- Recipes using beef
+- Recipes using bouquet garni
+- Recipes using carrot
+- Recipes using celery
+- Recipes using celery root
+- Recipes using clove
+- Recipes using green cabbage
+- Recipes using leek
+---
+
+# Pot-au-feu (Boiled Meat and Vegetables)
+
+**Pot-au-feu** is a typical and rustic French dish made of low-cost beef pieces and vegetables. There are many variants in France and other countries.
+
+## Ingredients
+
+### Vegetables
+
+- 2 ea. (~380 g) onions
+- 4 ea. (~500 g) carrots
+- 2 ea. (~600 g) turnips (each is one handful)
+- ½ ea. (~400 g) celery root OR 3–4 celery stalks
+- 2 ea. (~450 g) leeks
+- ¼ ea. white cabbage
+- A bouquet garni made of thyme, bay leaf, and parsley
+
+### Spices
+
+- Salt
+- Ground pepper
+- 4–6 cloves
+- Nutmeg (if you plan to serve the broth as the first course, i.e. the traditional way)
+
+### Meat
+
+- 1 kg low-cost, tougher beef meat (e.g. beef chuck)
+- Oxtail or marrowbone (optional)
+
+## Procedure
+
+1. Drive the cloves into the onions, so it will be easier to take them off after cooking.
+2. Peel the onions. Cut them in half and burn the cut surface in a frying pan protected with aluminum foil. The cut surface must become completely black. It will bring a slightly "smoked" taste and the typical golden brown color to the broth.
+3. While burning the onions, peel and cut the turnips, carrots, celery into large pieces.
+4. For the leeks, cut the root, wash well the green part and cut them in 2–3 pieces. Even the green, more fibrous part is used.
+5. For the white cabbage, if you took a quarter of a white cabbage, let it in one piece.
+6. In a pressure cooker, put all the vegetables, ground pepper and the *bouquet garni*. Try to arrange them so that they take a minimum space. Add enough water to cover the vegetables (warning: a pressure cooker should not be filled more than ⅔ to ¾ of its capacity; check on the user's guide of your pressure cooker). If you cannot cover the vegetables with water, just add as much water as you can.
+7. Add salt and cook the vegetables under pressure for 20 minutes.
+8. Put the pressure cooker under cold water so you can open it, and reserve the vegetables. Throw away the onions and the *bouquet garni*.
+9. Now you should have a golden brown broth. Taste it and add more salt or pepper if necessary. Note that it does not have its final taste since you have not cooked the meat inside it yet.
+10. Put the meat inside the broth. Cook for 60–75 minutes under pressure.
+11. If you use marrowbones, cook them apart or cook them under pressure for 5 minutes with the meat.
+12. Put the pressure cooker under cold water so you can open it. Take the meat off and put the vegetables back into the broth. Allow the broth to boil to warm them up while you are slicing the meat.
+
+## Serving
+
+In the French tradition, the broth is served first with a bit of nutmeg and toasted French bread. If you used marrowbones, bring them on the table and ask your guests who wants some, then spread some marrow on toasts for them (and provide salt to your guests). Not only is it a friendly way to serve it, but also people who do not like marrow are not embarrassed. Then, bring the meat and the vegetables on the table and serve your guests. The major condiments you should propose are strong mustard, horseradish sauce and, sometimes, gherkins pickled in vinegar.
+
+## Notes, tips, and variations
+
+- Generally speaking, use approximately 2–2.5 kg vegetables per 1 kg meat.
+- For celery (root or branches), turnips and cabbage, choose in-season vegetables (which are also usually the cheapest). You can also use old-style vegetables (see section Variants below).
+- Pot-au-feu is probably the number one dish to be considered (in France) as *tasting better the day after*. As such, you can cook it the day before you invite your guests and warm it up when you want to serve it.
+- Also can you deep-freeze the broth as a base for a soup or use the meat (and possibly vegetables) for stuffing. Both are used for the making of Fleischschnacka (a specialty from Alsace).
+- Many people add potatoes to their *pot-au-feu* but use only potatoes which resist to cooking without falling apart (Amandine, Charlotte or Ratte varieties, for example). Use one small potato per person.
+- The *pot-au-feu* is also a great opportunity to cook old vegetables which have recently regained interest: rutabaga, parsnip, old species of carrots, etc.
+
+## References

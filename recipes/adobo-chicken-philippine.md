@@ -1,0 +1,59 @@
+---
+title: Adobo Chicken (Philippine)
+slug: adobo-chicken-philippine
+source_url: https://en.wikibooks.org/wiki/Cookbook:Adobo_Chicken_(Philippine)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 47816
+date: '2026-04-12'
+cuisine:
+- Filipino
+course: []
+diet:
+- Halal
+- Kosher
+- Naturally gluten-free
+difficulty: Medium Difficulty
+technique:
+- Slow cooker
+recipe_type: []
+ingredients:
+- bay leaf
+- chicken
+- garlic
+categories:
+- Filipino recipes
+- Halal recipes
+- Kosher recipes
+- Medium Difficulty recipes
+- Naturally gluten-free recipes
+- Recipes
+- Recipes using bay leaf
+- Recipes using chicken
+- Recipes using garlic
+- Recipes with metric units
+- Slow cooker recipes
+---
+
+# Adobo Chicken (Philippine)
+
+**Adobo chicken** is the most indigenous in the Philippines. It has evolved over the centuries to prepare foods that won't spoil easily in a tropical climate. The vinegar gives it a tangy taste and acts as a preservative. Each region has its own version, but pork and/or chicken are most commonly used. The steps below are the traditional way of making adobo. The soy sauce gives it a savoury taste.
+
+## Ingredients
+
+- 6–8 chicken pieces, preferably legs and wings
+- ⅓ cup (80 ml) vinegar made from coconut juice (as a variant, try balsamic vinegar)
+- ¼ cup (60 ml) soy sauce
+- 4 cloves of garlic, crushed
+- 1–2 bay leaves
+- ½ tsp (2.5 ml) freshly cracked (not ground) black peppercorns
+
+## Preparation
+
+1. Put chicken, garlic, peppercorn, soy sauce and vinegar in a pan and bring to a boil.
+2. When chicken is cooked, put chicken pieces in a colander and drain. Put aside the pot with soy sauce and vinegar.
+3. When chicken pieces are no longer draining, fry them in hot oil at medium heat. Have a cover ready for splatters.
+4. Sear the chicken, browning on all sides.
+5. Put chicken pieces back in the pot with soy sauce and vinegar and bring to simmer. Add 1–2 pieces of bay leaf.
+6. Cook until the sauce has largely evaporated; some take this to an extreme and cook until the sauce has thickened and adhered to the chicken, which begins to make a popping noise due to the high, direct heat.
+7. Serve over hot steamed rice. May be eaten with tomato slices in fish sauce, tapsilog, soy sauce, vinegar, hotdog, etc.

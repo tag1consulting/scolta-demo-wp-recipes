@@ -1,0 +1,77 @@
+---
+title: Char Siu (Chinese BBQ pork)
+slug: char-siu-chinese-bbq-pork
+source_url: https://en.wikibooks.org/wiki/Cookbook:Char_Siu_(Chinese_BBQ_pork)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 120785
+date: '2025-07-22'
+cuisine:
+- Chinese
+course:
+- Main course
+diet: []
+difficulty: Medium Difficulty
+technique:
+- Roasted
+recipe_type: []
+ingredients:
+- hoisin sauce
+- honey
+- pork
+categories:
+- Chinese recipes
+- Main course recipes
+- Medium Difficulty recipes
+- Recipes
+- Recipes using hoisin sauce
+- Recipes using honey
+- Recipes using pork
+- Recipes with metric units
+- Roasted recipes
+---
+
+# Char Siu (Chinese BBQ pork)
+
+**Cha shao** is a kind of spiced Cantonese honey roast pork. It is often also called by the Cantonese **char siu** or **char siew**. Sometimes (usually in America) it is called **Chinese BBQ pork**. It is very popular, and can be eaten by itself (usually cold), or used as an ingredient for other dishes such as cha shao bao (pork buns), or in noodles or rice.
+
+The pork used should be quite fatty in order to keep the meat moist during cooking. Pork shoulder is a good choice. The meat is traditionally hung to cook, as this allows it to cook from all sides in the very hot oven. It can be laid on a rack, but if possible hang from metal S-hooks on a high rack, which are easily and cheaply available from hardware stores.
+
+Sherry can be used instead of Shaoxing wine (also called Shao Hsing wine), but it does not provide quite the same flavour.
+
+Since this dish requires a reasonably large amount of time and preparation, even while cooking (frequent basting is needed), it is easiest to make it in large batches. The recipe here makes 1 kg, which is enough for several different dishes. It can be kept in the fridge for several days or frozen until required.
+
+## Ingredients
+
+- 1 kg (2.25 lbs) pork shoulder
+- 2 tbsp dark soy sauce
+- 2 tbsp light soy sauce
+- 2 tbsp oyster sauce
+- 2 tbsp Shaoxing rice wine
+- 2 tbsp clear honey
+- 4 tbsp hoisin sauce
+- ½ tsp five spice
+
+## Procedure
+
+1. Slice the meat into strips about 1 inch (2.5 cm) wide by 6 inches (15 cm) long. A long thin strip like this will keep its shape better when hanging.
+2. Pierce the pork all over thoroughly with a fork. This makes the pork more tender and allows the marinade to penetrate the meat to give flavour all the way through.
+3. Mix all other ingredients together to make a marinade.
+4. Place pork strips in a tray and cover with marinade. Ensure strips are covered completely in marinade.
+5. Cover tightly with cling film and place in the refrigerator for several hours (8–24 hours is preferable).
+6. Preheat the oven to 230°C or 420°F and place a pan in the bottom to catch drippings. Line this pan with aluminium foil to make cleaning easier.
+7. Hang the meat on hooks in the oven or lay them on a rack. Depending on the method and the size of your oven, it may be easiest to do this in two or three batches, rather than all at once.
+8. Roast for 20 minutes, until pork is cooked all the way through. Baste at least twice to build up a good layer of marinade on the outside of the meat. The pork should turn a golden-red colour as it cooks.
+9. Allow to cool while still hanging, or lay on wire rack to cool. Avoid laying on top of other meat or on a flat surface until cooled.
+10. Cover and refrigerate until needed.
+
+## Notes, tips, and variations
+
+- Serve cold, or use diced in other dishes.
+- Add 1 tbsp of toasted sesame oil for a nuttier flavour
+- Add red food colouring to the marinade to give the traditional deep red hue. This used to be due to the preservative used for the pork. Also, in China, the red colour generally symbolises good fortune. However, due to the strong colour of the marinade described above, a significant quantity of food colouring will be needed.
+- This dish goes very well with ginger and onion.
+
+## Warnings
+
+- Use care in handling the raw pork. Wash hands and utensils that come into contact with raw pork. Don't allow raw pork or its juices to come into contact with other foods, unless they are to be cooked afterwards.

@@ -1,0 +1,74 @@
+---
+title: Guacamole I
+slug: guacamole-i
+source_url: https://en.wikibooks.org/wiki/Cookbook:Guacamole_I
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 4029
+date: '2026-01-30'
+cuisine:
+- Mexican
+- Tex-Mex
+course:
+- Appetizer
+diet:
+- Kid-friendly
+- Vegan
+difficulty: Easy
+technique: []
+recipe_type:
+- guacamole
+ingredients:
+- avocado
+- cayenne
+- jalapeño chile
+- lime juice
+- serrano chile
+categories:
+- Appetizer recipes
+- Easy recipes
+- Kid-friendly recipes
+- Mexican recipes
+- Recipes
+- Recipes for guacamole
+- Recipes using avocado
+- Recipes using cayenne
+- Recipes using jalapeño chile
+- Recipes using lime juice
+- Recipes using serrano chile
+- Tex-Mex recipes
+- Vegan recipes
+---
+
+# Guacamole I
+
+**Guacamole** is a Mexican paste made from crushed avocado and various seasonings, usually including onions, peppers, garlic and tomatoes. Guacamole is used as a condiment, an ingredient, and as an appetizer when served with tortilla chips.
+
+## Ingredients
+
+- 4 avocados
+- 2 tablespoons pico de gallo
+- Juice of ½ lime
+- 2 chopped Jalapeño OR 2 tablespoons of crushed red pepper OR 1 tablespoon of cayenne pepper
+- 1 teaspoon salt
+- 4 teaspoons olive oil
+- 1 ½ teaspoon minced garlic
+- ½ teaspoon of ground black pepper
+- 1 minced jalapeño OR 2 minced serrano chiles OR 2 tablespoon minced of any chile pepper like (adjust for spiciness)
+
+## Procedure
+
+1. Halve and pit the avocados.
+2. Score the avocado flesh in a criss-cross pattern without cutting through the skin.
+3. Scoop out the flesh of one half with a large spoon and place in mixing bowl.
+4. Add the lime juice and stir to evenly coat the avocados.
+5. Stir in the pico de gallo, garlic, oil, jalapeño, salt, red pepper, and black pepper, mashing and tossing the avocado pieces until thoroughly mixed.
+6. Scoop out the remaining avocado chunks and gently mix and toss in the larger pieces. The guacamole is the right consistency when more large pieces than mashed parts remain.
+7. Garnish with a sprig of cilantro.
+
+## Notes, tips, and variations
+
+- Guacamole is a dip originally made to be consumed almost instantly, meaning there is no intention to store it at all, so you can omit the use of any kind of oil or lime juice for these recipes. However, both oil and lime juice can be added so that the guacamole keeps for longer.
+- A dollop of Greek yogurt or mashed black beans can add richness and protein.
+- To prevent browning, cover the surface with plastic wrap so no air is in contact with the guacamole. Lime juice can also help prevent such oxidation.
+- A young chef from El Paso, Texas, has developed a much more effective approach to keep guacamole fresh for up to three times longer than traditional methods. Through trial and error, Alfred M. Gladstein found that the use of a various vegetable oils blended in to the concoction would keep it fresh longer and significantly increase the amount of time before the guacamole browns and spoils. In his studies Gladstein found that mixing olive oil in guacamole worked best when serving the dish independently or with warm foods, while vegetable oil (corn or canola) worked best when the guacamole is served with cold foods and salads. When these techniques are employed, Gladstein, who is also known as Chef Jamir, found that the refrigerated guacamole would stay fresh and green for three days or more. He also notes that when serving the guacamole at room temperature, the oil-treated dish will last up to six to eight hours before starting to brown.

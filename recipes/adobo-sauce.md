@@ -1,0 +1,66 @@
+---
+title: Adobo Sauce
+slug: adobo-sauce
+source_url: https://en.wikibooks.org/wiki/Cookbook:Adobo_Sauce
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 143865
+date: '2026-04-06'
+cuisine:
+- Mexican
+- Southwestern
+- Tex-Mex
+course: []
+diet: []
+difficulty: Easy
+technique:
+- Slow cooker
+recipe_type:
+- sauces and condiments
+ingredients:
+- chipotle chile
+- cumin
+- garlic
+- jalapeño chile
+- ketchup
+categories:
+- Easy recipes
+- Mexican recipes
+- Recipes
+- Recipes for sauces and condiments
+- Recipes using chipotle chile
+- Recipes using cumin
+- Recipes using garlic
+- Recipes using jalapeño chile
+- Recipes using ketchup
+- Recipes with metric units
+- Slow cooker recipes
+- Southwestern recipes
+- Tex-Mex recipes
+---
+
+# Adobo Sauce
+
+**Adobo sauce** is a sauce or marinade used in Latin American and Southwestern U.S.-style cooking, made of finely chopped or pureed chiles, garlic, vinegar, and often onions and tomatoes. Food that has been prepared with adobo is sometimes called *adobado* [1].
+
+Chipotles in adobo sauce is a particular use of this condiment in which chipotles (smoked jalapeño peppers) are stewed in adobo sauce. Ingredients of this sauce generally include tomatoes, garlic, vinegar, salt, and spices.
+
+## Ingredients
+
+- 12 chipotle peppers or smoked, dried jalapeño peppers (most co-ops can get these for you, or try the specialty produce section of your grocery store)
+- 4 cups (0.95 L) water
+- ½ cup (120 ml) onion, diced
+- ⅓ cup (80 ml) apple cider vinegar
+- ¼ cup (60 ml) ketchup
+- 3 cloves garlic, crushed or sliced
+- 1 pinch of cumin, oregano
+- Salt to taste
+
+## Procedure
+
+1. Combine all ingredients in a heavy saucepan. Cook over a very low heat for 1–2 hours until the chiles are very soft and the liquid has been reduced to about 1 cup. Alternatively, cook in a slow cooker overnight.
+2. Beat with a mortar and pestle, or put in blender to puree for a thick sauce.
+
+## Notes, tips, and variations
+
+- Sauce will keep for several weeks in the fridge in an airtight container. You can also can it in mason jars for longer storage, following proper procedures for sterilizing jars and canning.

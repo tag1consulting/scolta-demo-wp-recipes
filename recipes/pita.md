@@ -1,0 +1,61 @@
+---
+title: Pita
+slug: pita
+source_url: https://en.wikibooks.org/wiki/Cookbook:Pita
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 61949
+date: '2025-12-23'
+cuisine:
+- Mediterranean
+- Middle Eastern
+course: []
+diet:
+- Vegan
+difficulty: Medium Difficulty
+technique:
+- Baking
+recipe_type:
+- flatbread
+ingredients:
+- vegetable oil
+- wheat flour
+categories:
+- Baking recipes
+- Mediterranean recipes
+- Medium Difficulty recipes
+- Middle Eastern recipes
+- Recipes
+- Recipes for flatbread
+- Recipes using vegetable oil
+- Recipes using wheat flour
+- Recipes with metric units
+- Vegan recipes
+---
+
+# Pita
+
+**Pita** (also known as *pita bread*, *Arabic bread* etc.) is a yeasted wheat flatbread originating from North-African, to Middle-Eastern and Mediterranean cuisines. It is usually eaten with sauces, dips and fillings. Dishes that use pita include kebab, gyros, and shwarma.
+
+## Ingredients
+
+- 250 ml (1 cup) warm water
+- 1 tbsp instant yeast
+- 1 tsp salt
+- 2 tbsp vegetable oil
+- 500 ml (2 cups or 17 fl oz) durum wheat flour
+
+## Procedure
+
+1. Dissolve the yeast in a bowl of warm water. Add salt, oil and flour, mix it, and knead it into a dough.
+2. Let the dough rise to twice its size.
+3. Divide the risen dough into 8 pieces and shape them into balls.
+4. Then roll the balls into flat and round pita breads (to a diameter of 15 cm or 6 inches).
+5. Let the breads rise in a warm place covered with a cloth for about 30 minutes.
+6. Bake at 225°C (435°F) for about 12 minutes.
+
+## Notes, tips, and variations
+
+- Cut the bread into two pieces so it can be used like a sandwich filled with salad or meat. Or the exact same, wrapped into a roll.
+- Pita is delicious when dipped in sauces. There are lots of possible ideas and combinations!
+- Because this is a sticky dough, avoid using extra flour to dust your dough when working with it. Grease your hands and work surface with an oil of your choice.

@@ -1,0 +1,107 @@
+---
+title: Pupusas
+slug: pupusas
+source_url: https://en.wikibooks.org/wiki/Cookbook:Pupusas
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 28877
+date: '2026-04-12'
+cuisine:
+- Salvadoran
+course:
+- Main course
+diet: []
+difficulty: Difficult
+technique:
+- Pan fried
+recipe_type:
+- pastries
+ingredients:
+- bacon
+- cheese
+- corn flour
+- heavy cream
+categories:
+- Difficult recipes
+- Main course recipes
+- Pan fried recipes
+- Recipes
+- Recipes for pastries
+- Recipes using bacon
+- Recipes using cheese
+- Recipes using corn flour
+- Recipes using heavy cream
+- Salvadoran recipes
+---
+
+# Pupusas
+
+A **pupusa** is a stuffed corn-tortilla, usually served with a spicy coleslaw called curtido. Pupusas originated in El Salvador, but immigrants have taken the dish to other Central American countries and beyond. Pupusas are hand-made and thick. Like all corn tortillas, they are made using corn masa. They are stuffed with one or more of the following:
+
+- cheese *(queso)* (usually a soft Salvadoran cheese called Quesillo)
+- fried pork rind *(chicharrones)*
+- chicken *(pollo)*
+- refried beans *(frijoles refritos)*
+- *queso y Loroco* (loroco is a shrub flower bud from Central America)
+
+There are also the *pupusa revueltas* (with mixed ingredients of cheese, pork, and beans). Pupusas are usually served with curtido and tomato sauce. They are eaten with the fingers.
+
+## Ingredients
+
+### Dough
+
+- Corn masa
+- Water
+
+### Cheese filling
+
+- 3 cups of shredded cheese (use a combination of hard and soft cheese; you can mix frying cheese, mozzarella, and ricotta)
+- 3–4 tablespoons of heavy cream
+- ½–1 cup of *loroco* (this can be hard to source, so you can use very finely chopped green peppers or scallions instead)
+- Salt to taste
+
+### Chicharron (pork rind filling)
+
+- 1 cup bacon
+- Garlic (optional), minced
+- 4–5 tomatoes
+- 1 green pepper
+- Salt to taste
+
+### Revueltas filling
+
+- Ground and fried beans (can be canned or prepared from your favorite recipe)
+
+## Procedure
+
+### Dough
+
+1. Follow the instructions on the bag of masa for making tortilla dough, and make as much dough as needed. One pupusa uses about as much dough as two tortillas.
+2. Set the dough aside while you prepare the filling.
+
+### Cheese filling
+
+1. Make a paste with all of the ingredients. To avoid the paste leaking out of the pupusas, it should not be too soft.
+
+### Chicharron filling
+
+1. Cook the bacon with some garlic. Set fat aside but do not discard.
+2. Once cooked, grind bacon with the tomatoes, green pepper, and salt to taste.
+3. Mix in some of the bacon fat until it has a soft consistency.
+
+### Revueltas filling
+
+1. Prepare the ground and fried beans as desired.
+
+### Assembly
+
+1. Shape and fill 2 tbsp of the dough per pupusa using one of the two methods below. When filling the pupusas add some of the bean, chicharrón, and/or cheese fillings.
+   - Beginner method: Shape the dough into a ball, and clap it between your hands until you make a round, thin tortilla about ⅛ in thick. Continue making more tortillas this way. Put some filling on one tortilla, cover with another, and press the sides to seal them.
+   - Experienced method: Shape the dough into a ball, then insert your thumb in the ball to make a hole in the center. Fill the hole with some filling, and seal the hole by pushing and pinching the dough on the sides up. Carefully clap the pupusa between your hands to flatten it without pressing out the filling.
+2. Cook the pupusas on a lightly greased griddle, pan, or electric pancake griddler over low-medium heat (325–350°F) on one side, then the other until they are cooked. Each side will be ready when it no longer sticks to the pan (depending on the thickness of the tortillas, this might take 4 minutes or more per side).
+3. Top the pupusas with curtido and tomato sauce.
+
+## Notes, tips, and variations
+
+- There are different brands of corn masa to make the dough. MASECA, which can be found in most large American supermarkets in the international section, is one of them but there are others.
+- If you can find it, try replacing the cheese filling with prepared *queso con loroco*. You won't get the authentic flavor from a pupusa if you use American ingredients.

@@ -1,0 +1,52 @@
+---
+title: Pinza Mostarda Bolognese
+slug: pinza-mostarda-bolognese
+source_url: https://en.wikibooks.org/wiki/Cookbook:Pinza_Mostarda_Bolognese
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 457833
+date: '2025-10-26'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Pinza Mostarda Bolognese
+
+**Pinza Mostarda Bolognese** is a jam-filled rolled pastry that originated in Bologna. Serve warm or at room temperature with coffee. Store at room temperature. It keeps well for about a week.
+
+## Ingredients
+
+## Procedure
+
+1. Stir together the dry ingredients in a large mixing bowl.
+2. Cut the cold butter into smaller pieces.
+3. Put the butter pieces into the bowl with the dry ingredients, and blend the ingredients together. You can do this by hand or with an electric mixer.
+4. Add the eggs, stirring briefly after each one.
+5. Mix gently until dough holds together. Add a splash of milk as needed, until you get a thick dough, similar to what you would expect for scones.
+6. Cover the dough tightly and put it in the refrigerator to rest for about an hour.
+7. Preheat oven to 350 °F (175 °C, gas mark 4—medium).
+8. Turn the dough out onto the counter or a flat board and form into a thick disk.
+   - If you are working on a counter or board, sprinkle a large spoonful of flour on the surface before taking the dough out of the mixing bowl, and then another spoonful on top. Use just enough flour to keep the dough from sticking too much.
+   - If you cover your work area with plastic cling wrap, you do not need to put any flour on the surface. Cover the top of the dough with another layer of plastic wrap to keep your hands or rolling pin clean.
+9. Roll the dough out into a rectangle about ½ inch (1.25 cm) thick.
+10. Spread a generous layer of *Mostarda Bolognese* over the surface, leaving a clear border of 1 inch (2.5 cm) around the edges. This will reduce the risk of the jam leaking during the baking process.
+11. Fold the dough along the longer side, letting the edges overlap (see illustration).
+12. Put parchment paper on a large, ungreased baking sheet. Place the roll on the baking sheet, seam side down. Tuck the ends underneath to seal in the jam.
+13. Brush the top with a little bit of milk, and sprinkle with sugar crystals.
+14. Bake at 350 °F (175°C) for 30–35 minutes, until the roll is golden brown and the internal temperature is at least 190 °F (about 90 °C).
+
+## Notes, tips, and variations
+
+- *Mostarda Bolognese* or *Marmellata Sapore* is a type of preserves or jam from Bologna. Despite the name, and unlike the similarly named *Mostarda di Cremona* (also called *Mostarda di frutti*), it contains no mustard at all. The main ingredients are some combination of apples, pears, or quinces with some type of citrus or zest, and it is cooked and pureed until it has a dark, smooth, thick, fine texture similar to apple butter. Cavazza is one brand, but if you can't find it locally, you can substitute plum jam, or take the flavor in a different direction with raspberry jam, or your favorite flavor of thick preserves.
+- You can use gluten-free flour substitutes.
+- White granulated sugar is the most typical, but any type of sugar and most sugar substitutes will work.
+- If you want a sweet cake, you can increase the amount of sugar by up to 50%.
+- Luigi Lepri's cookbook in the Bolognese dialect gives a very similar recipe as the traditional one, with the higher amount of sugar and using yeast instead of baking powder. He also makes his own *Mostarda*, from equal amounts of quince, grapes, and autumnal fruits (apples, pears, figs, plums, apricots, peaches, etc.), plus a small amount of sugar, cooked for about 8 hours and then bottled hot.
+- The large-crystal sugar may also be called "sanding sugar" or "sparkling sugar".
+
+## References

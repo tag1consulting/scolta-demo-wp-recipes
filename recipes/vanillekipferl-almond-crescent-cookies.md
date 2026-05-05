@@ -1,0 +1,77 @@
+---
+title: Vanillekipferl (Almond Crescent Cookies)
+slug: vanillekipferl-almond-crescent-cookies
+source_url: https://en.wikibooks.org/wiki/Cookbook:Vanillekipferl_(Almond_Crescent_Cookies)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 178946
+date: '2026-04-07'
+cuisine:
+- Austrian
+course: []
+diet: []
+difficulty: Easy
+technique:
+- Baking
+recipe_type:
+- cookies
+ingredients:
+- all-purpose flour
+- almond
+- butter
+- egg
+- powdered sugar
+categories:
+- Austrian recipes
+- Baking recipes
+- Christmas recipes
+- Dessert recipes
+- Easy recipes
+- Recipes
+- Recipes for cookies
+- Recipes using all-purpose flour
+- Recipes using almond
+- Recipes using butter
+- Recipes using egg
+- Recipes using powdered sugar
+---
+
+# Vanillekipferl (Almond Crescent Cookies)
+
+***Vanillekipferl*** are small almond biscuits shaped like a crescent moon. They are particularly popular in Austria and Germany, where they are part of the culinary delights of Christmas biscuits. In most Austrian homes, baking biscuits is an essential part of Christmas preparation, a family activity to be enjoyed on wintry days when it is snowing outside. Children love to knead dough and cut out biscuits. They enjoy creating the distinctive shape of *Vanillekipferl*, which is formed by rolling the dough between one's palms. What is more, no two *Vanillekipferl* are ever the same, since the size of palms and pressure applied vary. Although, at first, the *Vanillekipferl* appears to be a modest, little biscuit among all the colourful and sometimes elaborately decorated Christmas biscuits, it is a clear favourite.
+
+The distinctive crescent shape that makes *Vanillekipferl* instantly recognisable among the Christmas biscuits is based on *Kifli*, a traditional Hungarian dish. *Kifli* are crescent shaped rolls made from a flour dough. The dough is cut into triangular wedges that are then wrapped and will form a crescent shape, when they are baked. Initially, they were a savoury dish, but later they were filled with nuts and served as a dessert. The origins of the shape go back to the time of the Austro-Hungarian Empire. When the Ottoman Turks stormed the city of Vienna, it was the bakers who raised the alarm, and thus saved the city from invasion. As the story goes, these bakers formed the *Kipferl* to symbolize the Turkish crescent moon and celebrate having successfully avoided an invasion. Whether this legend is true or not, most Austrians are unaware of this connection. They simply enjoy the taste of *Vanillekipferl* with a cup of hot fruit tea, coffee, or even mulled wine.
+
+## Ingredients
+
+- 350 g plain flour
+- 200 g cold unsalted butter
+- 100 g icing sugar
+- 100 g finely-ground almonds
+- 1 egg
+- 1 packet (8 g) vanilla sugar
+- 1 pinch salt
+
+### Decoration
+
+- 60 g icing sugar
+- 2 packets (16 g) of vanilla sugar
+
+## Procedure
+
+1. Sift the flour into a bowl.
+2. Cut the cold butter into slices and mix it with the flour.
+3. Add icing sugar, salt, vanilla sugar, ground almonds, and egg to the mixture.
+4. Rinse hands in cold water, and knead the dough on a pastry board. Let the dough rest for half an hour.
+5. Grease a baking tray, or alternatively use a sheet of baking paper to prevent the *kipferl* from sticking.
+6. Preheat the oven to 180°C (350°F/Gas 4 ).
+7. Form the dough to a cylinder with a diameter of approximately 5 cm, and cut off 0.5 cm thick slices. Roll them between your flat palms to form a sausage shape that is slightly tapered.
+8. Lay them in crescent shape on the baking tray, and bake them for 8–10 minutes until they are a light golden brown.
+9. Immediately after baking, dip the *Kipferl* into a mixture of icing sugar and vanilla sugar. Try some—they are delicious while still warm!
+10. Leave the rest out overnight, and then store them in an airtight tin.
+
+## Gallery
+
+## Notes, tips, and variations
+
+- Vanilla sugar can be bought in many supermarkets. Alternatively, it can be made by putting a vanilla-pod and some sugar in an airtight jar for a week or two.

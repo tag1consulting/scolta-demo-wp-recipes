@@ -1,0 +1,43 @@
+---
+title: Milk Toast II
+slug: milk-toast-ii
+source_url: https://en.wikibooks.org/wiki/Cookbook:Milk_Toast_II
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 456581
+date: '2026-03-17'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Milk Toast II
+
+**Milk toast** is a breakfast food consisting of toasted bread dipped in milk. Milk toast was a popular food throughout the late 19th century and early 20th century, especially for young children and for the ailing, for whom the food was thought to be soothing and easy to digest. Although not as popular today, milk toast is still considered a comfort food.
+
+This recipe comes from the 1918 edition of *The Boston Cooking-School Cook Book* by Fannie Farmer, a famous home-cooking author and instructor of the early 20th century.
+
+## Ingredients
+
+- 1 pint (570 ml) scalded milk
+- ½ teaspoon salt
+- 2 tablespoons butter
+- 4 tablespoons cold water
+- 2 ½ tablespoons bread flour
+- 6 slices dry toast
+
+## Procedure
+
+1. Gradually add cold water to flour to make a smooth, thin paste.
+2. Add paste to milk, stirring constantly until thickened.
+3. Cover, and cook 20 minutes; then, add salt and butter in small pieces.
+4. Dip slices of toast separately in sauce; when soft, remove to serving dish. Pour remaining sauce over all.
+
+## Notes, tips, and variations
+
+- Although both above recipes call for salt, milk toast may also be made sweet by the omission of salt and pepper and the addition, instead, of sugar. Other optional ingredients for sweet versions include cinnamon, honey or a touch of vanilla, but piquant and exotic ingredients should be avoided, as the primary purpose of milk toast is to provide a food soothing to the palate and to the digestion.
+- Corn starch may be substituted for flour.

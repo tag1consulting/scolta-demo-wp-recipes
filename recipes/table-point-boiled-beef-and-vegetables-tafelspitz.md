@@ -1,0 +1,70 @@
+---
+title: Table Point Boiled Beef and Vegetables (Tafelspitz)
+slug: table-point-boiled-beef-and-vegetables-tafelspitz
+source_url: https://en.wikibooks.org/wiki/Cookbook:Table_Point_Boiled_Beef_and_Vegetables_(Tafelspitz)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 33522
+date: '2025-07-22'
+cuisine:
+- Austrian
+course:
+- Main course
+diet: []
+difficulty: Easy
+technique:
+- Boiled
+recipe_type: []
+ingredients:
+- beef
+- carrot
+- garlic
+- juniper
+- onion
+- parsley
+categories:
+- Austrian recipes
+- Boiled recipes
+- Easy recipes
+- Main course recipes
+- Recipes
+- Recipes using beef
+- Recipes using carrot
+- Recipes using garlic
+- Recipes using juniper
+- Recipes using onion
+- Recipes using parsley
+- Recipes with metric units
+---
+
+# Table Point Boiled Beef and Vegetables (Tafelspitz)
+
+Cooked according to classic preparation rules, ***tafelspitz*** (literally translated: the point of the table) is known to have been Austrian Hungarian Emperor Francis Joseph's favourite meal. Viennese *tafelspitz* for Austrians is a whole special culinary science prepared with a special cut of beef. It is not a pot roast. The authentic Tafelspitz requires a custom-cut fresh piece of the hind part of beef (comparable to the American tri tip, also called silver tip); on the North American market, a substitute can be fresh beef chuck brisket (not corned brisket).
+
+The secrets of a juicy Tafelspitz are heating the water to a rolling boil before the piece of meat is put in the water; just enough salt to enhance the meat’s flavour; a few pieces of vegetables (sometimes also sections of bones with marrow), the right cooking time, and the gentle rolling of the boiling water which will cook but not break the meat’s fibre. This recipe is a simplified version of this very Austrian dish.
+
+## Ingredients
+
+- 2½ pounds (1200 g) fresh beef brisket, silverside, or sirloin
+- 3 whole cloves garlic, slightly crushed and peeled
+- 3 whole green (freeze dried) or white peppercorns
+- 2 juniper berries (you may substitute with 1 bay leaf)
+- 3 ea. (4 oz / 110 g) whole medium size carrots, peeled and trimmed
+- 1 ea. (2 oz / 55 g) small-medium onion, unpeeled, trimmed, and halved
+- 3 sprigs fresh parsley
+
+## Procedure
+
+1. Fill a 5-quart (700 ml) Dutch oven with water, season it with salt, and bring to a rolling boil over medium heat.
+2. When the water boils, add meat, garlic, peppercorns, and juniper berries, then cover the pot.
+3. Bring the water to a boil again and add carrots, onion, and parsley. Cover and let everything simmer for 60 minutes.
+4. Turn the meat over, add salt, and let everything cook, covered, for 90 additional minutes.
+5. Switch off the heat, and let the meat steep for 20 minutes.
+6. Remove the meat from the broth and cut meat across the grain when you serve it.
+7. Serve tafelspitz with *apfelkren* (see notes) and your choice of raw and cooked vegetables.
+
+## Notes, tips, and variations
+
+- Keep the broth for soups.
+- Cut cold meat leftovers in thin strips and use like a meat salad mixed with raw sliced onions dressed with a simple oil, vinegar, salt, and pepper vinaigrette.
+- To make apfelkren: combine and blend 1 pound Golden Delicious apples, cored, peeled, grated and cooked until very mushy with 1 tablespoon wine vinegar, 1 tablespoon lemon juice, and 3 tablespoons prepared horseradish.

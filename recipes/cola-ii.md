@@ -1,0 +1,56 @@
+---
+title: Cola II
+slug: cola-ii
+source_url: https://en.wikibooks.org/wiki/Cookbook:Cola_II
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 479564
+date: '2026-03-14'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Cola II
+
+**Cola** is a type of soda that flavored with citrus and spices. The word "cola" derives from kola nuts, a plant originating in West Africa and originally used as a source of caffeine to make this soda. Most modern recipes do not contain kola nuts.
+
+This recipe is derived from John Pemberton's original 1886 formula for Coca-Cola, which currently exists in the public domain. The recipe has been downscaled to quantities suitable for a home kitchen; the outlawed coca leaf extract has been replaced with similarly flavored green tea extract. If you live in a country where coca leaf extract is still legal, you may substitute the green tea extract for coca leaf extract for a more authentic taste.
+
+Note that consuming high levels of caffeine can be very dangerous. If you are scaling the recipe up or down, make sure you scale the caffeine accordingly so that the per-serving caffeine amount stays the same or is lower. Absolutely do not use more than triple the listed proportion of caffeine.
+
+## Ingredients
+
+- 2 oz (60 ml) 150+ proof unflavored spirit OR a mixture of 10 tsp (50 ml) water with 2 tsp (10 ml) gum arabic
+- 1 drop coriander oil
+- 3 drops cinnamon oil
+- 3 drops neroli oil
+- 3 drops nutmeg oil
+- 5 drops orange oil
+- 8 drops lemon oil
+- ⅔ cup (160 ml) water, heated to 122°F (50°C)
+- 25 mg caffeine (optional)
+- 3 drops caramel color
+- 4 drops tea extract
+- 2 drops vanilla extract
+- 1½ tsp (7.5 ml) strained lime juice
+- ¼ tsp (1.25 ml) citric acid
+- 10 fl oz (300 ml) white sugar
+- Carbonated water, as needed
+
+## Procedure
+
+1. Combine the spirit or gum arabic water and oils together in a small cup, mixing well. Set aside.
+2. Combine the hot water, caffeine, caramel coloring, green tea extract, vanilla extract, lime juice, citric acid, sugar, and ¼ tsp (1.25 ml) of the oil mixture in a heat-safe container. Stir well to dissolve and make a syrup.
+3. To make the finished soda, combine 1 volume of syrup with 5 volumes of carbonated water.
+
+## Notes, tips, and variations
+
+- Use a clean eye dropper to measure drops. Do not use a pipette, an eye dropper previously used for dispensing medication, or a spoon to measure drops.
+- Use water from a carbonating machine or a brand of pure carbonated water such as Polar Original Sparkling Water, Great Value Seltzer Water, or Signature Select Seltzer Water. Do not use a brand of mineral water such as Perrier, San Pellegrino, or Mineragua because the added minerals will ruin the taste. Avoid flavored sparkling water such as La Croix or Spindrift because the preexisting fruit flavors will ruin the drink.
+- You can make cherry cola by adding 1 tsp (5 ml) of cherry extract in step 2.
+- You can make vanilla cola by adding an additional teaspoon (5 ml) of vanilla extract in step 2.

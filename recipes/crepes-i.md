@@ -1,0 +1,90 @@
+---
+title: Crêpes I
+slug: crepes-i
+source_url: https://en.wikibooks.org/wiki/Cookbook:Cr%C3%AApes_I
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 4940
+date: '2025-09-01'
+cuisine: []
+course:
+- Dessert
+diet: []
+difficulty: Medium Difficulty
+technique: []
+recipe_type:
+- crêpes
+- pancakes
+ingredients:
+- all-purpose flour
+- cow milk
+- egg
+- fruit preserves
+categories:
+- Medium Difficulty recipes
+- Recipes
+- Recipes for crêpes
+- Recipes for dessert
+- Recipes for pancakes
+- Recipes using all-purpose flour
+- Recipes using cow milk
+- Recipes using egg
+- Recipes using fruit preserves
+- Recipes with metric units
+---
+
+# Crêpes I
+
+A **crêpe** is a thin pancake. The French word is from the Latin root *crispa* meaning "curled", from which the English word "crisp" is also derived. It originates from Brittany (Bretagne), a region in the west of France, where it is traditionally served with cider.
+
+Crêpes are usually of two types: sweet or savoury, the main difference is the flour used (plain flour or buckwheat flour respectively). They may then be rolled or folded, and filled with different ingredients. Depending on the filling ingredients, filled crêpes can be either a dessert dish or a main course.
+
+## Ingredients
+
+### Batter
+
+- 220 g (1 cup / 8 oz) plain flour
+- 345 ml (1 ½ cup / 12 fl oz) milk
+- 2 eggs
+- 2 tbsp oil or melted butter
+- 1 pinch of salt
+
+### Optional fillings
+
+- Sugar and lemon
+- Raspberry jam and chocolate sauce
+- Nutella and sliced banana
+- Nutella and chopped hazelnuts
+- Whipped cream
+- Chocolate, caramel, or butterscotch sauce
+- Frangipane
+- Peanut butter
+- Sugar and butter, possibly with lemon or cinnamon
+- Strawberries (fresh or frozen)
+- Cream cheese and brown sugar
+- Slivers of chicken, broccoli, and cheese sauce
+
+## Procedure
+
+1. Put the flour at the bottom of a mixing bowl and make a hole in the middle where you put the eggs, the melted butter, the salt and a bit of milk.
+2. Mix well by hand, slowly combining the liquid with the flour to get a thick paste.
+3. Continue mixing and slowly add the rest of the milk, mixing well to avoid making lumps.
+4. Allow to stand, perhaps for several hours, whilst the gluten rests—this is very important for the final texture.
+5. Heat a crêpe pan (non-stick recommended) or skillet. A drop of water can be used to test the pan temperature: too cold, and the water will sit on the pan, too hot and it will vanish immediately. At the right temperature, the water will seem to "dance" on the pan.
+6. Grease the pan with some butter. Pour in some batter while tilting the pan to make the crêpe as thin as possible.
+7. Cook for 30–60 seconds until the cooked side looks like the surface of the moon, then flip it over to cook the other side; with some practice, you can flip it in the air by swinging the pan. See the whole-wheat pancakes recipe for air-flipping instructions.
+8. Serve with maple syrup, caster sugar, jam, spreads, etc. The crêpes can be filled and folded into triangles or rolled up.
+
+## Notes, tips, and variations
+
+- The exact proportions are not critical. In practice, equal parts by volume of eggs, milk, and flour, measured by eye, with no other ingredients, still produces excellent results.
+- You may add a bit of liqueur (traditionally brandy or fleur d'oranger) to the batter for more flavor.
+- For a sweet crêpe, add 2 teaspoons sugar and 1 teaspoon vanilla
+- For a chocolate crêpe, add 2 tablespoons chocolate sauce.
+- For a cheesy crêpe, sprinkle Emmental cheese evenly over the crêpe while in the pan.
+- One can also substitute beer or soda water for the milk. The wheat flour can be replaced by buckwheat flour to make savory buckwheat crêpes, as a main dish (ham, cheese, etc.).
+- The batter ingredients above can be replaced by 5 eggs, 1 cup flour, and 1 cup milk for a simpler mixture.
+
+## See also
+
+- Cookbook:Nutella Crepes

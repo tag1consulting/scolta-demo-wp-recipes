@@ -1,0 +1,80 @@
+---
+title: Almond Milk II
+slug: almond-milk-ii
+source_url: https://en.wikibooks.org/wiki/Cookbook:Almond_Milk_II
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 234135
+date: '2026-02-05'
+cuisine: []
+course: []
+diet:
+- Raw
+difficulty: Easy
+technique: []
+recipe_type:
+- plant milk
+ingredients:
+- almond
+- date
+categories:
+- Easy recipes
+- Raw recipes
+- Recipes
+- Recipes for plant milk
+- Recipes using almond
+- Recipes using date
+- Recipes with metric units
+---
+
+# Almond Milk II
+
+**Almond milk** is a plant milk used in a variety of cultures. Plant milks are often a vegan substitute for dairy, and are suitable for people with lactose intolerance or who want a dairy milk alternative.
+
+Unlike cow’s milk, almond milk contains no cholesterol, is much lower in saturated fat, and lacks casein. It is therefore suitable for those with casein allergies. Unlike soy milk, this recipe is suitable for those who wish to avoid soy for various reasons.
+
+## Ingredients
+
+- 1 cup (236 ml) almonds
+- 3 cups (708 mL) pure water, such as rosewater, orange blossom water, spring water, distilled water, or iodized water
+- 3 dates
+
+## Equipment
+
+- Measuring cup
+- Bowl
+- Blender
+- Sieve or sprout/nut-milk bag
+- Wooden spoon
+- Pitcher
+
+## Procedure
+
+1. Put the almonds into a bowl, and cover them with at least one 1 inch (2.5 cm) of water. Leave them in the refrigerator overnight, and then drain the water. This is called sprouting or steeping.
+2. Put the drained almonds into a blender, and blend in the 3 cups (708 ml) of water. The mixture will start clear and quickly change color. Stop blending after a few minutes when there is no visible change in color or consistency anymore.
+3. Strain this mixture over a pitcher. You can either strain it through a fine sieve by squeezing the milk from the moist mixture through the sieve with a wooden spoon, or simply place mesh sometimes called a sprout or nut-milk bag that is usually made of nylon on top of the pitcher in order to squeeze the mixture through the mesh by hand. You may either discard the pulp or use it for other recipes, such as mixing it into almond agar jelly.
+4. Return the strained almond milk into the blender. Add the dates and blend until there is no longer any visible change in color or consistency.
+5. Refrigerate or pour into a drinking cup and consume.
+
+## Notes, tips, and variations
+
+- If you would like to substitute a different sweetener for the dates, try natural sweeteners, such or stevia or honey instead of sugar or syrup, if you can. Just bear in mind that using honey would make this recipe not vegan.
+
+## Warnings
+
+- Do not use bitter almonds, since the combination of bitter almonds and water releases cyanide.
+- Do not keep the mixture from step 2 above for more than two days, since it spoils quickly. It's best to make it fresh.
+- There are recipes that use a stove or boiling water, but heat destroys the food enzymes in the almonds.
+- Using water that is not pure, such as tap water, may have an adverse taste.
+
+## See also
+
+- Almond-Cowitch Matcha Smoothie
+- Sharbat bil Loz
+
+## References
+
+## External links
+
+- Matterer, James L. (2000). "Almond Milk". *www.godecookery.com*. Archived from the original on 4 Feb 2024. Retrieved 2009-04-12.
+- Rueben, Allen; Rueben, Zoe (Feb 2001), "The Bittersweet Almond Saga", *On the Highest Perch*, Los Angeles, California, United States: Vegetarians in Paradise, archived from the original on 22 Dec 2023, retrieved 2010-07-01

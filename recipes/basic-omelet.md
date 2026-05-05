@@ -1,0 +1,98 @@
+---
+title: Basic Omelet
+slug: basic-omelet
+source_url: https://en.wikibooks.org/wiki/Cookbook:Basic_Omelet
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 21794
+date: '2025-07-22'
+cuisine: []
+course:
+- Breakfast
+diet: []
+difficulty: Medium Difficulty
+technique: []
+recipe_type:
+- omelettes
+ingredients:
+- egg
+categories:
+- Breakfast recipes
+- Medium Difficulty recipes
+- Recipes
+- Recipes for omelettes
+- Recipes using egg
+---
+
+# Basic Omelet
+
+An **omelet** or **omelette** is a breakfast food consisting of an egg-based wrapper around a filling of your choice. Omelettes take little time to complete. Always ensure your fillings are either pre-cooked, able to be finished in the time available, or edible when raw but warmed.
+
+## Ingredients
+
+### Omelet base
+
+- 2 eggs and 2 egg whites for a typical (6-inch/15 cm) pan
+- oil
+
+### Fillings (suggested)
+
+- Pre-cooked bacon
+- Broccoli or most other seasonal vegetables
+- Black olives
+- Chopped tomatoes, optionally with the seeds and pulp removed
+- Pan-fried garlic, mushrooms, and fennel
+- Zucchini and leeks
+- Cheese, e.g. cheddar, Pecorino Romano, goat's chevre and fresh herbs (e.g. basil)
+- Any blue cheese
+- Spinach, goat cheese, and pinenuts
+- Sautéed spinach
+- Pancetta
+- Wood-fired or lightly roasted baby potatoes and fresh herbs
+- Wood-fired baby potatoes, mushrooms, and Brie
+- Spanish sausage, mushrooms, and blue cheese
+- Smoked salmon, crispy potatoes and herb sour cream
+- Smoked salmon, Brie, and fresh herbs
+- Prawns and Brie with fennel confit
+- Pancetta, bocconcini, and basil
+- Feta cheese, garlic, and cheddar cheese
+
+## Procedure
+
+An omelette can be served folded in half or thirds.
+
+### If you only have a normal frying pan
+
+1. Chop up the filling.
+2. Mix the eggs well. You may add milk to thin them (up to 1 Tbsp for each egg).
+3. Pour the eggs into a cool (i.e. room temperature) frying pan.
+4. Heat the pan, stirring constantly.
+5. Stop stirring as soon as solid egg begins to form.
+6. As the egg solidifies, pry it loose around the edges.
+7. If you didn't stir enough earlier, you may have difficulty solidifying the egg on top. In this case, you may pry up an edge while tilting the pan to let liquid egg flow under the solid egg. It is best to avoid this problem though.
+8. Keep loosening the egg from the edges until you can slide it around.
+9. Now you need to flip the egg without ripping it. If you have a very wide turner (or two smaller ones), you can use that. Otherwise, you'll have to flip the egg in the air. To do so, rapidly move the pan away from you then up, back toward you a bit, and then very rapidly downward. Catch the egg in the pan.
+10. Place filling on the egg.
+11. When the egg is done, wrap it around the filling. Serve.
+
+### If you have a large flat professional-style cooktop
+
+1. Chop up the filling.
+2. Mix the eggs well. You may add milk or cream to thin them.
+3. Heat your griddle (you're doing this without a pan, on the cooktop).
+4. Pour the eggs onto the griddle, using a spiral motion to spread them wide and thin.
+5. When the egg has set, gently add fillings on top.
+6. Using a large (3 x 12-inch, or 75 x 300 mm) turner, fold the egg over the filling.
+7. When you think the bottom has cooked, flip the omelette over to cook the other side.
+
+## Notes, tips, and variations
+
+- Before non-stick coating became common, many cooks would keep a special omelette pan which would not be used for any other purpose. **It is important to use a very clean pan, especially if it is not a "non-stick" pan**. If keeping a pan solely for omelettes, after cooking, wipe well with a clean cloth or paper-towel and then apply a thin coating of clean vegetable oil.
+- You can use 3 eggs and a dash of milk or cream instead of the 2 eggs and 2 egg whites.
+- Try frying the omelette in butter.
+- After folding the omelette, you can top with grated cheddar and place frying pan under a grill until the cheese begins to brown.
+- You can garnish with cream cheese, sour cream, or other thickened dairy product along with a fragrant sprig of a fresh herb or edible flower.
+- Try frying the omelet in excess oil and butter (covering the top).
+- Put the entire frying pan under a pre-heated grill to melt cheese before folding, and make the top go golden.
+- To increase protein content, one can add additional egg whites (which are mostly protein) separating out the egg yolk (which has a grams of fat to protein ratio of 1:1)
+- Cottage cheese or quark are possible high-protein alternatives to cheese as fillings.

@@ -1,0 +1,83 @@
+---
+title: Key Lime Meringue Pie
+slug: key-lime-meringue-pie
+source_url: https://en.wikibooks.org/wiki/Cookbook:Key_Lime_Meringue_Pie
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 103036
+date: '2026-04-05'
+cuisine:
+- Southern U.S.
+course:
+- Dessert
+diet: []
+difficulty: Easy
+technique:
+- Baking
+recipe_type:
+- meringue
+- pies and tarts
+ingredients:
+- egg
+- graham cracker
+- lime juice
+- meringue
+- superfine sugar
+- sweetened condensed milk
+categories:
+- Baking recipes
+- Easy recipes
+- Recipes
+- Recipes for dessert
+- Recipes for meringue
+- Recipes for pies and tarts
+- Recipes using egg
+- Recipes using graham cracker
+- Recipes using lime juice
+- Recipes using meringue
+- Recipes using superfine sugar
+- Recipes using sweetened condensed milk
+- Recipes with metric units
+- Southern U.S. recipes
+---
+
+# Key Lime Meringue Pie
+
+**Key lime pie** is made of Key lime juice, eggs, condensed milk, and sugar in a pre-baked pie shell. The pie is then baked, and often topped with meringue or whipped cream. Other recipes (with slightly different ingredients) call for it to be chilled or frozen, using an unbaked Graham cracker crust. This makes it a popular summer dessert. The dish is named after the small Key limes (*Citrus aurantifolia* 'Swingle') that are naturalized throughout the Florida Keys. Their ferocious thorns make them less tractable and their thin yellowish rind makes them less shippable, but they are both tarter and more aromatic than the common Persian limes seen year-round in most U.S. grocery stores.
+
+Proper Key lime pie is made with canned sweetened condensed milk, since fresh milk was not a common commodity in the Florida Keys before modern refrigerated distribution methods.
+
+Key lime juice, unlike regular lime juice, is a pale yellow. As such, Key lime pies are also pale yellow. Green Key lime pies, such as the one in the opening scene of *Natural Born Killers*, are not authentic, and the green color is due to added food coloring. Many "Key lime" pies are made with standard Persian limes since they tend to be larger and yield more juice, thus making them easier to work with.
+
+During mixing, a reaction between the condensed milk and the acidic lime juice occurs, which causes the filling to thicken on its own without requiring baking. Many early recipes for key lime pie did not instruct the cook to bake the pie, relying on this chemical reaction to produce the proper consistency of the filling. Today, in the interest of safety due to consumption of raw eggs, pies of this nature are usually baked for a short time. The baking also thickens the texture more than the reaction alone.
+
+## Ingredients
+
+### Pie
+
+- 1 fully-baked 9-inch (25 cm / 9 oz) graham cracker or pastry pie shell
+- 1 can (14 oz / 400 g) sweetened condensed milk
+- ½ cup fresh Key lime juice
+- 4 egg yolks
+
+### Meringue topping (optional)
+
+- 4 egg whites
+- ½ cup caster sugar
+
+## Equipment
+
+- Small mixing bowl
+- Spatula
+- Stand mixer
+
+## Procedure
+
+1. Separate egg whites from egg yolks. Make sure there is no trace of yolk in the whites.
+2. Beat the sweetened condensed milk, lime juice, and egg yolks in a small mixing bowl.
+3. Pour the mixture into the baked pie shell. Bake at 350°F (180°C) for 8 minutes.
+4. While baking filling, whip egg whites in a large, clean mixer bowl on high speed until soft peaks form. Gradually beat in the sugar until meringue forms hard peaks.
+5. Spoon the meringue over the top of the hot pie and use a spoon to form peaks.
+6. Bake at 350°F (180°C) for 10–15 minutes, or until meringue begins to brown.
+
+## References

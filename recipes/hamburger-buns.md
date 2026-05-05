@@ -1,0 +1,91 @@
+---
+title: Hamburger Buns
+slug: hamburger-buns
+source_url: https://en.wikibooks.org/wiki/Cookbook:Hamburger_Buns
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 474133
+date: '2025-10-04'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Hamburger Buns
+
+Fresh, homemade **hamburger buns** make hamburgers taste better. A good bun is always a great idea, and a critical improvement for lower-fat or less flavorful burgers.
+
+This flexible and forgiving yeast dough is a suitable yeast bread project for beginners. Unlike many baking projects, the ingredient measurements do not have to be precise. If your egg is a little smaller than usual, then you'll use a little more water, and vice versa. If you like a little more salt, or you don't have any butter on hand, or you want to add a pinch of dried herbs, then that's okay, too. It doesn't matter whether you use instant, active dry, or fresh (cake) yeast; just use the ordinary-size portion. The recipe won't break over such small changes.
+
+This recipe is a variation on a recipe from King Arthur Flour.
+
+## Ingredients
+
+The recipe is easy to remember if you think of needing one of each of the seven ingredients:
+
+- 1 pound of flour
+- 1 (small) spoonful of salt
+- 1 (bigger) spoonful of sugar
+- 1 egg
+- 1 lump of butter
+- 1 ordinary (small) packet of yeast
+- 1 cup of warm water
+
+## Equipment
+
+- Mixing bowl
+- Mixing spoon, such as a wooden spoon
+- Electric stand mixer (optional)
+- Baking sheet, such as a half-sheet pan (or other shallow, oven-proof dishes); a half-sheet (18 x 13 inches / 46 x 33 cm) or two quarter-sheets (13 x 9 inches / 33 x 23 cm) is about the right size for this recipe.
+- Parchment paper (optional)
+- Oven
+
+## Procedure
+
+### Mix dough
+
+1. Put all ingredients except the warm water into a mixing bowl. If you are using a stand mixer, fit the dough hook and turn the mixer to its lowest setting to begin stirring the ingredients together. If you are mixing by hand, give it a few strokes with a mixing spoon or spatula. The purpose of this step is to mostly distribute the yeast throughout the flour and other ingredients. Don't bother stirring it more than necessary for this step.
+2. Pour in half to three-quarters of the warm water. Stir this water in thoroughly. If you are using a stand mixer, let it run until the dough comes together. This will probably take several minutes. At first, it may look like it will never come together, and then it will suddenly form into a smooth ball, or even into a wet, slack batter. If you are mixing by hand, you can turn the dough out onto a clean, flat surface (can be oiled or floured, as you prefer) and knead the dough by hand for up to 10 minutes, adding flour or water by the spoonful as you feel the need.
+3. Assess the texture of the dough. If the dough seems sticky (e.g., makes a sticky mess on your fingers) and is too slack to form into a smooth, soft ball, then you need to add more flour. Start with a generous spoonful, and stir again until it is incorporated. Repeat the addition as many times as necessary (it is unlikely that you will need to add more than about ½ cup/60 g of flour). If instead there is dry flour in the bottom, then pour a little bit of the remaining warm water directly on that dry part, and mix again until the dry flour and the water have been thoroughly incorporated. If you overcorrected, then add a spoonful of flour until you get a workable texture.
+
+### Let raise
+
+1. Unless it's a hot day, turn on the empty, cold oven for one minute. Then turn the oven off. The purpose of this short "preheating" is to make a comfortably warm place for the dough to rise.
+2. Cover the dough to keep the surface from drying out. You can do this by coating the surface of the dough with oil, or by putting a lid or a big plate over the dough.
+3. Put the bowl of dough in the (now slightly warm) oven or another warm place. Double check that the oven has been turned off.
+4. Let the dough rise for about 1 hour, until clearly puffy and almost twice the original volume. If you used cold water, it will take longer.
+
+### Shape and proof
+
+1. If you're using parchment paper, place a piece of parchment on your baking sheet. Otherwise, you can lightly grease the pan to keep the buns from sticking.
+2. Sprinkle a big spoonful of flour on your work surface, and spread this out a bit.
+3. Remove the bowl of dough from the oven. Scrape the puffy dough onto your floured work surface.
+4. Roll the dough in the flour to lightly coat all sides with the flour. If needed, put more flour on your work surface to keep it from sticking. Roll the dough into a rough log shape. Use a sharp knife or a bench scraper to cut the dough into about 12 pieces of similar size.
+5. Pick up one piece. Dust the wet edges in the remaining flour on your work surface, so it won't stick to your fingers. Choose one of the smoother sides of that piece to be the "top" of your roll. Grab the edges around your chosen "top" surface, and stretch or pinch them back to the "bottom". This has the effect of stretching the smooth side and hiding any lumpy bits on the bottom. Pinch the lumpy bits together on the bottom. Flatten the bun between your hands, and put it pinched-side-down on your baking sheet.
+6. Repeat this for the other eleven pieces of dough, until all of the pieces are shaped. When you place the rolls on the baking sheet, leave about an inch or two in between them, so they have room to grow in the oven.
+7. Place the baking sheet with the shaped buns back in the barely warm oven. Leave it there for about 45 minutes or an hour to "proof". If your oven has cooled off while you were shaping the buns, you can warm it up again for 30 seconds or so, but be sure to turn it off before you put the pan of raw dough in the oven.
+8. When the buns look nicely puffy, take the baking sheet of raw dough out of the oven.
+
+### Bake
+
+1. Preheat the empty oven to 375 °F (190 °C, gas mark 5, moderately hot).
+2. When it is hot, put the proofed buns in the oven and bake for 12–15 minutes, until golden brown.
+3. Serve hot, warm, or at room temperature.
+
+## Notes, tips, and variations
+
+- For the warm water, ordinary hot water straight from the tap is fine. The water should be warm but definitely not boiling so you don't accidentally cook the yeast in the mixing bowl. If you haven't got hot water, then cold water will work, but your raising time will be longer.
+- You can substitute whole wheat flour for about a quarter of the all-purpose flour. Use the same total volume/weight for all the flour.
+- This recipe can be made vegan by omitting the egg (adding a little extra water to compensate) and using oil or a cooking-friendly vegan butter substitute instead of the butter.
+- This recipe *cannot* be made gluten-free.
+- Shaping the buns takes practice. Once you get used to it, it may take as little as 10 minutes to shape the entire batch, but for your first time, plan for it to take longer.
+- If the process for shaping the buns is too confusing or awkward for you (or for a young helper), you can just roll them into balls. The results won't look quite as smoothly professional, but they will taste every bit as good.
+- This recipe can be used to make fancy shapes. For example, roll a fist-sized lump of dough into an inch-long "snake", and then twist that into a loose spiral, or cut it into small pieces that you can assemble into a simple flower.
+- You can also use this dough to make cinnamon buns. Instead of cutting it into bun-sized pieces, roll it out into a thin rectangle. Spread cinnamon and sugar over the surface, and then roll, cut, proof, and bake according to the usual process for cinnamon rolls.
+- If you are grilling hamburgers with a gas/propane grill, then light the grill when you start preheating the oven to bake the buns. This timing usually works out about right. With a charcoal grill, you'll need to start earlier than that.
+- If you want shiny hamburger buns, then brush the warm buns with a little melted butter after you take them out of the oven.
+- Store cooked buns at room temperature. They keep well for a couple of days. You can also freeze them for months.

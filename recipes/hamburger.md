@@ -1,0 +1,65 @@
+---
+title: Hamburger
+slug: hamburger
+source_url: https://en.wikibooks.org/wiki/Cookbook:Hamburger
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 18111
+date: '2026-03-08'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique:
+- Grilled
+- Pan fried
+recipe_type:
+- hamburgers
+ingredients:
+- ground beef
+categories:
+- Grilled recipes
+- Pan fried recipes
+- Recipes
+- Recipes for hamburgers
+- Recipes using ground beef
+- Recipes with metric units
+---
+
+# Hamburger
+
+A **hamburger** is a variant on a sandwich involving a patty of ground meat, usually beef (known in the United Kingdom as a **beefburger**), or a vegetarian patty. A slice of cheese on the patty makes it a cheeseburger, a common variation in the United States. It is popular in the United States.
+
+## Ingredients
+
+- 500 g (1.1 lb) minced / ground beef
+- Herbs and spices (optional; see suggestions)
+- Cheese (optional; see suggestions)
+- Vegetables (lettuce, sprouts, tomato, onion etc; optional)
+- 1 hamburger bun per burger
+
+## Procedure
+
+1. Shape the ground beef by hand into burger patties. You should get between 4–6 burgers from 500 g (1.1 lb) of beef.
+2. If adding optional ingredients, either season the outside or mix into the beef before forming the patties. Overworking the beef will result in mushy meat that won't stick together, so only mix the minimum necessary and do so by hand.
+3. Pan-fry or grill the patties for about 4–5 minutes on each side for burgers that aren't too thick. Ensure your burgers are fully cooked through before serving. If your burgers are quite thick or if you are unsure, you can cut one open to ensure the insides are browned. If the insides are red, there is a chance that the meat is not fully cooked. Alternately, you can insert a meat thermometer into the center of the burger, if the temperature reads less than 71°C (160°F), your burger is undercooked.
+4. Let the burger rest for several minutes before serving to let the juices cool down and not burst out at first bite.
+5. Serve each burger on a bun, optionally with relish, sliced pickles, ketchup, mayonnaise, mustard, ranch dressing, cheese, lettuce, tomatoes and/or onions.
+
+## Notes, tips and variations
+
+### Ingredients
+
+- You can add a pat of butter or some cheese to the center of each burger before cooking.
+- You can use almost any type of minced (ground) meat to make hamburgers, including pork, chicken, turkey, lamb, bison, venison, ostrich, or even a meat substitute such as Quorn. Some variations of hamburgers call for mixing different types of meat (e.g. ground beef and ground pork).
+- Optional additions to burger patties prior to cooking include: black pepper, chili, Worcestershire Sauce, soy sauce, basil, oregano and parsley, minced garlic or garlic powder, onion flakes or diced onion, mustard, olive oil, cheese, butter, hot sauce, kosher salt, bread crumbs, and crushed crackers.
+- Depending on the quality of your local beef, for example, you may wish to add some beef stock to improve the flavour. If you add any liquids, mix the ground beef well then squeeze out the extra juice when forming patties.
+
+### Technique
+
+- Do not over-mix the meat—the burger will be tough, dense, and dry. If you mix herbs or spices in, do so by hand and be sparing. You can season the outside of the patties.
+- Burgers can also be smoked on a grill. Smoked burgers will appear red and glazed on the outside, but browned on the inside. Smoking a burger before grilling it is an excellent way to seal in the flavorful juices.
+- Hand-made burger patties change shape during cooking, with the edges shrinking in toward the middle. This causes the burger to be more ball-shaped than originally formed. To circumvent this, press the raw patties down much thinner than you want the finished burger to be.
+- Let the meat get to room temperature before cooking. This will help the burgers cook evenly and fully.
+- Do not add salt until right before you start cooking the patty.
+- If your burgers fall apart, adding an egg yolk will help keep it together. Buying lean ground beef will also help, although if the meat is too lean the burger may be excessively dry. Not mixing the ground meat in the first place will also ensure the patty's integrity.

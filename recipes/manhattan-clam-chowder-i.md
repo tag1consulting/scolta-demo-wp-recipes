@@ -1,0 +1,62 @@
+---
+title: Manhattan Clam Chowder I
+slug: manhattan-clam-chowder-i
+source_url: https://en.wikibooks.org/wiki/Cookbook:Manhattan_Clam_Chowder_I
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 213812
+date: '2026-04-12'
+cuisine:
+- United States
+course: []
+diet:
+- Halal
+- Pescatarian
+difficulty: Very Easy
+technique: []
+recipe_type:
+- chowder
+ingredients:
+- celery
+- clam
+- tomato
+categories:
+- Halal recipes
+- Pescatarian recipes
+- Recipes
+- Recipes for chowder
+- Recipes using celery
+- Recipes using clam
+- Recipes using tomato
+- United States recipes
+- Very Easy recipes
+---
+
+# Manhattan Clam Chowder I
+
+**Manhattan clam chowder** is a soup traditionally made from clams, herbs, tomatoes, and other vegetables. Despite its name, it originated in Rhode Island, not Manhattan.
+
+Clam chowder, in its cream-based, New England version, has existed since the mid-18th Century, and no mention of any Manhattan chowder has been found that predates the 1930s. Many restaurants in northern Rhode Island sell both red and white chowders, while the US southern coast favors clear and white chowders. Often they are served alongside clam cakes.
+
+According to Alton Brown, who pointed this out in the installment of his program *Good Eats* titled "Send In The Clams," the use of tomatoes instead of milk was initially the work of Portuguese immigrants in Rhode Island, as tomato-based stews were already a traditional part of Portuguese cuisine. New Englanders called this modified version Manhattan-style clam chowder as a pejorative because, in their snide view, calling someone a New Yorker was an insult.
+
+## Ingredients
+
+- 15 ounces (425 g) canned potatoes, or 2 small boiled potatoes
+- 28 ounces (794 g) canned tomatoes in juice, or 2 large tomatoes and tomato juice
+- 6.5 ounces (184 g) canned chopped clams, minimum
+- 2 stalks of celery
+
+## Procedure
+
+1. Core the tomatoes. Remove the pale parts and the seeds; the "meat" of the tomato will be what will be used. For canned tomatoes, a strainer will be helpful.
+2. Chop all non-clam ingredients to match the clams in size.
+3. If desired add spices. Suggestions offered include dill seed, basil, thyme, celery seed, tarragon, marjoram, and/or fresh cilantro. Alternatively, oregano can be used in lieu of the marjoram.
+4. Cook the chowder, without boiling, until the celery begins to soften.
+
+## Notes, tips, and variations
+
+- A sturdy type of fish can be used in place of the clams; good choices include catfish, tilapia, and pollock.
+- Cooked rice can be substituted for the potatoes, the celery can be replaced with spinach or seaweed, and lemon juice can be added.
+
+## References

@@ -1,0 +1,83 @@
+---
+title: Traditional Finnish Lemon Mead (Sima)
+slug: traditional-finnish-lemon-mead-sima
+source_url: https://en.wikibooks.org/wiki/Cookbook:Traditional_Finnish_Lemon_Mead_(Sima)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 118583
+date: '2026-02-05'
+cuisine:
+- Finnish
+course: []
+diet: []
+difficulty: Easy
+technique:
+- Fermented
+recipe_type:
+- alcoholic beverages
+ingredients:
+- brown sugar
+- honey
+- lemon
+categories:
+- Easy recipes
+- Fermented recipes
+- Finnish recipes
+- Recipes
+- Recipes for alcoholic beverages
+- Recipes using brown sugar
+- Recipes using honey
+- Recipes using lemon
+- Recipes with metric units
+---
+
+# Traditional Finnish Lemon Mead (Sima)
+
+**Sima** is a Finnish, lemon-flavored mead mostly consumed during the celebrations of the 1st of May. A glass of sima is traditionally accompanied by a funnel cake or sugar coated donut.
+
+The purpose of the fermentation is mainly to make the drink bubbly; the alcohol content of traditionally prepared sima is only 0.5-0.8%. As the drink is meant to be consumed in reasonable quantities anyway, a glass of sima is generally considered suitable for children over five years of age.
+
+## Ingredients
+
+- 8 litres water
+- 500 g brown sugar
+- 500 g white sugar
+- 2–3 lemons
+- ¼ tsp yeast (ordinary baker's yeast, either fresh or dry)
+- 1 handful of raisins
+
+## Equipment
+
+- Container large enough to hold all of the sima (a big plastic bucket for example)
+- Empty bottles
+- Funnel
+
+## Procedure
+
+### First day
+
+1. Sterilize all of your equipment. A thorough process is described in the mead recipe. However, as the fermentation time of sima is very short (only a few days) and it is usually consumed within a week or so, just washing the bucket and bottles well and then rinsing them with boiling water right before using is generally enough to prevent spoiling.
+2. Boil 4 litres of water.
+3. Wash the lemons well and peel the zest, being careful not to include the bitter white pith. Put the zest into your container.
+4. Slice the lemons and remove the white pith from around the slices. Add the slices into the container.
+5. Add all the sugar into the container with the lemons.
+6. Pour the boiling water on top, and mix well until the sugar is mostly dissolved.
+7. Add 4 litres of cold water so that the mixture will be lukewarm, the right temperature for the yeast to activate. If unsure, check with a thermometer—the temperature should be between 35°C and 45°C.
+8. When the temperature is right, add the yeast. One way is to take a small cup of the mixture from the container, dissolve the yeast in it and then mix it back. Just dropping a crumb of fresh yeast into the container will also work.
+9. Let it stand overnight in room temperature.
+
+### Second day
+
+1. Bottle it on the next day: add one spoonful of sugar and a few raisins to each bottle before you pour the sima in.
+2. After bottling, let the bottles stand at room temperature out of direct sunlight for 2 more days. The raisins will bloat up and float to the surface.
+3. Move the bottles to your refrigerator. The sima is ready, and should be served cold. It will keep for at least a week in the refrigerator.
+
+## Notes, tips and variations
+
+- For a simpler process, just squeeze in the juice of 1–2 lemons instead of removing the pith.
+- You may use 1 kg brown sugar instead of mixing white and brown to make a darker sima with a stronger brown sugar flavour.
+- All the sugar may optionally be replaced with 1 kg honey.
+- You can put the bottled sima into the refrigerator immediately instead of fermenting overnight at room temperature. This will cause the fermentation to be slower; the sima will be ready in approximately 5–7 days.
+- Plastic soda bottles are recommended as pressure can build up in the bottles. An exploding plastic bottle is less dangerous than an exploding glass bottle.
+
+## References

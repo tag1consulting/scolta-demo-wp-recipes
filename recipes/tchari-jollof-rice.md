@@ -1,0 +1,67 @@
+---
+title: Tchari (Jollof Rice)
+slug: tchari-jollof-rice
+source_url: https://en.wikibooks.org/wiki/Cookbook:Tchari_(Jollof_Rice)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 457506
+date: '2025-07-22'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Tchari (Jollof Rice)
+
+**Tchari**, also known as jollof rice, is a popular West African dish that is enjoyed in various countries across the region, including Nigeria, Ghana, Senegal, and many others. This vibrant and colorful one-pot rice dish is cooked in a rich tomato-based sauce, infused with an array of spices and vegetables, resulting in a savory and aromatic meal that is perfect for gatherings, celebrations, and everyday feasting.
+
+## Ingredients
+
+- 2 tablespoons vegetable oil
+- 1 large onion, finely chopped
+- 3 cloves of garlic, minced
+- 1 teaspoon minced ginger
+- 3–4 ripe tomatoes, blended
+- 1 red bell pepper
+- 1 green bell pepper, blended
+- 2–3 Scotch bonnet or habanero peppers
+- 1 teaspoon thyme
+- 1 teaspoon curry powder
+- 1 teaspoon paprika
+- 1 teaspoon ground nutmeg
+- 1 bay leaf
+- 2–3 cups chicken or vegetable broth (or water)
+- 2 cups long-grain parboiled rice
+- 1 cup frozen mixed vegetables (e.g. peas, carrots, corn)
+- Salt
+- Pepper
+- 1 tablespoon butter (optional)
+
+## Equipment
+
+- Large pot
+- Wooden spoon or spatula for stirring
+- Blender or food processor
+- Knife and cutting board for chopping vegetables
+- Measuring cups and spoons
+- Plate and fork for serving
+
+## Procedure
+
+1. Heat the vegetable oil in the large pot over medium heat. Add the chopped onions and sauté until they become translucent.
+2. Add the minced garlic and grated ginger to the pot, and cook for about 1 minute until fragrant.
+3. Stir in the blended or finely chopped tomatoes, red and green bell peppers, and blended Scotch bonnet peppers. Cook the mixture for 10–15 minutes, stirring occasionally, until the sauce thickens and the oil starts to separate.
+4. Add the thyme, curry powder, paprika, ground nutmeg, and bay leaf to the sauce. Stir well to ensure the spices are evenly distributed.
+5. Rinse the rice thoroughly in cold water until the water runs clear. Drain the excess water.
+6. Add the rice to the pot with the sauce, stirring gently to coat the rice with the flavorful mixture.
+7. Pour in the chicken or vegetable broth (or water) into the pot. The liquid level should be about 1 inch above the rice. Season with salt and pepper to taste.
+8. Bring the mixture to a boil, then reduce the heat to low. Cover the pot with the lid, ensuring it is tightly sealed to trap steam inside.
+9. Let the rice simmer for about 20–25 minutes or until the rice is tender and fully cooked. Avoid opening the lid too frequently, as this may interfere with the cooking process. If the liquid is absorbed before the rice is fully cooked, add a little more water or broth as needed.
+10. Once the rice is cooked, add the frozen mixed vegetables to the pot. Stir them gently into the rice.
+11. Optionally, add a tablespoon of butter for extra richness. Stir it into the rice until it melts.
+12. Remove the pot from the heat and let it sit, covered, for a few minutes to allow the flavors to meld.
+13. Fluff the rice with a fork and serve hot, garnished with fresh herbs if desired.

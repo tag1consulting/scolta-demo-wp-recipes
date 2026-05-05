@@ -1,0 +1,84 @@
+---
+title: Sandwich Layer-Cake
+slug: sandwich-layer-cake
+source_url: https://en.wikibooks.org/wiki/Cookbook:Sandwich_Layer-Cake
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 155618
+date: '2025-07-22'
+cuisine:
+- Swedish
+course:
+- Appetizer
+diet: []
+difficulty: Very Easy
+technique: []
+recipe_type:
+- sandwiches
+ingredients:
+- bread
+- cottage cheese
+- dill
+- egg
+- lemon
+- mayonnaise
+categories:
+- Appetizer recipes
+- Recipes
+- Recipes for sandwiches
+- Recipes using bread
+- Recipes using cottage cheese
+- Recipes using dill
+- Recipes using egg
+- Recipes using lemon
+- Recipes using mayonnaise
+- Swedish recipes
+- Very Easy recipes
+---
+
+# Sandwich Layer-Cake
+
+**Smörgåstårta** or **sandwich cake** is a typical Swedish party dish, not to be confused with Smörgåsbord. The sandwich cake is a very rich sandwich with so much filling it resembles a cake. It is excellent for receptions and parties since it is served cold and can be prepared in advance. It is also possible to have great variation in the fillings to accompany most peoples taste. The dish can be served as a cake or in smaller piece as appetizers.
+
+This recipe is for shrimp and egg filling. This is only one of many variants, and other variants are listed at the end.
+
+## Ingredients
+
+- 3–4 eggs
+- 1 kg (~2.25 lbs) shrimp with shells on
+- 4.5 dl (450 ml / 1 pint) cottage cheese
+- 4 dl (400 ml) mayonnaise
+- 1 dl (100 ml) sour cream
+- 2 loaves white sandwich bread
+- Salt
+- Black pepper
+- Sprigs of dill or slices of lemon or lime for garnish
+- Chopped dill or parsley for garnish
+
+## Procedure
+
+1. Boil the eggs until hard, and peel the shrimp.
+2. Set aside some shrimp (about ⅓) for garnishing. Chop the remaining shrimp, which will be used for filling.
+3. Mix 1 dl mayonnaise with 1 dl sour cream in a cup or bowl, place in the refrigerator.
+4. Mix the remaining mayonnaise with the cottage cheese in another bowl together with the chopped shrimp; this is the *filling*.
+5. Cut the bread *lengthwise* to make eight 1 cm thick slices. Discard the top and bottom slice.
+6. Place two slices next to each other, preferably on a cutting board. Spread one third of the filling on top of the bread slices. Add two more bread slices on top. Spread half of the remaining filling and repeat for the final layer. The cake should now have four layers of bread with three layers of filling between them.
+7. If necessary even out the edges of the cake with a sharp knife.
+8. Take the mayonnaise/sour cream mix out of the refrigerator and spread it thinly and evenly on the sides of and on top of the cake.
+9. Cover the sides of the cake with chopped parsley or dill. Garnish with shrimp, sliced eggs, and dill sprigs or lemon slices.
+
+## Notes, tips, and variations
+
+- The recipe above describes a four layer cake with only one type of filling. It is possible to use different fillings in different layers of the cake. However, make sure that the tastes of the fillings "fit" together. It is also possible to do a three layer cake.
+- Instead of serving the sandwich cake in cake form it is possible to cut it into pieces before serving. This makes an excellent appetizer or it can be more convenient way to serve the cake since guests do not have to cut it.
+- Since the sandwich cake can be quite heavy it is usually served with a mixed salad. Tortilla chips, various kinds of nuts, or almonds (roasted or fresh) can also be served on the side.
+- When preparing the sandwich cake in "appetizer style" do not cut the bread lengthwise, instead cut normal slices. It is also possible to use pre-sliced bread. Only use two layers for the appetizers and use a tooth-pick to hold it together.
+
+### Additional Fillings
+
+The basic filling consists of about 50/50 mayonnaise and cottage cheese. The proportions can be varied by taste. For a low fat version use more cottage cheese and/or substitute the mayonnaise for low-fat (do not use non-fat) mayonnaise. Different flavorings can be added to the basic filling, some examples follow.
+
+- Chopped canned tuna
+- Chopped pâté and pickled cucumber
+- Smoked ham and paprika
+- Eggs, pickled cucumber, and curry

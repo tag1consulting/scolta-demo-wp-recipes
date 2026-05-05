@@ -1,0 +1,72 @@
+---
+title: Caponata (Sicilian Eggplant and Vegetables)
+slug: caponata-sicilian-eggplant-and-vegetables
+source_url: https://en.wikibooks.org/wiki/Cookbook:Caponata_(Sicilian_Eggplant_and_Vegetables)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 196407
+date: '2025-09-21'
+cuisine:
+- Italian
+course:
+- Appetizer
+- Side dish
+diet: []
+difficulty: Easy
+technique:
+- Pan fried
+recipe_type: []
+ingredients:
+- caper
+- celery
+- eggplant
+- olive
+- sugar
+- tomato
+categories:
+- Appetizer recipes
+- Easy recipes
+- Italian recipes
+- Pan fried recipes
+- Recipes
+- Recipes using caper
+- Recipes using celery
+- Recipes using eggplant
+- Recipes using olive
+- Recipes using sugar
+- Recipes using tomato
+- Recipes with metric units
+- Side dish recipes
+---
+
+# Caponata (Sicilian Eggplant and Vegetables)
+
+**Caponata** is a Sicilian eggplant dish consisting of cooked vegetables with chopped up fried eggplant, celery, sweetened vinegar, and capers with sweet sauce.
+
+## Ingredients
+
+- 2 ¼ pounds (1 kg) eggplant (aubergine)
+- ½ pound (225 g) green olives packed in brine, pitted
+- 6 ounces (170 g) salted capers, rinsed
+- 1 ¼ (570 g) pounds celery ribs
+- 1 cup tomato sauce (optional)
+- ⅔ pound (300 g) onions
+- ⅔ pound (300 g) tomatoes
+- ⅓ cup vinegar
+- 2 tablespoons sugar
+- Basil
+- ⅜ cup pine nuts
+- Olive oil
+- Salt
+
+## Procedure
+
+1. Strip the filaments from the celery sticks and blanch in lightly salted water for five minutes. Drain and cut the celery into bite-size pieces, sauté them in a little oil, and set aside.
+2. Wash and dice the eggplant, strain, and sprinkle liberally with salt, and let sit for several hours to draw out the bitterness. In the meantime, blanch, peel, seed and chop the tomatoes.
+3. Once the eggplant has sat, rinse away the salt and pat the pieces dry. Finely slice the onion and sauté them in olive oil; once they have turned translucent, add the capers, pine nuts, olives, and tomatoes. Continue cooking, stirring with a wooden spoon, until the tomatoes are done, about 15 minutes, and then remove the pot from the heat.
+4. While the tomatoes are cooking, heat another pan of oil and fry the eggplant, in batches, to prevent lowering of the frying temperature. When the last batch is done, return the tomato pot to the heat and stir in the eggplant together with the previously sautéed celery. Cook for several minutes over low flame, stirring gently, then stir in the vinegar and the sugar; when the vinegar has almost completely evaporated, remove the pot from the fire and let it cool.
+5. Serve the caponata cold with a garnish of fresh basil. Caponata keeps for several days in the refrigerator.
+
+## Notes, tips, and variations
+
+- You can serve this on toast as an appetizer, as a side dish, or as a main dish for a light meal.

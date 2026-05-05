@@ -1,0 +1,72 @@
+---
+title: Behari Kabab
+slug: behari-kabab
+source_url: https://en.wikibooks.org/wiki/Cookbook:Behari_Kabab
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 451147
+date: '2026-02-03'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients:
+- chile flake
+- coriander
+- fennel seed
+- garam masala
+- ginger paste
+- lamb and mutton
+- lemon juice
+- mustard seed
+- paprika
+- turmeric
+- whole cumin
+- yogurt
+categories:
+- Recipes
+- Recipes using chile flake
+- Recipes using coriander
+- Recipes using fennel seed
+- Recipes using garam masala
+- Recipes using ginger paste
+- Recipes using lamb and mutton
+- Recipes using lemon juice
+- Recipes using mustard seed
+- Recipes using paprika
+- Recipes using turmeric
+- Recipes using whole cumin
+- Recipes using yogurt
+---
+
+# Behari Kabab
+
+**Behari kabab** is a traditional Pakistani dish made with beef, lamb, or mutton that has been marinated in a mixture of spices and then grilled or baked.
+
+## Ingredients
+
+- 1 tsp cumin seeds
+- 1 tsp coriander seeds
+- 1 tsp fennel seeds
+- 1 tsp mustard seeds
+- 1 tbsp ginger paste
+- 1 tbsp garlic paste
+- 1 tsp garam masala
+- 1 tsp paprika
+- 1 tsp chile flakes
+- 1 tsp turmeric
+- 1 tsp salt
+- 2 tbsp yogurt
+- 2 tbsp lemon juice
+- 2 tbsp oil
+- 1 pound beef, lamb, or mutton, cut into small pieces
+
+## Procedure
+
+1. In a small pan, dry roast the cumin seeds, coriander seeds, fennel seeds, and mustard seeds over medium heat until fragrant. Grind the roasted spices in a spice grinder or with a mortar and pestle.
+2. In a small bowl, combine the ground spices with the ginger paste, garlic paste, garam masala, paprika, chili flakes, turmeric, salt, yogurt, lemon juice, and oil. Mix well to make the marinade.
+3. Place the meat in a large bowl and pour the marinade over it. Mix well to coat the meat with the marinade. Cover the bowl with plastic wrap and refrigerate for at least 4 hours or overnight.
+4. Preheat a grill to medium-high heat. Thread the marinated meat onto skewers and grill for 8–10 minutes, turning occasionally, until the meat is cooked through. Alternatively, you can bake the kababs in the oven at 400°F for 15–20 minutes.
+5. Serve the behari kababs hot with rice or naan bread and a side of your choice. Enjoy!

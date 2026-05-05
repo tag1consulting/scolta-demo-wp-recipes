@@ -1,0 +1,77 @@
+---
+title: Gallo Pinto (Costa Rican Rice and Beans)
+slug: gallo-pinto-costa-rican-rice-and-beans
+source_url: https://en.wikibooks.org/wiki/Cookbook:Gallo_Pinto_(Costa_Rican_Rice_and_Beans)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 403907
+date: '2026-02-11'
+cuisine: []
+course:
+- Side dish
+diet:
+- Vegan
+difficulty: Medium Difficulty
+technique:
+- Boiled
+recipe_type: []
+ingredients:
+- black bean
+- cumin
+- pulses
+- rice
+categories:
+- Boiled recipes
+- Louisiana recipes
+- Medium Difficulty recipes
+- Recipes
+- Recipes using black bean
+- Recipes using cumin
+- Recipes using pulses
+- Recipes using rice
+- Side dish recipes
+- Vegan recipes
+---
+
+# Gallo Pinto (Costa Rican Rice and Beans)
+
+The main Costa Rica staple, known as ***gallo pinto***, consists of rice and black beans, which in many households is eaten at all three meals during the day.
+
+*Gallo pinto* is also known in some Southern Areas of Costa Rica as *burra*, though still recognised the name is rarely used as it is mostly referred to as *gallo pinto*. Also, Costa Rican *gallo pinto* is made with black beans, while Nicaraguans use red beans traditionally.
+
+## Ingredients
+
+- 1 package (450 g / 16 oz) dry beans (black beans preferred)
+- 1 onion, chopped
+- 1 red pepper, chopped
+- 1 bulb garlic, minced
+- 2 bay leaves
+- 1 tsp cumin
+- Olive oil
+- Salt to taste
+- Pepper to taste
+- 1–2 whole dried or fresh hot peppers (optional)
+- 1–2 cups uncooked rice (you can use the same amount of rice than beans; this is, 3 cups of beans for 3 cups of rice).
+
+## Procedure
+
+### Beans
+
+1. Soak beans overnight, or, bring them to a boil and let sit for 1 hour.
+2. In a Dutch oven or large pot, sauté onions and garlic in olive oil on medium heat until onions are translucent.
+3. Add red pepper, and sauté for a few minutes more.
+4. Add beans and enough water to cover all ingredients.
+5. Add spices, bring to a boil, then lower heat and cover, stirring occasionally until done (1–2 hours, depending on the age of your beans).
+
+### Rice
+
+1. Add rice and twice as much water to a pot (e.g. 1 cup rice + 2 cups water, 1 ½ cups rice + 3 cups water, etc).
+2. Cook at a rolling boil until the water has boiled down to the level of the rice.
+3. Reduce heat to a light simmer, cover, and cook for 20 minutes.
+4. Serve the beans over the rice and enjoy!
+
+## Notes, tips, and variations
+
+- Use canned beans instead of dry (greatly reduces cooking time, but doesn't allow for the flavor to soak into the beans as well).
+- You can employ Instant Pot in pressure cooker mode to cook beans in advance instead of using canned beans. You can cook more beans that needed and store them in the fridge upto a week, to make more gallo pinto later.
+- Use a crockpot: Sauté vegetables in a skillet, then add all ingredients (except rice, mainly the soaked beans) for 5 minutes to the crockpot before you leave for work, go to school, whatever. When you come home, beans are ready! Then, fry the cooked rice for 3 minutes with the other ingredients (or fry the cooked rice for 3 minutes and put the beans an the other hot ingredients over it). If using kidney beans, you must cook them for 30 minutes at a vigorous boil before adding to the crockpot.

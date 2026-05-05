@@ -1,0 +1,63 @@
+---
+title: Beurre Blanc
+slug: beurre-blanc
+source_url: https://en.wikibooks.org/wiki/Cookbook:Beurre_Blanc
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 52168
+date: '2026-03-20'
+cuisine:
+- French
+course: []
+diet:
+- Vegetarian
+difficulty: ''
+technique: []
+recipe_type:
+- sauces and condiments
+ingredients:
+- butter
+- heavy cream
+- lemon juice
+- wine
+categories:
+- French recipes
+- Recipes
+- Recipes for sauces and condiments
+- Recipes using butter
+- Recipes using heavy cream
+- Recipes using lemon juice
+- Recipes using wine
+- Vegetarian recipes
+---
+
+# Beurre Blanc
+
+Traditionally, a **beurre blanc** consists of nearly equal parts white wine and good white wine vinegar reduced dramatically with shallot, held in emulsion with quite a lot of butter. Once the basic technique has been mastered, don't be afraid to experiment with new ingredients. Many modern variations exist employing any number of herbs and flavorings.
+
+The sauce, whose name means "white butter," traces its roots to the French cuisine of the Loire Valley, and would be conventionally served with river fish, like trout or pike.
+
+Correctly prepared, a basic beurre blanc should be creamy and tangy with a good savory component, pairing well with lean meats, particularly fish. I recommend it highly with a nice preparation of pan-seared halibut, seasoned simply with salt and pepper. What follows is a recipe for a simple, semi-traditional beurre blanc.
+
+## Ingredients
+
+- 1 cup of good white wine (dry aromatic white, preferably French, such as Pouilly-Fumé)
+- 1 lemon, juiced
+- 1–2 shallots, minced
+- 1 Tbsp heavy cream (optional and non-traditional)
+- 10–12 Tbsp unsalted butter, very cold and in cubes or lumps
+- Salt
+- White pepper
+
+## Procedure
+
+1. Place the white wine in a non-reactive saucepan with the lemon juice and chopped shallots.
+2. Cook this mixture until reduced to about 2 tablespoons, and don't be shy about letting it boil—it will not adversely affect the sauce. Once reduced, the shallot should still be fairly moist. If you're looking at a dry pan, there's a good chance your sauce won't hold.
+3. Reduce heat to low flame. If you want to increase the holding power of your sauce, add the heavy cream at this juncture, but every authority on traditional French preparation would disapprove.
+4. Begin to add cubes of the cold butter while whisking vigorously. From a technical standpoint, the sauce should stay under 200°F (95°C), so do some of the whisking off the flame. Whisk in 1 or 2 cubes and add more, and continue until you've added all the butter.
+5. Season with salt and white pepper, and serve immediately. The sauce can be held in a vacuum container, such a Thermos, but this is not recommended for long periods of time.
+
+## Notes, tips, and variations
+
+- American chefs may try to enhance the presentation of the sauce by straining the shallot out before plating, but the French know better. If the shallot has been sufficiently chopped it has no deleterious effect on the texture of the finished product.
+- You must use a non-reactive saucepan (i.e. stainless steel, ceramic, enamel, etc.) because the sauce contains acidic components.

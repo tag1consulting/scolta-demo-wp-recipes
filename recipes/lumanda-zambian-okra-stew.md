@@ -1,0 +1,57 @@
+---
+title: Lumanda (Zambian Okra Stew)
+slug: lumanda-zambian-okra-stew
+source_url: https://en.wikibooks.org/wiki/Cookbook:Lumanda_(Zambian_Okra_Stew)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 457541
+date: '2025-07-22'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Lumanda (Zambian Okra Stew)
+
+**Lumanda** is a flavorful Zambian okra stew that celebrates the unique taste and texture of okra. This vegetarian stew is made with fresh okra pods, tomatoes, onions, and a blend of aromatic spices. It is a delightful dish often enjoyed with nshima, a popular Zambian staple food.
+
+## Ingredients
+
+- 2 tablespoons vegetable oil
+- 1 onion, finely chopped
+- 2 cloves of garlic, minced
+- 1 hot pepper, chopped (remove seeds for less heat)
+- 1 teaspoon ground paprika
+- 1 teaspoon ground cumin
+- ½ teaspoon ground turmeric
+- ½ teaspoon ground coriander
+- 2 cups sliced fresh okra
+- 1 tomato, diced
+- Salt, to taste
+
+## Equipment
+
+- Large pot
+- Cutting board
+- Knife
+- Wooden spoon or spatula
+
+## Procedure
+
+1. In a large pot, heat the vegetable oil over medium heat.
+2. Add the chopped onion, minced garlic, and chopped hot pepper to the pot. Sauté until the onions are soft and translucent.
+3. Stir in the ground paprika, ground cumin, ground turmeric, and ground coriander. Cook for a minute or two to release the flavors of the spices.
+4. Add the sliced okra and diced tomato to the pot. Stir well to combine the vegetables with the spice mixture.
+5. Season the stew with salt to taste. Adjust the seasoning according to your preference.
+6. Reduce the heat to low, cover the pot, and let simmer for about 15–20 minutes, or until the okra is tender and cooked through.
+7. Stir occasionally during cooking to prevent sticking and to ensure even cooking of the okra and tomatoes.
+8. Once the stew is ready, remove the pot from the heat and let rest for a few minutes before serving.
+
+## Notes, tips, and variations
+
+- For a thicker stew, you can add a spoonful of cornmeal or cassava meal to the pot during cooking.
+- Lumanda is traditionally served with nshima, a stiff maize porridge, but it can also be enjoyed with rice or bread.

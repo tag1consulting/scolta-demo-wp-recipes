@@ -1,0 +1,71 @@
+---
+title: Chadian Salad
+slug: chadian-salad
+source_url: https://en.wikibooks.org/wiki/Cookbook:Chadian_Salad
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 457316
+date: '2025-07-22'
+cuisine:
+- Chadian
+course:
+- Salad
+diet: []
+difficulty: Very Easy
+technique: []
+recipe_type: []
+ingredients:
+- bell pepper
+- carrot
+- cucumber
+- lemon juice
+- onion
+categories:
+- Chadian recipes
+- Recipes
+- Recipes for salad
+- Recipes using bell pepper
+- Recipes using carrot
+- Recipes using cucumber
+- Recipes using lemon juice
+- Recipes using onion
+- Very Easy recipes
+---
+
+# Chadian Salad
+
+**Chadian salad** is a colorful and flavorful salad that combines fresh vegetables with a zesty dressing. It is a healthy and refreshing dish, perfect for hot summer days or as a side dish to accompany grilled meats or fish.
+
+## Ingredients
+
+- 2 tomatoes, diced
+- 1 cucumber, diced
+- 1 red onion, thinly sliced
+- 1 bell pepper (any color), diced
+- 1 carrot, peeled and grated
+- 1 lemon, juiced
+- 2 tablespoons olive oil
+- Salt to taste
+- Pepper to taste
+- Fresh parsley or mint leaves, chopped (optional, for garnish)
+
+## Equipment
+
+- Knife
+- Cutting board
+- Mixing bowl
+- Whisk or fork
+- Plastic wrap
+
+## Procedure
+
+1. Combine the tomatoes, cucumber, bell pepper, red onion, and carrot in a mixing bowl.
+2. In a separate small bowl, whisk together the lemon juice, olive oil, salt, and pepper to make a dressing. Adjust the seasoning according to your taste.
+3. Pour the dressing over the vegetables in the mixing bowl. Gently toss the salad to ensure all the vegetables are coated with the dressing.
+4. Cover the mixing bowl with plastic wrap or a lid and let the salad marinate in the refrigerator for at least 30 minutes. This allows the flavors to blend together and enhances the taste.
+5. Remove the salad from the refrigerator. Give it a final toss to mix the flavors, and transfer it to a serving dish. If desired, sprinkle chopped parsley or mint leaves on top as a garnish.
+6. Enjoy as a standalone dish or as a side salad alongside grilled meats, fish, or other main courses.
+
+## Notes, tips, and variations
+
+- Feel free to customize the salad by adding or substituting vegetables according to your preference and availability. You can also add a touch of heat by including chopped chili peppers or a sprinkle of paprika.

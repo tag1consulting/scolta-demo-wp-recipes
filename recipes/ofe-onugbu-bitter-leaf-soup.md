@@ -1,0 +1,57 @@
+---
+title: Ofe Onugbu (Bitter Leaf Soup)
+slug: ofe-onugbu-bitter-leaf-soup
+source_url: https://en.wikibooks.org/wiki/Cookbook:Ofe_Onugbu_(Bitter_Leaf_Soup)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 476283
+date: '2025-07-23'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Ofe Onugbu (Bitter Leaf Soup)
+
+**Ofe onugbu**, or bitterleaf soup, is a traditional Nigerian soup commonly eaten by the Igbo people of Eastern Nigeria. It is prepared with thoroughly washed bitter leaves, meat, palm oil, local spices, and a thickener such as cocoyam, achi, or ofor. The soup is known for its rich flavor and slightly bitter taste. Serve with a swallow, such as pounded yam, eba (garri), or wheat meal.
+
+## Ingredients
+
+- 1–2 cups bitterleaf
+- 300 g assorted meat (beef, tripe, cow skin)
+- 1 small piece stockish (optional)
+- 1–2 pieces dried fish (optional)
+- 2–3 tablespoons palm oil
+- 1 tablespoon ground crayfish
+- 2-3 Seasoning cubes
+- 1-2 tablespoons Salt (to taste)
+- 1-2 tablespoons ground Pepper (fresh or dried)
+- 1 tablespoon ogiri or iru (fermented locust beans, optional)
+- 3–5 small cocoyam pieces or 2 tablespoons achi powder (as thickener)
+
+## Equipment
+
+- Cooking pot
+- Blender or mortar and pestle (for cocoyam or pepper)
+- Stirring spoon
+- Sieve or colander
+
+## Procedure
+
+1. Wash the bitter leaves thoroughly, squeezing and rinsing several times to reduce the bitterness. Set aside.
+2. In a pot, combine the assorted meat, stockfish, dryfish, salt, seasoning cubes, and chopped onions. Cover with water, and simmer until the meat is tender.
+3. Add palm oil and allow it to melt into the meat stock.
+4. If using cocoyam, boil it separately, peel, blend into a paste, and stir into the soup as a thickener. If using achi or ofor powder, stir directly into the pot.
+5. Stir in the ground crayfish, pepper, ogiri, and ground crayfish.
+6. Stir in the washed bitter leaves.Allow to simmer for 5–10 minutes until the soup thickens and the flavors combine.
+7. Taste and adjust seasoning as needed.
+
+## Notes, tips, and variations
+
+- Washing bitterleaf thoroughly or boiling it helps reduce its bitterness.
+- For added richness, smoked fish or cow foot can be added.
+- Ofe onugbu can be made vegetarian by omitting meat and fish and using mushroom or tofu instead.

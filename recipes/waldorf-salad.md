@@ -1,0 +1,73 @@
+---
+title: Waldorf Salad
+slug: waldorf-salad
+source_url: https://en.wikibooks.org/wiki/Cookbook:Waldorf_Salad
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 44775
+date: '2025-07-22'
+cuisine:
+- United States
+course:
+- Salad
+diet: []
+difficulty: Medium Difficulty
+technique:
+- Refrigerated
+recipe_type: []
+ingredients:
+- apple
+- celery
+- granulated sugar
+- lemon juice
+- lettuce
+- maraschino cherry
+- mayonnaise
+categories:
+- Medium Difficulty recipes
+- Recipes
+- Recipes for salad
+- Recipes using apple
+- Recipes using celery
+- Recipes using granulated sugar
+- Recipes using lemon juice
+- Recipes using lettuce
+- Recipes using maraschino cherry
+- Recipes using mayonnaise
+- Recipes with metric units
+- Refrigerated recipes
+- United States recipes
+---
+
+# Waldorf Salad
+
+**Waldorf salad** was created by Oscar Tschirky in 1896 at the Waldorf-Astoria Hotel, New York, New York, in the United States of America.
+
+## Ingredients
+
+- 1 large Granny Smith apple
+- 1 large Red Delicious apple
+- 1 tablespoon of lemon juice
+- 80 g (⅓ cup or 3 oz) raisins
+- 80 g (⅓ cup or 3 oz) chopped walnuts
+- 80 g (⅓ cup or 3 oz) chopped celery
+- 2 tablespoons mayonnaise
+- 1 tablespoon white granulated sugar
+- 6 large leaves lettuce
+- 10 halved maraschino cherries
+
+## Procedure
+
+1. Slice the apples into wedges, and place in a bowl.
+2. Pour lemon juice on the apple wedges, and ensure a light coating to prevent browning.
+3. Plump the raisins by placing them in warm water for 5 minutes, then drain well.
+4. Mix celery, raisins, and walnuts into the bowl of apple wedges.
+5. Mix the mayonnaise and sugar together, then pour into the apple mixture, ensuring a light coating on all items.
+6. Chill for at least 30 minutes
+7. Place 3 lettuce leaves on a large plate and three on another, place half of the mixture on each set of leaves, and sprinkle 5 cherries on each salad.
+8. Serve
+
+## Notes, tips, and variations
+
+- Though the original salad only used apples, celery and mayonnaise; walnuts mixed in have become an integral part of the modern version of the salad and cherries are only used as a sweet addition to further the contrasts within the salad.
+- Instead of raisins, try using grapes to create the same sort of taste but more wholly and not as rich.

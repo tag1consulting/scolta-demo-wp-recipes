@@ -1,0 +1,80 @@
+---
+title: Spaghetti with Clams in White Wine Sauce
+slug: spaghetti-with-clams-in-white-wine-sauce
+source_url: https://en.wikibooks.org/wiki/Cookbook:Spaghetti_with_Clams_in_White_Wine_Sauce
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 213011
+date: '2026-04-12'
+cuisine: []
+course: []
+diet:
+- Pescatarian
+difficulty: Easy
+technique:
+- Boiled
+recipe_type:
+- pasta sauce
+ingredients:
+- butter
+- chile flake
+- clam
+- garlic
+- lemon juice
+- lime zest
+- pasta and noodles
+- wine
+categories:
+- Boiled recipes
+- Easy recipes
+- Pescatarian recipes
+- Recipes
+- Recipes for pasta sauce
+- Recipes using butter
+- Recipes using chile flake
+- Recipes using clam
+- Recipes using garlic
+- Recipes using lemon juice
+- Recipes using lime zest
+- Recipes using pasta and noodles
+- Recipes using wine
+---
+
+# Spaghetti with Clams in White Wine Sauce
+
+This recipe is an Americanized version of *spaghetti alle vongole*, a Neapolitan dish that's popular throughout Italy. The traditional, Neapolitan version calls for clams, spaghetti, garlic, olive oil, parsley, salt, black pepper and sometimes red pepper flakes. This American version adds butter, white wine and sometimes cream to the traditional ingredients.
+
+## Ingredients
+
+- Olive oil
+- 8 oz clams or carpet clams as they are sometimes known
+- 2 cloves garlic, minced or pressed
+- 1 large pinch of red pepper flakes
+- ½ cup white wine
+- Zest or the juice of 1 lemon
+- Zest of ½ lime
+- Spaghetti, enough for the number of people to be served
+- 1 handful of flat-leaf parsley
+- 1 oz salted butter
+
+## Procedure
+
+1. Put a large saucepan of water on the heat, and bring to a rolling boil. Add the spaghetti, keeping an eye on the cooking time to ensure that the spaghetti does not overcook.
+2. Put the clams into a separate small saucepan with the white wine and poach gently for about 2 minutes. Take off the heat and set aside.
+3. Pour a generous quantity of olive oil into a small frying pan, and heat up.
+4. Add the garlic cloves, chillies, chopped parsley, and the lemon zest.
+5. Heat everything for about 3 minutes.
+6. Now add about ½ of the white wine the clams were cooked in.
+7. Continue to heat for a few minutes on a high heat to induce a slight reduction.
+8. Add the cooked clams to the sauce and turn the heat off completely.
+9. Once the pasta is cooked drain it through a sieve or colander and return to the saucepan.
+10. Add the salted butter to the pasta and mix through thoroughly. This will induce the sauce to thicken a little.
+11. Add the cooked clams to the sauce and the pasta.
+12. Mix up thoroughly ensuring you do not damage the clams.
+13. Serve in a high-sided bowl, ensuring that each guest gets their fair share of clams.
+
+## Notes, tips, and variations
+
+- Add some cream to the sauce before serving if you like. However refrain from adding parmesan cheese. Most Italians frown on adding cheese to fish-based pasta dishes. Also, you don't have to use spaghetti. Penne works well with the spicy sauce. Linguine also works. But make sure the pasta is *al dente*.
+
+## References

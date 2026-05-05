@@ -1,0 +1,83 @@
+---
+title: Fasolia (Ethiopian Green Bean Stew)
+slug: fasolia-ethiopian-green-bean-stew
+source_url: https://en.wikibooks.org/wiki/Cookbook:Fasolia_(Ethiopian_Green_Bean_Stew)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 457220
+date: '2025-07-22'
+cuisine:
+- Ethiopian
+course: []
+diet: []
+difficulty: Easy
+technique: []
+recipe_type:
+- stew
+ingredients:
+- cayenne
+- cilantro
+- coriander
+- cumin
+- green bean
+categories:
+- Easy recipes
+- Ethiopian recipes
+- Recipes
+- Recipes for stew
+- Recipes using cayenne
+- Recipes using cilantro
+- Recipes using coriander
+- Recipes using cumin
+- Recipes using green bean
+---
+
+# Fasolia (Ethiopian Green Bean Stew)
+
+**Fasolia** is an Ethiopian stew, is a delicious and flavorful dish made with tender green beans cooked in a rich and aromatic sauce. This vegetarian stew is a popular choice in Ethiopian cuisine and pairs well with injera (Ethiopian flatbread) or rice.
+
+## Ingredients
+
+- 2 tablespoons olive oil
+- 1 large onion, finely chopped
+- 3 cloves of garlic, minced
+- 2 medium-sized tomatoes, diced
+- 1 tablespoon berbere spice blend
+- 1 teaspoon paprika
+- ½ teaspoon cumin
+- ½ teaspoon coriander
+- ½ teaspoon turmeric
+- ½ teaspoon cayenne pepper, or to taste
+- Salt, to taste
+- 500 grams (1 lb) fresh green beans, trimmed and cut into bite-sized pieces
+- Fresh cilantro or parsley, chopped, for garnish
+
+## Equipment
+
+- Large skillet or frying pan with lid
+- Wooden spoon or spatula
+- Cutting board
+- Chef's knife
+
+## Procedure
+
+1. Heat the olive oil in a large skillet or frying pan over medium heat.
+2. Add the finely chopped onion and minced garlic to the skillet. Sauté until the onion becomes translucent and the garlic is fragrant.
+3. Add the diced tomatoes to the skillet and cook for a few minutes until they start to soften.
+4. Stir in the berbere spice blend, paprika, cumin, coriander, turmeric, cayenne pepper, and salt. Mix well to coat the onions and tomatoes with the spices.
+5. Add the trimmed and cut green beans to the skillet and stir to combine them with the spice mixture.
+6. Reduce the heat to low, cover the skillet with a lid, and simmer for about 20–25 minutes, or until the green beans are tender but still slightly crisp. Stir occasionally to ensure even cooking.
+7. Taste and adjust the seasoning with salt or additional spices if desired.
+8. Remove from heat and let the stew rest for a few minutes to allow the flavors to meld together.
+9. Garnish with freshly chopped cilantro or parsley.
+10. Serve as a main course, accompanied by injera or rice.
+
+## Notes, tips, and variations
+
+- Adjust the spiciness of the stew by adding more or less cayenne pepper according to your taste preferences.
+- For a thicker sauce, you can mash a small portion of the cooked tomatoes and onions using a fork or the back of a spoon.
+- Use fresh, crisp green beans for the best texture and flavor in the stew.
+- To save time, you can blanch the green beans in boiling water for a few minutes before adding them to the skillet.
+- You can add other vegetables like carrots, potatoes, or bell peppers to the fasolia for added flavor and variety.
+- Some recipes include a tablespoon of tomato paste for a richer and more concentrated tomato flavor.
+- Fasolia is a nutritious and flavorful dish that can be enjoyed as part of a vegetarian or vegan diet.

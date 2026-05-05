@@ -1,0 +1,57 @@
+---
+title: Chocolate Orbit Cake
+slug: chocolate-orbit-cake
+source_url: https://en.wikibooks.org/wiki/Cookbook:Chocolate_Orbit_Cake
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 480967
+date: '2026-01-01'
+cuisine: []
+course: []
+diet: []
+difficulty: ''
+technique: []
+recipe_type: []
+ingredients: []
+---
+
+# Chocolate Orbit Cake
+
+**Chocolate orbit cake** is a dense, flourless, gluten-free, nut-free, deeply chocolate dessert made with just four ingredients. The texture is somewhere in between a New York cheesecake and cooled chocolate ganache. The recipe was originally developed by American pastry chef and cookbook author David Lebovitz. This version of his original recipe requires relatively few skills beyond stirring and following directions, and no special equipment. It is baked with a *bain-marie* method.
+
+## Ingredients
+
+## Equipment
+
+- Microwave-safe bowl, or a pan for melting chocolate and butter on the stove top
+- Mixing bowl
+- Whisk (or spoon or fork for stirring)
+- 9-inch round cake pan, at least 1.5 inches (4 cm) deep
+- Parchment baking paper (or waxed paper)
+- Aluminum foil
+- An oven-proof pan that is big enough for a 9-inch pan to sit inside (e.g., a larger cake pan, casserole dish, or all-metal skillet)
+
+## Procedure
+
+1. Preheat oven to 350 °F (175°C, gas mark 4—moderate).
+2. Line the bottom of the cake pan with a piece of parchment paper. Optionally, butter the sides of the cake pan.
+3. Melt the butter and chocolate together until smooth and well-combined. The easiest way to do this is in the microwave: Put the chocolate and butter in a microwave-safe bowl or glass measuring pitcher and heat it for 30–60 seconds at a time, stirring each time, until it is nearly all melted. Let it sit for a few minutes so the residual heat will finish melting the chocolate, then give it a final stir.
+4. Put the sugar and eggs in a large mixing bowl. Briefly whisk the sugar and eggs together.
+5. Drizzle the melted chocolate mixture into the sugar–egg mixture, whisking until the batter is smooth in texture and uniform in appearance. The goal of whisking is to combine the ingredients thoroughly, but not to beat air into the cake batter.
+6. Pour the batter into the prepared cake pan, then cover the cake pan with a piece of aluminum foil.
+7. Place the foil-covered pan in a larger, oven-proof pan. Carefully pour very hot water (can be boiling) into the larger pan, so that the foil-covered cake pan is sitting in a hot water bath (called a *bain marie* in French). The water should be an inch (2.5 cm) deep, or approximately halfway up the side of the foil-covered cake pan. Don't pour the hot water on top of the foil or so high that it might get inside the cake pan.
+8. Carefully put the whole bain-marie assembly in the preheated oven. Bake for about 75–90 minutes, until the cake is set and the surface is nearly dry. To test, remove the cake and its water bath from the oven, and remove the aluminum foil from the top. The surface will be pocked by little craters like an asteroid, which is the source of its name—don't worry, as they'll be covered before serving. The middle of the cake shouldn't jiggle when the cake pan is moved, and when you lightly touch the surface, your finger should come away nearly clean. If it needs just a few more minutes, it's okay to put the cake back in the oven without re-covering it. However, if you think it will need more than about 10 more minutes, re-cover it with the foil and put the whole water bath assembly back in the oven.
+9. When it is done, remove the cake pan from the water bath and remove the foil. Cool the cake in the pan on the counter or a wire cooling rack until it is safe to cover it with plastic wrap and put it in the refrigerator. A large rubber band can help secure the plastic wrap, if needed. Chill the cake in the refrigerator for at least 3 hours (and up to overnight) until firmly set.
+10. To serve, first let the cake warm up to room temperature for about 30 minutes. Slide a dull knife around the edge of the cake pan to loosen the sides. Flip the cake upside down onto a large plate or serving platter. Carefully peel the parchment paper off the cake.
+
+## Notes, tips, and variations
+
+- This recipe is gluten-free, nut-free, flourless, and low in sodium. It is also high in total fats, saturated fats, and cholesterol, as well as being moderately high in added sugars.
+- This recipe can be scaled up or down somewhat. For an 8-inch round pan, scale the recipe down to use 4 eggs. For a 10-inch round, scale the recipe up to use 6 eggs. The baking time will need to be adjusted as a result (possibly by about 10 minutes). To serve a larger crowd, bake two cakes instead of trying to double the recipe. A half recipe could be baked in a loaf pan, with a shorter baking time.
+- Use high-quality chocolate bars (or fèves), not chocolate chips or chocolate-flavored melting wafers, which may contain unwanted additives such as milk, whey, milkfat, vegetable oil, or palm oil. There are many brands of couverture chocolate that are popular with professional bakers, such as Valrhona, Callebaut, and Guittard; anything that you like to eat and is similar to these will work.
+- The recipe was designed to work with a bittersweet or semi-sweet chocolate (around 60% to 70% cacao solids)—do not use other varieties such as unsweetened baking chocolate or milk chocolate. You could try somewhat lighter or darker, depending on your preferences, but it should be a plain chocolate with simple ingredients (cacao beans, sugar, cocoa butter, vanilla, lecithin) that you like eating by itself. For example, Scharffen Berger Chocolate recommends their 62% semi-sweet chocolate for this recipe.
+- For a mocha variation, add 2 teaspoons of instant espresso powder to the sugar and egg mixture.
+- Optionally, decorate the top of the cake with lightly sweetened whipped cream or a sifting of powdered sugar just before serving. The cake can also be served with a favorite flavored whipped cream (e.g., chocolate, mint, raspberry, or coffee), crème anglaise, or raspberry sauce. A dark chocolate ganache would probably be gilding the lily.
+- To cut the cake into neat slices, place a thin knife in very hot water until it is heated. Make one cut through the cake. Wipe the chocolate off the knife blade, and reheat the blade in hot water. Repeat this until the cake has been cut into 12 (or more) wedge-shaped slices.
+- It is possible to bake this cake in a springform pan. However, that will require carefully wrapping the outside of the pan in large pieces of aluminum foil, to prevent any of the hot water in the *bain marie* from leaking into the cake. Using an ordinary cake pan reduces the risk of ending up with chocolate soup instead of chocolate cake.
+- This cake can be stored in the refrigerator, covered, for at least 3 days. For the best flavor, remove the cake from the refrigerator about 30 minutes before serving, so it can come to room temperature.

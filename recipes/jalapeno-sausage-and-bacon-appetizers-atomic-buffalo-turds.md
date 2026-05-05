@@ -1,0 +1,63 @@
+---
+title: Jalapeno Sausage and Bacon Appetizers (Atomic Buffalo Turds)
+slug: jalapeno-sausage-and-bacon-appetizers-atomic-buffalo-turds
+source_url: https://en.wikibooks.org/wiki/Cookbook:Jalapeno_Sausage_and_Bacon_Appetizers_(Atomic_Buffalo_Turds)
+source: Wikibooks Cookbook
+license: CC-BY-SA 3.0
+wikibooks_id: 290852
+date: '2025-07-22'
+cuisine:
+- United States
+course:
+- Appetizer
+diet: []
+difficulty: Easy
+technique:
+- Baked
+- Barbecue
+- Grilled
+recipe_type: []
+ingredients:
+- bacon
+- cream cheese
+- jalapeño chile
+- sausage
+categories:
+- Appetizer recipes
+- Baked recipes
+- Barbecue recipes
+- Easy recipes
+- Grilled recipes
+- Recipes
+- Recipes using bacon
+- Recipes using cream cheese
+- Recipes using jalapeño chile
+- Recipes using sausage
+- Recipes with metric units
+- Texas recipes
+- United States recipes
+---
+
+# Jalapeno Sausage and Bacon Appetizers (Atomic Buffalo Turds)
+
+**Atomic buffalo turds** (also known as **ABTs**) are a variation of the jalapeño popper.
+
+## Ingredients
+
+- Jalapeño peppers
+- Cream cheese
+- Cocktail sausages
+- Bacon slices
+
+## Procedure
+
+1. Halve the jalapeño peppers lengthwise and scrape out membrane and seeds.
+2. Fill the peppers with cream cheese, and then place a cocktail sausage on top of the cream cheese.
+3. Cut the bacon slices in half, and wrap each halved pepper in bacon. A cocktail stick or toothpick can be used to hold the ABTs together if needed.
+4. Cook the ABTs by barbecuing, baking, or grilling. They are done when the bacon is crisped and the jalapeño has softened but not to the point of collapsing. When oven-baked or indirectly grilled, they are typically cooked at approximately 275°F (135°C) for 2 hours, or until bacon is crisped.
+
+## Notes, tips, and variations
+
+- Try using cheddar cheese or other cheese in place of the cream cheese.
+- If the heat of the jalapeño peppers does not appeal, bell peppers may be used instead—quarter the bell peppers and scrape out the seeds before filling.
+- The ABTs can be basted with a barbecue sauce before being cooked.
