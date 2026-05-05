@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 290" role="img" aria-label="Decorative illustration of a bowl of food with herbs">
+
+  <!-- Soft background circle -->
+  <circle cx="118" cy="155" r="118" fill="#EBF3EB" opacity="0.55"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="118" cy="258" rx="72" ry="9" fill="#251F18" opacity="0.07"/>
+
+  <!-- Bowl body -->
+  <path d="M 32 127 C 30 200, 62 242, 118 244 C 174 242, 206 200, 204 127 Z"
+        fill="#EDE7DC"/>
+
+  <!-- Bowl outer rim -->
+  <ellipse cx="118" cy="127" rx="86" ry="21" fill="#D8D2C6"/>
+
+  <!-- Bowl inner rim highlight -->
+  <ellipse cx="118" cy="125" rx="80" ry="17" fill="#E8E2D8"/>
+
+  <!-- Soup surface -->
+  <ellipse cx="118" cy="129" rx="74" ry="14" fill="#C85D2A"/>
+
+  <!-- Soup warmth highlight -->
+  <ellipse cx="96" cy="126" rx="16" ry="5" fill="#FFFFFF" opacity="0.14"/>
+
+  <!-- Herb garnish: three leaves around a centre -->
+  <!-- Left leaf -->
+  <path d="M 106 127 C 96 115, 100 105, 110 111 C 115 117, 110 125, 106 127 Z"
+        fill="#3D6B3B"/>
+  <!-- Centre leaf -->
+  <path d="M 118 124 C 112 111, 118 102, 124 111 C 127 118, 122 122, 118 124 Z"
+        fill="#4A7A48"/>
+  <!-- Right leaf -->
+  <path d="M 130 127 C 140 115, 138 105, 128 111 C 123 117, 128 125, 130 127 Z"
+        fill="#2C5029"/>
+  <!-- Stem -->
+  <line x1="118" y1="124" x2="118" y2="138"
+        stroke="#3D6B3B" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Steam wisps — gentle S-curves -->
+  <path d="M 90 110 C 86 98, 96 88, 91 76 C 86 64, 94 56, 91 46"
+        fill="none" stroke="#C0B8AE" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+  <path d="M 118 106 C 114 94, 124 84, 119 72 C 114 60, 122 52, 119 42"
+        fill="none" stroke="#C0B8AE" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+  <path d="M 146 110 C 142 98, 152 88, 147 76 C 142 64, 150 56, 147 46"
+        fill="none" stroke="#C0B8AE" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Herb sprig — left of bowl -->
+  <line x1="22" y1="205" x2="26" y2="158"
+        stroke="#3D6B3B" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Left leaves -->
+  <path d="M 25 182 C 14 174, 11 163, 18 163 C 24 164, 24 174, 25 182 Z"
+        fill="#3D6B3B" opacity="0.85"/>
+  <path d="M 24 167 C 12 160, 10 148, 18 150 C 25 151, 24 161, 24 167 Z"
+        fill="#4A7A48" opacity="0.85"/>
+  <!-- Right leaves -->
+  <path d="M 25 182 C 36 174, 38 163, 32 164 C 26 165, 25 174, 25 182 Z"
+        fill="#2C5029" opacity="0.75"/>
+  <path d="M 25 168 C 36 161, 38 150, 32 151 C 26 152, 24 161, 25 168 Z"
+        fill="#3D6B3B" opacity="0.75"/>
+
+  <!-- Small decorative dots — scattered spices -->
+  <circle cx="50" cy="222" r="3"   fill="#C85D2A" opacity="0.32"/>
+  <circle cx="60" cy="234" r="2"   fill="#8B6914" opacity="0.38"/>
+  <circle cx="188" cy="218" r="2.5" fill="#C85D2A" opacity="0.28"/>
+  <circle cx="200" cy="232" r="2"  fill="#3D6B3B" opacity="0.32"/>
+  <circle cx="42"  cy="240" r="1.5" fill="#3D6B3B" opacity="0.28"/>
+
+</svg>

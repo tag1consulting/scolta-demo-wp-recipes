@@ -1,0 +1,746 @@
+/*
+Theme Name:   Blocksy Child – Recipe
+Description:  Recipe-themed child of Blocksy for the Scolta AI Search demo.
+Template:     blocksy
+Version:      1.0.0
+Text Domain:  blocksy-child-recipe
+*/
+
+/* ═══════════════════════════════════════════════════════════
+   1. GOOGLE FONTS
+   ═══════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap');
+
+
+/* ═══════════════════════════════════════════════════════════
+   2. DESIGN TOKENS
+   ═══════════════════════════════════════════════════════════ */
+:root {
+  --r-green:         #3D6B3B;
+  --r-green-dark:    #2C5029;
+  --r-green-light:   #EBF3EB;
+  --r-orange:        #C85D2A;
+  --r-orange-light:  #FBF0EB;
+  --r-cream:         #F8F4EF;
+  --r-dark:          #251F18;
+  --r-muted:         #7A6B5F;
+  --r-border:        #E5DDD3;
+  --r-white:         #FFFFFF;
+
+  /* Blocksy palette colour slots */
+  --theme-palette-color-1: #3D6B3B;
+  --theme-palette-color-2: #C85D2A;
+
+  /* Scolta search UI overrides */
+  --scolta-primary:           #3D6B3B;
+  --scolta-primary-hover:     #2C5029;
+  --scolta-accent:            #C85D2A;
+  --scolta-bg:                #F8F4EF;
+  --scolta-card-bg:           #FFFFFF;
+  --scolta-text:              #251F18;
+  --scolta-text-muted:        #7A6B5F;
+  --scolta-text-light:        #9A8D7E;
+  --scolta-border:            #E5DDD3;
+  --scolta-highlight:         #FFF4E6;
+  --scolta-summary-bg-start:  #F0F7EE;
+  --scolta-summary-bg-mid:    #E8F2E6;
+  --scolta-summary-border:    #B8D4B3;
+  --scolta-badge-bg:          #EDF3EC;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   3. GLOBAL — BASE & TYPOGRAPHY
+   ═══════════════════════════════════════════════════════════ */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--r-cream);
+  color: var(--r-dark);
+}
+
+h1, h2, h3, h4, h5, h6,
+.entry-title,
+.site-title,
+.wp-block-heading {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+a             { color: var(--r-green); }
+a:hover       { color: var(--r-green-dark); }
+
+:focus-visible {
+  outline: 2px solid var(--r-green);
+  outline-offset: 2px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   4. HEADER
+   ═══════════════════════════════════════════════════════════ */
+#header,
+.ct-header {
+  background: var(--r-white) !important;
+  border-bottom: 1px solid var(--r-border) !important;
+  box-shadow: none !important;
+}
+
+/* Site title */
+.site-title a,
+.site-title a:visited,
+.site-title a:hover {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+  letter-spacing: -0.02em !important;
+  color: var(--r-green) !important;
+  text-decoration: none !important;
+}
+
+.site-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: var(--r-muted);
+  letter-spacing: 0.02em;
+}
+
+/* Navigation */
+.ct-nav .menu-item > a,
+.ct-header nav .menu-item > a,
+.ct-header .sub-menu .menu-item > a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: var(--r-dark) !important;
+}
+.ct-nav .menu-item > a:hover,
+.ct-header nav .menu-item > a:hover {
+  color: var(--r-green) !important;
+}
+.ct-nav .current-menu-item > a,
+.ct-nav .current_page_item > a {
+  color: var(--r-green) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   5. FRONT PAGE — HERO BLOCK
+   ═══════════════════════════════════════════════════════════ */
+.recipe-hero {
+  text-align: center;
+  padding: 4rem 2rem 3.5rem;
+  background: linear-gradient(145deg, #EBF3EB 0%, #F8F4EF 55%, #FBF0EB 100%);
+  border-radius: 20px;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle colour-wash orbs */
+.recipe-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 45% at 15% 85%, rgba(200, 93, 42, 0.08) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 55% at 85% 15%, rgba(61, 107, 59, 0.09) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.recipe-hero h1,
+.recipe-hero .wp-block-heading {
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  line-height: 1.2;
+  color: var(--r-dark);
+  margin: 0 0 0.8rem;
+  position: relative;
+}
+
+.recipe-hero p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: var(--r-muted);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.65;
+  position: relative;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   6. FRONT PAGE — BELOW-SEARCH CONTENT SECTIONS
+   ═══════════════════════════════════════════════════════════ */
+
+/* Intro paragraph — illustration left, text right */
+.recipe-intro {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 780px;
+  margin: 3.5rem 0 2.5rem;
+}
+.recipe-intro__image {
+  flex-shrink: 0;
+  width: 180px;
+}
+.recipe-intro__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.recipe-intro__text h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  color: var(--r-dark);
+  margin-bottom: 0.75rem;
+}
+.recipe-intro__text p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--r-muted);
+  margin: 0;
+}
+@media (max-width: 580px) {
+  .recipe-intro { flex-direction: column; }
+  .recipe-intro__image { width: 130px; align-self: center; }
+}
+
+/* Two feature columns */
+.recipe-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 600px) {
+  .recipe-features { grid-template-columns: 1fr; }
+}
+.recipe-feature {
+  background: var(--r-white);
+  border-radius: 14px;
+  padding: 1.75rem;
+  border-top: 3px solid var(--r-green-light);
+  box-shadow: 0 2px 12px rgba(37, 31, 24, 0.06);
+}
+.recipe-feature h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--r-dark);
+  margin: 0 0 0.6rem;
+}
+.recipe-feature p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--r-muted);
+  margin: 0;
+}
+
+/* Suggested searches */
+.recipe-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.recipe-suggestions__label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--r-muted);
+  white-space: nowrap;
+  margin: 0;
+}
+.recipe-suggestions__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.recipe-suggestion-chip {
+  background: var(--r-white);
+  color: var(--r-green);
+  border: 1.5px solid #B8D4B3;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(61, 107, 59, 0.07);
+  transition: background 0.15s, color 0.15s, border-color 0.15s,
+              box-shadow 0.15s, transform 0.15s;
+}
+.recipe-suggestion-chip:hover {
+  background: var(--r-green);
+  color: var(--r-white);
+  border-color: var(--r-green);
+  box-shadow: 0 2px 10px rgba(61, 107, 59, 0.25);
+  transform: translateY(-1px);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   7. FRONT PAGE — LAYOUT
+   ═══════════════════════════════════════════════════════════ */
+/* Suppress Blocksy page-title hero on the front page */
+.home .hero-section,
+.home .ct-breadcrumbs-container,
+.home .page-header {
+  display: none !important;
+}
+
+/* Push search content to full width — hide sidebar */
+.home .ct-sidebar,
+.home [data-id="sidebar"] {
+  display: none !important;
+}
+.home .ct-container.ct-sidebar-container,
+.home .ct-page-content-wrap {
+  grid-template-columns: 1fr !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   7. SCOLTA SEARCH UI — ENHANCEMENTS
+   ═══════════════════════════════════════════════════════════ */
+/* Input & button shape */
+.scolta-search-box input[type="text"] {
+  font-family: 'Inter', sans-serif;
+  border-radius: 12px;
+  border-width: 1.5px;
+  font-size: 1rem;
+  padding: 0.9rem 2.6rem 0.9rem 1.15rem;
+  background: var(--r-white);
+  box-shadow: 0 1px 4px rgba(37, 31, 24, 0.06);
+}
+.scolta-search-box input[type="text"]:focus {
+  box-shadow: 0 0 0 3px rgba(61, 107, 59, 0.15);
+}
+.scolta-search-btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  border-radius: 12px;
+  letter-spacing: 0.02em;
+  padding: 0.9rem 1.85rem;
+  background: linear-gradient(150deg, #4a7a48 0%, var(--r-green-dark) 100%) !important;
+  box-shadow: 0 2px 10px rgba(61, 107, 59, 0.35);
+  transition: box-shadow 0.2s, transform 0.15s !important;
+}
+.scolta-search-btn:hover {
+  background: linear-gradient(150deg, #568a54 0%, var(--r-green) 100%) !important;
+  box-shadow: 0 4px 18px rgba(61, 107, 59, 0.42) !important;
+  transform: translateY(-1px);
+}
+.scolta-search-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 5px rgba(61, 107, 59, 0.2) !important;
+}
+
+/* Result cards */
+.scolta-result-card {
+  border-radius: 12px;
+  border-left: 3px solid transparent;
+  transition: box-shadow 0.2s, border-left-color 0.2s;
+  background: var(--r-white);
+}
+.scolta-result-card:hover {
+  border-left-color: var(--r-green);
+  box-shadow: 0 4px 20px rgba(61, 107, 59, 0.12);
+}
+
+/* Recipe title in result cards */
+.scolta-result-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+}
+
+/* Filter sidebar headings */
+.scolta-filters h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--r-muted);
+}
+
+/* Expanded query pills — outlined chip style */
+.scolta-expanded-terms {
+  gap: 0.5rem;
+}
+.scolta-expanded-term {
+  background: var(--r-white) !important;
+  color: var(--r-green) !important;
+  border: 1.5px solid #B8D4B3 !important;
+  padding: 0.3rem 0.9rem !important;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(61, 107, 59, 0.07);
+  transition: background 0.15s, color 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.15s !important;
+}
+.scolta-expanded-term:hover {
+  background: var(--r-green) !important;
+  color: var(--r-white) !important;
+  border-color: var(--r-green) !important;
+  box-shadow: 0 2px 10px rgba(61, 107, 59, 0.25) !important;
+  transform: translateY(-1px);
+}
+
+/* AI summary panel */
+.scolta-ai-summary {
+  background: var(--r-white) !important;
+  border: 1.5px solid #B8D4B3 !important;
+  border-left: 5px solid var(--r-green) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 3px 18px rgba(61, 107, 59, 0.09) !important;
+  padding: 1.4rem 1.75rem 1.15rem 1.5rem !important;
+}
+.scolta-ai-summary-label {
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  color: var(--r-green) !important;
+  margin-bottom: 0.75rem !important;
+}
+.scolta-ai-summary-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem !important;
+  line-height: 1.8 !important;
+}
+/* Orange bullets to match the recipe theme */
+.scolta-ai-summary-text li::before {
+  color: var(--r-orange) !important;
+}
+.scolta-ai-summary-disclaimer {
+  color: var(--r-muted) !important;
+  border-top-color: rgba(184, 212, 179, 0.5) !important;
+}
+
+/* Follow-up input row */
+.scolta-ai-followup-input input {
+  border-radius: 10px !important;
+  font-family: 'Inter', sans-serif !important;
+}
+.scolta-ai-followup-input button {
+  border-radius: 10px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  background: linear-gradient(150deg, #4a7a48 0%, var(--r-green-dark) 100%) !important;
+  box-shadow: 0 2px 8px rgba(61, 107, 59, 0.3) !important;
+  transition: box-shadow 0.2s, transform 0.15s !important;
+}
+.scolta-ai-followup-input button:hover {
+  background: linear-gradient(150deg, #568a54 0%, var(--r-green) 100%) !important;
+  box-shadow: 0 4px 14px rgba(61, 107, 59, 0.38) !important;
+  transform: translateY(-1px);
+}
+.scolta-ai-followup-input button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 5px rgba(61, 107, 59, 0.2) !important;
+}
+
+/* AI summary shimmer */
+.scolta-ai-shimmer {
+  background: linear-gradient(90deg, #d4e8d2 25%, #e8f2e6 50%, #d4e8d2 75%);
+  background-size: 200% 100%;
+}
+
+/* Load-more button */
+.scolta-load-more {
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+/* No-results */
+.scolta-no-results {
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   8. RECIPE ARCHIVE — CARDS
+   ═══════════════════════════════════════════════════════════ */
+.post-type-archive-recipe [data-cards] .entry-card,
+.tax-recipe_cuisine [data-cards] .entry-card,
+.tax-recipe_course [data-cards] .entry-card,
+.tax-recipe_diet [data-cards] .entry-card {
+  --theme-border-radius: 14px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--r-white);
+  border-top: 3px solid var(--r-green-light) !important;
+  box-shadow: 0 2px 12px rgba(37, 31, 24, 0.06);
+  transition: box-shadow 0.25s, transform 0.22s;
+}
+.post-type-archive-recipe [data-cards] .entry-card:hover {
+  box-shadow: 0 8px 30px rgba(37, 31, 24, 0.13);
+  transform: translateY(-3px);
+}
+
+.post-type-archive-recipe .entry-title a {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--r-dark);
+  text-decoration: none;
+}
+.post-type-archive-recipe .entry-title a:hover {
+  color: var(--r-green);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   9. SINGLE RECIPE PAGE
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Hero area — matches home page .recipe-hero style ── */
+.single-recipe .hero-section {
+  background: linear-gradient(145deg, #EBF3EB 0%, #F8F4EF 55%, #FBF0EB 100%) !important;
+  text-align: center !important;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px !important;
+  padding-top: 4rem !important;
+  padding-bottom: 3.5rem !important;
+}
+
+/* Same colour-wash orbs as the home page hero */
+.single-recipe .hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 45% at 15% 85%, rgba(200, 93, 42, 0.08) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 55% at 85% 15%, rgba(61, 107, 59, 0.09) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Recipe name — same scale as "Find Your Perfect Recipe" */
+.single-recipe .hero-section .page-title,
+.single-recipe .hero-section h1 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: clamp(1.9rem, 5vw, 3rem) !important;
+  line-height: 1.2 !important;
+  color: var(--r-dark) !important;
+  position: relative;
+}
+
+/* Date / meta line below the title */
+.single-recipe .hero-section .ct-meta,
+.single-recipe .hero-section [class*="meta"] {
+  position: relative;
+  justify-content: center;
+  color: var(--r-muted);
+  font-size: 0.88rem;
+}
+
+/* Taxonomy pill links in the hero meta row */
+.single-recipe .hero-section a {
+  display: inline-block;
+  background: rgba(61, 107, 59, 0.12);
+  color: var(--r-green) !important;
+  padding: 0.15rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  margin: 0.1rem;
+  transition: background 0.15s, color 0.15s;
+}
+.single-recipe .hero-section a:hover {
+  background: var(--r-green) !important;
+  color: var(--r-white) !important;
+}
+
+/* ── Body content ── */
+.single-recipe .entry-content {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--r-dark);
+}
+
+/* Section headings — "Ingredients", "Procedure", etc. */
+.single-recipe .entry-content h2 {
+  font-size: 1.35rem;
+  color: var(--r-green);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--r-green-light);
+}
+.single-recipe .entry-content h3 {
+  font-size: 1.1rem;
+  color: var(--r-dark);
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Ingredient lists — orange dot bullets */
+.single-recipe .entry-content ul {
+  list-style: none;
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.single-recipe .entry-content ul li {
+  position: relative;
+  padding-left: 0.25rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.65;
+}
+.single-recipe .entry-content ul li::before {
+  content: '•';
+  position: absolute;
+  left: -1.1rem;
+  color: var(--r-orange);
+  font-weight: 700;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* Procedure / numbered steps */
+.single-recipe .entry-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  counter-reset: recipe-step;
+  list-style: none;
+}
+.single-recipe .entry-content ol li {
+  counter-increment: recipe-step;
+  position: relative;
+  padding-left: 0.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+.single-recipe .entry-content ol li::before {
+  content: counter(recipe-step);
+  position: absolute;
+  left: -1.75rem;
+  top: 0.1em;
+  width: 1.4em;
+  height: 1.4em;
+  background: var(--r-green);
+  color: var(--r-white);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Inline links in recipe body */
+.single-recipe .entry-content a {
+  color: var(--r-green);
+  text-decoration: underline;
+  text-decoration-color: var(--r-green-light);
+  text-underline-offset: 2px;
+}
+.single-recipe .entry-content a:hover {
+  text-decoration-color: var(--r-green);
+}
+
+/* Recipe meta footer — taxonomy pill badges */
+.single-recipe .ct-meta-box a,
+.single-recipe .entry-footer .cat-links a,
+.single-recipe .entry-footer .tags-links a {
+  display: inline-block;
+  background: var(--r-green-light);
+  color: var(--r-green) !important;
+  padding: 0.2rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0.15rem 0.1rem;
+  transition: background 0.15s, color 0.15s;
+}
+.single-recipe .ct-meta-box a:hover,
+.single-recipe .entry-footer .cat-links a:hover,
+.single-recipe .entry-footer .tags-links a:hover {
+  background: var(--r-green) !important;
+  color: var(--r-white) !important;
+}
+
+/* Featured image */
+.single-recipe .wp-post-image,
+.single-recipe .post-thumbnail img {
+  border-radius: 14px;
+  width: 100%;
+  height: auto;
+}
+
+/* Source attribution */
+.recipe-source-url {
+  display: block;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--r-border);
+  font-size: 0.8rem;
+  color: var(--r-muted);
+}
+.recipe-source-url a { color: var(--r-muted); }
+
+
+/* ═══════════════════════════════════════════════════════════
+   10. BUTTONS — GLOBAL
+   ═══════════════════════════════════════════════════════════ */
+.ct-button,
+.wp-block-button__link,
+input[type="submit"],
+button.wp-element-button {
+  background: var(--r-green) !important;
+  border-color: var(--r-green) !important;
+  color: var(--r-white) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  transition: background 0.15s, border-color 0.15s !important;
+}
+.ct-button:hover,
+.wp-block-button__link:hover,
+input[type="submit"]:hover,
+button.wp-element-button:hover {
+  background: var(--r-green-dark) !important;
+  border-color: var(--r-green-dark) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   11. FOOTER
+   ═══════════════════════════════════════════════════════════ */
+#footer,
+.ct-footer {
+  background: var(--r-dark) !important;
+  color: rgba(248, 244, 239, 0.7);
+}
+#footer a,
+.ct-footer a {
+  color: rgba(248, 244, 239, 0.85) !important;
+}
+#footer a:hover,
+.ct-footer a:hover {
+  color: var(--r-white) !important;
+}
+#footer .site-title a,
+.ct-footer .site-title a {
+  color: rgba(235, 243, 235, 0.9) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   12. MISC
+   ═══════════════════════════════════════════════════════════ */
+/* Subtle webkit scrollbar */
+::-webkit-scrollbar            { width: 7px; height: 7px; }
+::-webkit-scrollbar-track      { background: var(--r-cream); }
+::-webkit-scrollbar-thumb      { background: var(--r-border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--r-muted); }
+
+/* Blocksy page background */
+.ct-page-content-wrap,
+.entry-content-wrap {
+  background: transparent;
+}
