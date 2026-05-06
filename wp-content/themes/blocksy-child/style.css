@@ -480,6 +480,20 @@ a:hover       { color: var(--r-green-dark); }
   transform: translateY(-3px);
 }
 
+/*
+ * When a recipe card has no taxonomy terms, Blocksy omits the .entry-meta
+ * element entirely and the title shifts to the top, making the grid uneven.
+ * .entry-title:first-child targets exactly that case and restores the space.
+ */
+.post-type-archive-recipe .entry-card .entry-title:first-child,
+.tax-recipe_cuisine .entry-card .entry-title:first-child,
+.tax-recipe_course .entry-card .entry-title:first-child,
+.tax-recipe_diet .entry-card .entry-title:first-child,
+.tax-recipe_difficulty .entry-card .entry-title:first-child,
+.tax-recipe_technique .entry-card .entry-title:first-child {
+  margin-top: 2.25rem;
+}
+
 .post-type-archive-recipe .entry-title a {
   font-family: 'Playfair Display', Georgia, serif;
   color: var(--r-dark);
@@ -685,7 +699,87 @@ a:hover       { color: var(--r-green-dark); }
 
 
 /* ═══════════════════════════════════════════════════════════
-   10. BUTTONS — GLOBAL
+   10. RECIPE PHOTO + INGREDIENTS LAYOUT
+   ═══════════════════════════════════════════════════════════ */
+
+/* Two-column wrapper: photo left, ingredients right */
+.recipe-photo-ingredients {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-photo-col {
+  flex: 0 0 42%;
+  max-width: 42%;
+}
+
+.recipe-ingredients-col {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* Photo: square container, image fills and crops naturally */
+.recipe-photo-col .recipe-hero-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* Attribution caption — subtle, small, muted */
+.recipe-photo-caption {
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--r-muted);
+}
+.recipe-photo-caption a {
+  color: var(--r-muted) !important;
+  text-decoration: none !important;
+}
+.recipe-photo-caption a:hover {
+  color: var(--r-green) !important;
+}
+
+/* Flush the "Ingredients" h2 to the top of the column */
+.recipe-ingredients-col > h2:first-child {
+  margin-top: 0 !important;
+}
+
+/* Full-width solo photo (no ingredients section found) */
+.recipe-photo-solo {
+  margin-bottom: 2rem;
+}
+.recipe-photo-solo .recipe-hero-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* Mobile: stack photo above ingredients */
+@media (max-width: 767px) {
+  .recipe-photo-ingredients {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .recipe-photo-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .recipe-photo-col .recipe-hero-photo,
+  .recipe-photo-solo .recipe-hero-photo {
+    aspect-ratio: 1 / 1;
+    max-height: 280px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   11. BUTTONS — GLOBAL
    ═══════════════════════════════════════════════════════════ */
 .ct-button,
 .wp-block-button__link,

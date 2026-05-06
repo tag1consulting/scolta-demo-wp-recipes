@@ -53,12 +53,110 @@ add_filter( 'wp_resource_hints', function ( array $hints, string $relation_type 
  * @param string $title The generated archive title.
  * @return string
  */
+/**
+ * Stable pagination for recipe archives.
+ *
+ * Many recipes share the same post_date after a bulk import, making
+ * MySQL's ORDER BY post_date DESC non-deterministic. Posts shuffle
+ * between requests, causing the same posts to appear on consecutive pages.
+ * Adding ID as a tiebreaker guarantees a consistent order.
+ */
+add_action( 'pre_get_posts', function ( WP_Query $query ): void {
+	if ( is_admin() || ! $query->is_main_query() ) {
+		return;
+	}
+	if ( $query->is_post_type_archive( 'recipe' ) || $query->is_tax( get_object_taxonomies( 'recipe' ) ) ) {
+		$query->set( 'orderby', [ 'date' => 'DESC', 'ID' => 'DESC' ] );
+	}
+} );
+
 add_filter( 'get_the_archive_title', function ( string $title ): string {
 	if ( is_post_type_archive( 'recipe' ) ) {
 		return 'Browse Recipes';
 	}
 	return $title;
 } );
+
+/**
+ * Suppress Blocksy's default featured image output on single recipe pages.
+ * The image is displayed instead via the two-column layout below.
+ */
+add_filter( 'post_thumbnail_html', function ( string $html, int $post_id ): string {
+	if ( is_singular( 'recipe' ) ) {
+		return '';
+	}
+	return $html;
+}, 99, 2 );
+
+/**
+ * Inject a two-column photo + ingredients layout at the top of single recipe
+ * content when a featured image and attribution meta are present.
+ *
+ * Layout: [photo + caption] [ingredients list]
+ * Falls back to full-width ingredients if no featured image exists.
+ */
+add_filter( 'the_content', function ( string $content ): string {
+	if ( ! is_singular( 'recipe' ) || ! in_the_loop() || ! is_main_query() ) {
+		return $content;
+	}
+
+	$thumbnail_id = get_post_thumbnail_id();
+	if ( ! $thumbnail_id ) {
+		return $content;
+	}
+
+	$post_id = get_the_ID();
+
+	// Attribution meta
+	$author     = get_post_meta( $post_id, '_photo_author', true );
+	$license    = get_post_meta( $post_id, '_photo_license', true );
+	$source_url = get_post_meta( $post_id, '_photo_source_url', true );
+
+	// Build the image element directly (bypasses post_thumbnail_html filter)
+	$image_html = wp_get_attachment_image(
+		$thumbnail_id,
+		'large',
+		false,
+		[
+			'class' => 'recipe-hero-photo',
+			'alt'   => esc_attr( get_the_title() ),
+		]
+	);
+
+	// Build caption line
+	$caption_html = '';
+	if ( $author || $license ) {
+		$caption_text = 'Photo: ' . ( $author ?: 'Unknown' ) . ' / Wikimedia Commons' . ( $license ? ' / ' . $license : '' );
+		if ( $source_url ) {
+			$caption_html = '<p class="recipe-photo-caption"><a href="' . esc_url( $source_url ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( $caption_text ) . '</a></p>';
+		} else {
+			$caption_html = '<p class="recipe-photo-caption">' . esc_html( $caption_text ) . '</p>';
+		}
+	}
+
+	// Extract the ingredients block: from <h2>Ingredients</h2> to the next <h2>
+	$pattern = '/(<h2[^>]*>\s*Ingredients\s*<\/h2>.*?)(?=<h2|$)/si';
+
+	if ( preg_match( $pattern, $content, $matches, PREG_OFFSET_CAPTURE ) ) {
+		$ingredients_html   = $matches[0][0];
+		$ingredients_offset = (int) $matches[0][1];
+
+		$before = substr( $content, 0, $ingredients_offset );
+		$after  = substr( $content, $ingredients_offset + strlen( $ingredients_html ) );
+
+		$two_col = '<div class="recipe-photo-ingredients">'
+			. '<div class="recipe-ingredients-col">' . $ingredients_html . '</div>'
+			. '<div class="recipe-photo-col">' . $image_html . $caption_html . '</div>'
+			. '</div>';
+
+		$content = $before . $two_col . $after;
+	} else {
+		// No ingredients section — prepend photo full-width
+		$content = '<div class="recipe-photo-solo">' . $image_html . $caption_html . '</div>' . $content;
+	}
+
+	return $content;
+}, 10 );
 
 /**
  * Homepage enhancements:
