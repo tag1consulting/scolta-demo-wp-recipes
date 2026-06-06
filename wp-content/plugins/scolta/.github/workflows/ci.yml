@@ -1,0 +1,237 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - php: '8.2'
+            lint: false
+          - php: '8.3'
+            lint: true
+          - php: '8.4'
+            lint: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: intl
+          coverage: none
+
+      - name: Replace path repo with GitHub VCS repo
+        run: |
+          php -r '
+            $j = json_decode(file_get_contents("composer.json"), true);
+            $j["repositories"] = [["type" => "vcs", "url" => "https://github.com/tag1consulting/scolta-php.git"]];
+            $j["require"]["tag1/scolta-php"] = "dev-main@dev";
+            file_put_contents("composer.json", json_encode($j, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n");
+          '
+
+      - name: Install dependencies
+        run: composer update --no-interaction --prefer-dist --ignore-platform-req=php
+
+      - name: Verify scolta.js matches canonical (scolta-php)
+        run: |
+          SHA256_FILE=vendor/tag1/scolta-php/assets/js/scolta.js.sha256
+          if [ ! -f "$SHA256_FILE" ]; then
+            echo "ERROR: $SHA256_FILE not found. scolta-php must include a checksum file."
+            echo "Generate it in scolta-php: sha256sum assets/js/scolta.js | awk '{print \$1}' > assets/js/scolta.js.sha256"
+            exit 1
+          fi
+          EXPECTED=$(cat "$SHA256_FILE")
+          ACTUAL=$(sha256sum assets/js/scolta.js | awk '{print $1}')
+          if [ "$EXPECTED" != "$ACTUAL" ]; then
+            echo "ERROR: assets/js/scolta.js is out of sync with canonical source (scolta-php)."
+            echo "Expected: $EXPECTED"
+            echo "Actual:   $ACTUAL"
+            echo "Run: cp vendor/tag1/scolta-php/assets/js/scolta.js assets/js/scolta.js"
+            exit 1
+          fi
+          echo "OK: assets/js/scolta.js checksum matches canonical (scolta-php)."
+
+      - name: Lint (WordPress coding standards)
+        if: matrix.lint
+        run: composer lint
+
+      - name: Run tests
+        run: composer test
+
+  coverage:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP with Xdebug
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: intl
+          coverage: xdebug
+
+      - name: Replace path repo with GitHub VCS repo
+        run: |
+          php -r '
+            $j = json_decode(file_get_contents("composer.json"), true);
+            $j["repositories"] = [["type" => "vcs", "url" => "https://github.com/tag1consulting/scolta-php.git"]];
+            $j["require"]["tag1/scolta-php"] = "dev-main@dev";
+            file_put_contents("composer.json", json_encode($j, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n");
+          '
+
+      - name: Install dependencies
+        run: composer update --no-interaction --prefer-dist
+
+      - name: Run tests with coverage
+        run: ./vendor/bin/phpunit --coverage-text --colors=never 2>&1 | tail -20
+
+  docs-check:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check CHANGELOG.md updated when code changes
+        run: |
+          CODE_CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- \
+            'includes/' 'admin/' 'cli/' 'scolta.php' 'composer.json' 'tests/' | head -1)
+          if [ -n "$CODE_CHANGED" ]; then
+            CHANGELOG_CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- CHANGELOG.md)
+            if [ -z "$CHANGELOG_CHANGED" ]; then
+              echo "FAIL: Code changed but CHANGELOG.md was not updated."
+              echo "Please add an entry under ## [Unreleased] in CHANGELOG.md."
+              exit 1
+            fi
+            echo "PASS: CHANGELOG.md updated alongside code changes."
+          else
+            echo "SKIP: No code changes detected."
+          fi
+
+  version-consistency:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+
+      - name: Check WordPress version locations match
+        run: |
+          php scripts/validate-release.php || echo "Note: -dev versions expected in development"
+
+  version-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+
+      - name: Check version alignment with scolta-php
+        run: |
+          MY_VERSION=$(php -r "echo json_decode(file_get_contents('composer.json'))->version;")
+          MY_MAJOR=$(echo "$MY_VERSION" | cut -d. -f1)
+          PHP_CONSTRAINT=$(php -r "echo json_decode(file_get_contents('composer.json'))->require->{'tag1/scolta-php'};")
+
+          echo "My version: $MY_VERSION (major: $MY_MAJOR)"
+          echo "scolta-php constraint: $PHP_CONSTRAINT"
+
+          if [ "$PHP_CONSTRAINT" = "@dev" ]; then
+            echo "SKIP: Development mode (@dev constraint)"
+            exit 0
+          fi
+
+          PHP_MAJOR=$(echo "$PHP_CONSTRAINT" | sed 's/[\^~>=<]//g' | cut -d. -f1)
+          if [ "$MY_MAJOR" != "$PHP_MAJOR" ]; then
+            echo "FAIL: Major version mismatch"
+            exit 1
+          fi
+          echo "PASS: Major versions aligned"
+
+  lock-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check scolta-php is stable and from Packagist
+        run: |
+          python3 - <<'PY'
+          import json,sys,re
+          lock=json.load(open("composer.lock"))
+          pkgs=lock.get("packages",[])+lock.get("packages-dev",[])
+          p=next((x for x in pkgs if x["name"]=="tag1/scolta-php"),None)
+          if not p: sys.exit("scolta-php not in lock")
+          dist=(p.get("dist") or {}).get("type")
+          ver=p.get("version","")
+          bad=[]
+          if dist=="path": bad.append(f"dist.type=path ({(p.get('dist') or {}).get('url')})")
+          if not re.fullmatch(r"\d+\.\d+\.\d+", ver): bad.append(f"non-stable version {ver}")
+          if bad: sys.exit("LOCK GUARD FAILED for tag1/scolta-php: "+"; ".join(bad))
+          print(f"Lock guard OK: tag1/scolta-php {ver} via {dist}")
+          PY
+
+  dist-build:
+    name: Distribution archive build + validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: intl
+          coverage: none
+
+      - name: Install dependencies (no dev)
+        run: composer install --no-dev --prefer-dist --no-interaction
+
+      - name: Build distribution archive
+        run: |
+          VERSION=$(php -r "echo json_decode(file_get_contents('composer.json'))->version;")
+          bash scripts/build-dist.sh "$VERSION"
+
+      - name: Validate distribution archive
+        run: |
+          VERSION=$(php -r "echo json_decode(file_get_contents('composer.json'))->version;")
+          bash scripts/validate-dist.sh "scolta-${VERSION}.zip"
+
+  antipatterns:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for known bad patterns
+        run: |
+          FAIL=0
+
+          # Unbounded WP_Query (can exhaust memory on large sites)
+          if grep -rn 'posts_per_page[[:space:]]*=>[[:space:]]*-1' includes/ 2>/dev/null; then
+            echo "FAIL: Unbounded WP_Query (posts_per_page => -1) found in includes/"
+            FAIL=1
+          fi
+
+          # IndexBuildOrchestrator constructed without a logger or progress reporter
+          if grep -rn 'new IndexBuildOrchestrator' includes/ 2>/dev/null | grep -qvE 'logger|progress'; then
+            echo "FAIL: IndexBuildOrchestrator constructed without logger/progress in includes/"
+            grep -rn 'new IndexBuildOrchestrator' includes/ | grep -vE 'logger|progress'
+            FAIL=1
+          fi
+
+          [ $FAIL -eq 0 ] && echo "PASS: No known bad patterns found."
+          exit $FAIL

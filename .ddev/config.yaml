@@ -13,6 +13,14 @@ use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
 corepack_enable: false
+hooks:
+  post-start:
+    - exec: "cd /var/www/html/wp-content/plugins/scolta && composer install --no-interaction --no-dev"
+    - exec-host: "[ -f db/dump.sql.gz ] && ddev import-db --file=db/dump.sql.gz || true"
+    - exec: "wp option update siteurl 'https://wp-scolta-demo.ddev.site' 2>/dev/null || true"
+    - exec: "wp option update home 'https://wp-scolta-demo.ddev.site' 2>/dev/null || true"
+    - exec: "wp plugin activate scolta scolta-demo-recipes 2>/dev/null || true"
+    - exec: "wp option patch insert scolta_settings preset content_catalog 2>/dev/null || true"
 
 # Key features of DDEV's config.yaml:
 

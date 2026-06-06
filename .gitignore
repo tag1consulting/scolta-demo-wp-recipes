@@ -1,0 +1,45 @@
+# WordPress config (contains secrets)
+wp-config.php
+wp-config-local.php
+wp-config-ddev.php
+wp-config-sample.php
+error_log
+debug.log
+*.log
+
+# DDEV local overrides
+.ddev/.gitignore
+.ddev/import-db/
+.ddev/sequelpro.spf
+.ddev/db_snapshots/
+.ddev/homeadditions/
+
+# Node
+node_modules/
+npm-debug.log
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Uploads - committed intentionally for demo
+# wp-content/uploads is NOT gitignored
+
+# WP core cache
+wp-content/cache/
+wp-content/upgrade/
+
+# Scolta runtime state (build output is committed, state is not)
+wp-content/uploads/scolta/state/
+
+# Composer
+vendor/
+.claude/
+wp-content/plugins/plugin-check/

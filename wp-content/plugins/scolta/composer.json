@@ -1,0 +1,72 @@
+{
+    "name": "tag1/scolta-wp",
+    "version": "1.0.4",
+    "description": "Scolta AI Search for WordPress \u2014 zero-infrastructure AI-powered search with Pagefind",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Tag1 Consulting",
+            "homepage": "https://www.tag1.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "tag1/scolta-php": "^1.0.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0|^11.0",
+        "wp-coding-standards/wpcs": "^3.0",
+        "yoast/phpunit-polyfills": "^2.0|^3.0"
+    },
+    "scripts": {
+        "test": "phpunit",
+        "lint": "phpcs",
+        "format": "phpcbf",
+        "validate-release": "php scripts/validate-release.php",
+        "copy-assets": [
+            "[ -f vendor/tag1/scolta-php/assets/js/scolta.js ] && cp vendor/tag1/scolta-php/assets/js/scolta.js assets/js/scolta.js || true",
+            "[ -f vendor/tag1/scolta-php/assets/css/scolta.css ] && cp vendor/tag1/scolta-php/assets/css/scolta.css assets/css/scolta.css || true",
+            "[ -f vendor/tag1/scolta-php/assets/wasm/scolta_core.js ] && cp vendor/tag1/scolta-php/assets/wasm/scolta_core.js assets/wasm/scolta_core.js || true",
+            "[ -f vendor/tag1/scolta-php/assets/wasm/scolta_core_bg.wasm ] && cp vendor/tag1/scolta-php/assets/wasm/scolta_core_bg.wasm assets/wasm/scolta_core_bg.wasm || true"
+        ],
+        "post-install-cmd": [
+            "@copy-assets"
+        ],
+        "post-update-cmd": [
+            "@copy-assets"
+        ]
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "classmap": [
+            "includes/",
+            "admin/",
+            "cli/"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "audit": {
+            "ignore": [
+                "PKSA-5jz8-6tcw-pbk4",
+                "PKSA-z3gr-8qht-p93v"
+            ]
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        },
+        "installer-name": "scolta"
+    }
+}

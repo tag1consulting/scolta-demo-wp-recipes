@@ -1,0 +1,10 @@
+.git
+.github
+.jj
+vendor
+.env
+.env.*
+!.env.example
+.ddev
+docker-compose.yml
+Dockerfile

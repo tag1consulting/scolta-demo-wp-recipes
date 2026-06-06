@@ -1,0 +1,205 @@
+<?php
+/**
+ * Shortcode and block registration for the Scolta search UI.
+ *
+ * WordPress gives users two ways to embed content:
+ *   - [scolta_search] shortcode (works everywhere, Classic + Block editors)
+ *   - Gutenberg block (future — requires @wordpress/scripts build pipeline)
+ *
+ * The shortcode outputs a container div and enqueues scolta.js + config.
+ * The actual search UI is rendered client-side by scolta.js, identical to
+ * how it works on Drupal and Laravel. One JS file, three platforms.
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+use Tag1\Scolta\Config\ScoltaConfig;
+
+class Scolta_Shortcode {
+
+	/**
+	 * Register the [scolta_search] shortcode.
+	 */
+	public static function register(): void {
+		add_shortcode( 'scolta_search', array( self::class, 'render' ) );
+	}
+
+	/**
+	 * Render the shortcode.
+	 *
+	 * Outputs the search container and enqueues the shared scolta.js
+	 * library with WordPress-specific configuration injected via
+	 * wp_localize_script() — the WordPress-standard way to pass PHP
+	 * config to JavaScript.
+	 *
+	 * @param array $atts Shortcode attributes (currently unused, reserved for future).
+	 * @return string HTML output.
+	 */
+	public static function render( array $atts = array() ): string {
+		$settings   = get_option( 'scolta_settings', array() );
+		$output_dir = $settings['output_dir'] ?? scolta_default_output_dir();
+
+		// Silently strip a trailing /pagefind — the PHP indexer appends it
+		// automatically, so including it in the setting causes double-nesting.
+		$normalized = wp_normalize_path( rtrim( $output_dir, '/' ) );
+		if ( str_ends_with( $normalized, '/pagefind' ) ) {
+			$output_dir = substr( $normalized, 0, -strlen( '/pagefind' ) );
+
+			if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+				_doing_it_wrong(
+					__CLASS__ . '::render',
+					'output_dir should not end in /pagefind. The PHP indexer appends /pagefind ' .
+					'automatically. Remove the suffix to avoid double-nested index directories.',
+					'1.0.0'
+				);
+			}
+		}
+
+		// The PHP indexer writes to {output_dir}/pagefind/ (atomic swap subdirectory).
+		// The binary pipeline writes directly to {output_dir}/ (flat structure).
+		// Detect which layout exists so URLs point to the right location.
+		if ( file_exists( $output_dir . '/pagefind/pagefind-entry.json' ) ) {
+			$index_dir    = $output_dir . '/pagefind';
+			$index_exists = true;
+		} elseif ( file_exists( $output_dir . '/pagefind-entry.json' ) ) {
+			$index_dir    = $output_dir;
+			$index_exists = true;
+		} else {
+			$index_dir    = $output_dir;
+			$index_exists = false;
+		}
+
+		if ( ! $index_exists ) {
+			if ( current_user_can( 'manage_options' ) ) {
+				$settings_url = esc_url( admin_url( 'options-general.php?page=scolta' ) );
+				return '<div class="scolta-no-index"'
+					. ' style="padding:20px;background:#fff3cd;border:1px solid #ffc107;'
+					. 'border-radius:4px;margin:20px 0;">'
+					. '<p><strong>Scolta:</strong> Search index has not been built yet.</p>'
+					. '<p><a href="' . $settings_url . '">Build now &rarr;</a>'
+					. ' or run <code>wp scolta build</code></p></div>';
+			}
+			return ''; // Hide search box for non-admins when index doesn't exist.
+		}
+
+		$config       = ScoltaConfig::fromArray( $settings );
+		$pagefind_url = self::dir_to_url( $index_dir );
+
+		// Enqueue the bundled scolta.js and scolta.css (assets/ is committed to the repo).
+		// Cache-bust on the asset's own mtime, not SCOLTA_VERSION: the plugin version is a
+		// static constant that does not change between dev builds, so an unchanged ?ver= let
+		// HTTP caches keep serving stale JS/CSS after a deploy. filemtime changes whenever the
+		// shipped asset changes, forcing a refetch.
+		$scolta_js_path = SCOLTA_PLUGIN_DIR . 'assets/js/scolta.js';
+		if ( file_exists( $scolta_js_path ) ) {
+			wp_enqueue_script(
+				'scolta-search',
+				SCOLTA_PLUGIN_URL . 'assets/js/scolta.js',
+				array(),
+				filemtime( $scolta_js_path ),
+				true // Load in footer.
+			);
+		}
+
+		$scolta_css_path = SCOLTA_PLUGIN_DIR . 'assets/css/scolta.css';
+		if ( file_exists( $scolta_css_path ) ) {
+			wp_enqueue_style(
+				'scolta-search',
+				SCOLTA_PLUGIN_URL . 'assets/css/scolta.css',
+				array(),
+				filemtime( $scolta_css_path )
+			);
+		}
+
+		// Enqueue Pagefind UI CSS (from the built index).
+		$pagefind_css = $index_dir . '/pagefind-ui.css';
+		if ( file_exists( $pagefind_css ) ) {
+			wp_enqueue_style(
+				'scolta-pagefind-ui',
+				$pagefind_url . '/pagefind-ui.css',
+				array(),
+				SCOLTA_VERSION
+			);
+		}
+
+		// Pass config to JS via wp_localize_script.
+		// This sets window.scolta before scolta.js runs.
+		wp_localize_script(
+			'scolta-search',
+			'scolta',
+			array(
+				'scoring'            => $config->toJsScoringConfig(),
+				'wasmPath'           => SCOLTA_PLUGIN_URL . 'assets/wasm/scolta_core.js',
+				'endpoints'          => array(
+					'expand'    => rest_url( 'scolta/v1/expand-query' ),
+					'summarize' => rest_url( 'scolta/v1/summarize' ),
+					'followup'  => rest_url( 'scolta/v1/followup' ),
+				),
+				'pagefindPath'       => $pagefind_url . '/pagefind.js',
+				'siteName'           => ! empty( $config->siteName )
+					? $config->siteName
+					: get_bloginfo( 'name' ),
+				'container'          => '#scolta-search',
+				'allowedLinkDomains' => array(),
+				'disclaimer'         => '',
+				'nonce'              => wp_create_nonce( 'wp_rest' ),
+				'currentLanguage'    => strtolower( explode( '_', get_locale() )[0] ),
+			)
+		);
+
+		// Output the container that scolta.js targets.
+		$attribution = '';
+		if ( $config->showAttribution ) {
+			$attribution = '<p class="scolta-attribution">'
+				. esc_html__( 'Powered by Scolta', 'scolta-ai-search' )
+				. '</p>';
+		}
+
+		return '<div id="scolta-search"></div>' . $attribution;
+	}
+
+	/**
+	 * Convert an absolute filesystem path to a URL.
+	 *
+	 * Checks from most-specific to least-specific so offloaded uploads (S3/CDN)
+	 * resolve correctly: uploads → wp-content → site root → last-resort fallback.
+	 */
+	private static function dir_to_url( string $dir ): string {
+		// Resolve symlinks once for all comparisons.
+		$real_dir     = realpath( $dir );
+		$dir_resolved = rtrim( ! empty( $real_dir ) ? $real_dir : $dir, '/' );
+
+		// Uploads directory — the canonical location for plugin-written index files.
+		// Use wp_upload_dir() so offloaded uploads (S3, CDN) get the right base URL.
+		// Apply set_url_scheme() because wp_upload_dir()['baseurl'] inherits the raw
+		// siteurl option, which may be http:// on reverse-proxy HTTPS setups.
+		$upload_info    = wp_upload_dir();
+		$real_uploads   = realpath( $upload_info['basedir'] );
+		$uploads_base   = ! empty( $real_uploads ) ? $real_uploads : $upload_info['basedir'];
+		$uploads_dir    = rtrim( $uploads_base, '/' );
+		$uploads_url    = rtrim( $upload_info['baseurl'], '/' );
+		if ( str_starts_with( $dir_resolved, $uploads_dir ) ) {
+			$relative = substr( $dir_resolved, strlen( $uploads_dir ) );
+			return set_url_scheme( $uploads_url . $relative );
+		}
+
+		// wp-content directory (non-uploads plugin/theme files).
+		$real_content = realpath( WP_CONTENT_DIR );
+		$content_dir  = rtrim( ! empty( $real_content ) ? $real_content : WP_CONTENT_DIR, '/' );
+		if ( str_starts_with( $dir_resolved, $content_dir ) ) {
+			$relative = substr( $dir_resolved, strlen( $content_dir ) );
+			return content_url( $relative );
+		}
+
+		// Site root (anything else under ABSPATH).
+		$real_abspath = realpath( ABSPATH );
+		$abspath      = rtrim( ! empty( $real_abspath ) ? $real_abspath : ABSPATH, '/' );
+		if ( str_starts_with( $dir_resolved, $abspath ) ) {
+			$relative = substr( $dir_resolved, strlen( $abspath ) );
+			return site_url( $relative );
+		}
+
+		// Last resort.
+		return site_url( '/scolta-pagefind' );
+	}
+}
