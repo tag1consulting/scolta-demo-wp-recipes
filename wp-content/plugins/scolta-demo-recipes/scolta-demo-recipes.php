@@ -266,7 +266,7 @@ function scolta_recipes_enrich_index( $item, $post ) {
 		return $item;
 	}
 
-	$taxonomy_text = '';
+	// All taxonomies are appended to the searchable body for full-text recall.
 	$taxonomies = array(
 		'recipe_cuisine'    => 'Cuisine',
 		'recipe_course'     => 'Course',
@@ -277,25 +277,44 @@ function scolta_recipes_enrich_index( $item, $post ) {
 		'recipe_ingredient' => 'Ingredients',
 	);
 
+	// A subset is also emitted as Pagefind filter facets (filterable dimensions
+	// in the search UI). Keys here must match the `filter_fields` setting. Each
+	// is multi-value: a recipe can carry several cuisines, courses, or diets.
+	$facet_taxonomies = array(
+		'recipe_cuisine'    => 'cuisine',
+		'recipe_course'     => 'course',
+		'recipe_diet'       => 'diet',
+		'recipe_difficulty' => 'difficulty',
+	);
+
+	$taxonomy_text = '';
+	$filters       = array();
+
 	foreach ( $taxonomies as $tax_slug => $label ) {
 		$terms = wp_get_post_terms( $post->ID, $tax_slug, array( 'fields' => 'names' ) );
-		if ( ! is_wp_error( $terms ) && ! empty( $terms ) ) {
-			$taxonomy_text .= '<p>' . esc_html( $label ) . ': ' . esc_html( implode( ', ', $terms ) ) . '</p>';
+		if ( is_wp_error( $terms ) || empty( $terms ) ) {
+			continue;
+		}
+
+		// Searchable body text (all taxonomies).
+		$taxonomy_text .= '<p>' . esc_html( $label ) . ': ' . esc_html( implode( ', ', $terms ) ) . '</p>';
+
+		// Facet values (subset only). Multi-value array of term names.
+		if ( isset( $facet_taxonomies[ $tax_slug ] ) ) {
+			$filters[ $facet_taxonomies[ $tax_slug ] ] = array_values( $terms );
 		}
 	}
 
-	if ( $taxonomy_text ) {
-		return new \Tag1\Scolta\Export\ContentItem(
-			id:       $item->id,
-			title:    $item->title,
-			bodyHtml: $item->bodyHtml . $taxonomy_text,
-			url:      $item->url,
-			date:     $item->date,
-			siteName: $item->siteName,
-		);
+	if ( $taxonomy_text === '' && empty( $filters ) ) {
+		return $item;
 	}
 
-	return $item;
+	return $item->cloneWith(
+		array(
+			'bodyHtml' => $item->bodyHtml . $taxonomy_text,
+			'filters'  => $filters,
+		)
+	);
 }
 
 // =========================================================================
