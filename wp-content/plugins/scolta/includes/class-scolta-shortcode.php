@@ -9,12 +9,17 @@
  * The shortcode outputs a container div and enqueues scolta.js + config.
  * The actual search UI is rendered client-side by scolta.js, identical to
  * how it works on Drupal and Laravel. One JS file, three platforms.
+ *
+ * @package Scolta
  */
 
 defined( 'ABSPATH' ) || exit;
 
 use Tag1\Scolta\Config\ScoltaConfig;
 
+/**
+ * Registers and renders the [scolta_search] shortcode.
+ */
 class Scolta_Shortcode {
 
 	/**
@@ -39,21 +44,20 @@ class Scolta_Shortcode {
 		$settings   = get_option( 'scolta_settings', array() );
 		$output_dir = $settings['output_dir'] ?? scolta_default_output_dir();
 
-		// Silently strip a trailing /pagefind — the PHP indexer appends it
-		// automatically, so including it in the setting causes double-nesting.
-		$normalized = wp_normalize_path( rtrim( $output_dir, '/' ) );
-		if ( str_ends_with( $normalized, '/pagefind' ) ) {
-			$output_dir = substr( $normalized, 0, -strlen( '/pagefind' ) );
-
-			if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-				_doing_it_wrong(
-					__CLASS__ . '::render',
-					'output_dir should not end in /pagefind. The PHP indexer appends /pagefind ' .
-					'automatically. Remove the suffix to avoid double-nested index directories.',
-					'1.0.0'
-				);
-			}
+		// Strip a trailing /pagefind via the shared builder normalization —
+		// the PHP indexer appends it automatically, so including it in the
+		// setting causes double-nesting.
+		$normalized = scolta_normalize_output_dir( $output_dir );
+		$had_suffix = $normalized !== wp_normalize_path( rtrim( $output_dir, '/' ) );
+		if ( $had_suffix && defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+			_doing_it_wrong(
+				__CLASS__ . '::render',
+				'output_dir should not end in /pagefind. The PHP indexer appends /pagefind ' .
+				'automatically. Remove the suffix to avoid double-nested index directories.',
+				'1.0.0'
+			);
 		}
+		$output_dir = $normalized;
 
 		// The PHP indexer writes to {output_dir}/pagefind/ (atomic swap subdirectory).
 		// The binary pipeline writes directly to {output_dir}/ (flat structure).
@@ -72,12 +76,23 @@ class Scolta_Shortcode {
 		if ( ! $index_exists ) {
 			if ( current_user_can( 'manage_options' ) ) {
 				$settings_url = esc_url( admin_url( 'options-general.php?page=scolta' ) );
+				$not_built    = esc_html__(
+					'Search index has not been built yet.',
+					'scolta-ai-search'
+				);
+				$build_now    = esc_html__( 'Build now', 'scolta-ai-search' );
+				$or_run       = sprintf(
+					/* translators: %s: shell command */
+					esc_html__( 'or run %s', 'scolta-ai-search' ),
+					'<code>wp scolta build</code>'
+				);
 				return '<div class="scolta-no-index"'
 					. ' style="padding:20px;background:#fff3cd;border:1px solid #ffc107;'
 					. 'border-radius:4px;margin:20px 0;">'
-					. '<p><strong>Scolta:</strong> Search index has not been built yet.</p>'
-					. '<p><a href="' . $settings_url . '">Build now &rarr;</a>'
-					. ' or run <code>wp scolta build</code></p></div>';
+					. '<p><strong>Scolta:</strong> ' . $not_built . '</p>'
+					. '<p><a href="' . $settings_url . '">' . $build_now . ' &rarr;</a> '
+					. $or_run
+					. '</p></div>';
 			}
 			return ''; // Hide search box for non-admins when index doesn't exist.
 		}
@@ -163,6 +178,8 @@ class Scolta_Shortcode {
 	 *
 	 * Checks from most-specific to least-specific so offloaded uploads (S3/CDN)
 	 * resolve correctly: uploads → wp-content → site root → last-resort fallback.
+	 *
+	 * @param string $dir Absolute filesystem path to convert.
 	 */
 	private static function dir_to_url( string $dir ): string {
 		// Resolve symlinks once for all comparisons.
@@ -173,11 +190,11 @@ class Scolta_Shortcode {
 		// Use wp_upload_dir() so offloaded uploads (S3, CDN) get the right base URL.
 		// Apply set_url_scheme() because wp_upload_dir()['baseurl'] inherits the raw
 		// siteurl option, which may be http:// on reverse-proxy HTTPS setups.
-		$upload_info    = wp_upload_dir();
-		$real_uploads   = realpath( $upload_info['basedir'] );
-		$uploads_base   = ! empty( $real_uploads ) ? $real_uploads : $upload_info['basedir'];
-		$uploads_dir    = rtrim( $uploads_base, '/' );
-		$uploads_url    = rtrim( $upload_info['baseurl'], '/' );
+		$upload_info  = wp_upload_dir();
+		$real_uploads = realpath( $upload_info['basedir'] );
+		$uploads_base = ! empty( $real_uploads ) ? $real_uploads : $upload_info['basedir'];
+		$uploads_dir  = rtrim( $uploads_base, '/' );
+		$uploads_url  = rtrim( $upload_info['baseurl'], '/' );
 		if ( str_starts_with( $dir_resolved, $uploads_dir ) ) {
 			$relative = substr( $dir_resolved, strlen( $uploads_dir ) );
 			return set_url_scheme( $uploads_url . $relative );

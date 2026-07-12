@@ -111,7 +111,7 @@ This verifies PHP version, index directories, indexer selection, AI provider con
 wp scolta status
 ```
 
-The REST health endpoint also reports current state: `GET /wp-json/scolta/v1/health`
+The REST health endpoint also reports current state: `GET /wp-json/scolta/v1/health`. Anonymous requests return only the overall `status` value (enough for uptime monitoring); the full diagnostic payload — AI provider, index detail, integrity breakdown — requires an authenticated request from a user with `manage_options`.
 
 ## What Scolta Is Built For
 
@@ -135,6 +135,8 @@ aggressive     # peak ≤ 1 GB   — high-memory servers              (500 posts
 ```
 
 The **Settings > Scolta > Chunk Size** field sets pages-per-chunk independently of the memory budget. Leave it blank to use the profile default. Lower values reduce peak RAM; higher values reduce merge overhead on large corpora.
+
+Both settings apply to every PHP-indexer build path — `wp scolta build`, the admin **Rebuild Now** button, and Action Scheduler background rebuilds all stream content through the same budget-aware pipeline.
 
 Both settings can be overridden per-run:
 
@@ -468,7 +470,7 @@ wp scolta check-setup                    # Verify PHP, indexer, and configuratio
 | POST | `/wp-json/scolta/v1/expand-query` | Expand a search query into related terms |
 | POST | `/wp-json/scolta/v1/summarize` | Summarize search results |
 | POST | `/wp-json/scolta/v1/followup` | Continue a search conversation |
-| GET | `/wp-json/scolta/v1/health` | Health check (indexer status, AI availability) |
+| GET | `/wp-json/scolta/v1/health` | Health check — anonymous: overall `status` only; full detail requires `manage_options` |
 | GET | `/wp-json/scolta/v1/build-progress` | Current build status (admin only) |
 | POST | `/wp-json/scolta/v1/rebuild-now` | Trigger immediate background rebuild (admin only) |
 

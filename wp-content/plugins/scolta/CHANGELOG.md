@@ -4,6 +4,25 @@ All notable changes to scolta-wp will be documented in this file.
 
 This project uses [Semantic Versioning](https://semver.org/). Major versions are synchronized across all Scolta packages; minor and patch versions are released independently per package.
 
+## [1.0.7] - 2026-07-06
+
+### Added
+- On the WordPress.org distribution, all remote AI functionality is opt-in: activation contacts no remote service and AI features default off.
+- Amazee.ai credentials are now stored with authenticated encryption (encrypt-then-MAC) instead of plain encryption.
+
+### Changed
+- The `/health` endpoint now returns only the overall status to anonymous (logged-out) requesters — a user-visible REST API change.
+- When the stored Amazee.ai connection is no longer accepted, AI search degrades gracefully and wp-admin shows a prompt to reconnect; the `/health` endpoint reflects the credential state.
+- Ordinary page views no longer pay two extra non-autoloaded option reads per request on hosts without a persistent object cache.
+- Scheduler and admin index builds now run the same streamed, budget-aware pipeline as `wp scolta build`, and both content paths produce identical items via one shared mapper.
+- Synced the bundled browser script, stylesheet, and modern stemmer from scolta-php 1.0.5 (AI-Overview latency fix and the up-to-date Snowball stemmer).
+- Trimmed bundled dependency documentation from the distribution archive.
+- Clarified historical changelog entries.
+
+### Fixed
+- Amazee.ai credentials stored without resolved model names now self-heal by re-resolving the model against the stored credentials, instead of leaving AI unavailable; the `/health` endpoint reports AI status accurately.
+- Several admin and CLI fixes: connecting Amazee.ai no longer overwrites a customized AI model, the budget-exceeded admin notice can display, the dashboard widget is hidden from non-administrators, "Reset to default" on the custom-prompt fields works, "Rebuild Now" honors the build lock, and `wp scolta clear-cache` also clears transient timeout rows.
+
 ## [1.0.4] - 2026-06-05
 
 ### Added

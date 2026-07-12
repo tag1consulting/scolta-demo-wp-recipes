@@ -3,7 +3,7 @@
  * Plugin Name:       Scolta AI Search
  * Plugin URI:        https://www.tag1.com/scolta
  * Description:       Zero-infrastructure AI search with Pagefind, query expansion, summarization.
- * Version:       1.0.4
+ * Version:       1.0.7
  * Requires at least: 6.1
  * Requires PHP:      8.1
  * Author:            Tag1 Consulting
@@ -15,10 +15,23 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'SCOLTA_VERSION', '1.0.4' );
+define( 'SCOLTA_VERSION', '1.0.7' );
 define( 'SCOLTA_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SCOLTA_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'SCOLTA_PLUGIN_FILE', __FILE__ );
+
+/*
+ * Whether Amazee.ai trial provisioning may run automatically at activation
+ * and AI features start enabled. The WordPress.org distribution build flips
+ * this default to false (scripts/build-dist.sh): activation performs zero
+ * outbound HTTP and all AI features stay off until an administrator
+ * explicitly enables them or configures an API key. Self-distributed and
+ * partner builds keep auto-provisioning. Sites can override via wp-config.php.
+ */
+if ( ! defined( 'SCOLTA_AUTO_PROVISION_DEFAULT' ) ) {
+	// Flipped to false by scripts/build-dist.sh for the WordPress.org build.
+	define( 'SCOLTA_AUTO_PROVISION_DEFAULT', true );
+}
 
 // Composer autoloader (scolta-php).
 $scolta_autoloader = SCOLTA_PLUGIN_DIR . 'vendor/autoload.php';
@@ -31,6 +44,7 @@ require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-tracker.php';
 require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-content-source.php';
 require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-amazee-config-storage.php';
 require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-amazee-budget-handler.php';
+require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-amazee-reauth-handler.php';
 require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-ai-service.php';
 require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-cache-driver.php';
 require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-prompt-enricher.php';
@@ -38,6 +52,7 @@ require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-content-gatherer.php';
 require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-logger.php';
 require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-rest-api.php';
 require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-shortcode.php';
+require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-build-status-progress-reporter.php';
 require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-rebuild-scheduler.php';
 require_once SCOLTA_PLUGIN_DIR . 'includes/class-scolta-auto-rebuild.php';
 
@@ -68,6 +83,28 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
  */
 function scolta_default_output_dir(): string {
 	return wp_upload_dir()['basedir'] . '/scolta';
+}
+
+/**
+ * Normalize a configured output_dir the same way the index builder does.
+ *
+ * The PHP indexer's IndexBuildOrchestrator strips a trailing /pagefind
+ * before building (the suffix is appended automatically during
+ * atomicSwap()), so every consumer that derives index paths from the
+ * configured output_dir — health checks, the dashboard widget, the
+ * shortcode — must apply the identical normalization or it resolves a
+ * different directory than the one the builder wrote to.
+ *
+ * @param string $output_dir The configured output_dir setting value.
+ * @return string Normalized path: forward slashes, no trailing slash,
+ *                no trailing /pagefind suffix.
+ */
+function scolta_normalize_output_dir( string $output_dir ): string {
+	$normalized = rtrim( wp_normalize_path( $output_dir ), '/' );
+	if ( str_ends_with( $normalized, '/pagefind' ) ) {
+		$normalized = substr( $normalized, 0, -strlen( '/pagefind' ) );
+	}
+	return $normalized;
 }
 
 /**
@@ -120,48 +157,48 @@ function scolta_activate(): void {
 	$upload_dir = wp_upload_dir();
 
 	$defaults = array(
-		'ai_provider'                => 'anthropic',
-		'ai_model'                   => 'claude-sonnet-4-5-20250929',
-		'ai_expansion_model'         => '',
-		'ai_base_url'                => '',
-		'site_name'                  => get_bloginfo( 'name' ),
-		'site_description'           => 'website',
-		'search_page_path'           => '/scolta-search',
-		'pagefind_index_path'        => wp_upload_dir()['baseurl'] . '/scolta/pagefind',
-		'pagefind_binary'            => 'pagefind',
-		'build_dir'                  => wp_upload_dir()['basedir'] . '/scolta/build',
-		'output_dir'                 => scolta_default_output_dir(),
-		'indexer'                    => 'auto',
-		'memory_budget_profile'      => 'conservative',
-		'auto_rebuild'               => true,
-		'post_types'                 => array( 'post', 'page' ),
-		'cache_ttl'                  => 2592000,
-		'max_follow_ups'             => 3,
-		'ai_expand_query'            => true,
-		'ai_summarize'               => true,
-		'ai_languages'               => array( 'en' ),
+		'ai_provider'                  => 'anthropic',
+		'ai_model'                     => 'claude-sonnet-4-5-20250929',
+		'ai_expansion_model'           => '',
+		'ai_base_url'                  => '',
+		'site_name'                    => get_bloginfo( 'name' ),
+		'site_description'             => 'website',
+		'search_page_path'             => '/scolta-search',
+		'pagefind_index_path'          => wp_upload_dir()['baseurl'] . '/scolta/pagefind',
+		'pagefind_binary'              => 'pagefind',
+		'build_dir'                    => wp_upload_dir()['basedir'] . '/scolta/build',
+		'output_dir'                   => scolta_default_output_dir(),
+		'indexer'                      => 'auto',
+		'memory_budget_profile'        => 'conservative',
+		'auto_rebuild'                 => true,
+		'post_types'                   => array( 'post', 'page' ),
+		'cache_ttl'                    => 2592000,
+		'max_follow_ups'               => 3,
+		'ai_expand_query'              => SCOLTA_AUTO_PROVISION_DEFAULT,
+		'ai_summarize'                 => SCOLTA_AUTO_PROVISION_DEFAULT,
+		'ai_languages'                 => array( 'en' ),
 		// Scoring.
-		'title_match_boost'          => 2.0,
-		'title_all_terms_multiplier' => 1.5,
-		'content_match_boost'        => 0.4,
-		'recency_boost_max'          => 0.25,
-		'recency_half_life_days'     => 365,
-		'recency_penalty_after_days' => 1825,
-		'recency_max_penalty'        => 0.3,
-		'expand_primary_weight'      => 0.5,
-		'cross_list_bonus'           => 0.05,
+		'title_match_boost'            => 2.0,
+		'title_all_terms_multiplier'   => 1.5,
+		'content_match_boost'          => 0.4,
+		'recency_boost_max'            => 0.25,
+		'recency_half_life_days'       => 365,
+		'recency_penalty_after_days'   => 1825,
+		'recency_max_penalty'          => 0.3,
+		'expand_primary_weight'        => 0.5,
+		'cross_list_bonus'             => 0.05,
 		'expand_subword_max_frequency' => 0.05,
-		'expansion_combine_mode'     => 'relevance_union',
+		'expansion_combine_mode'       => 'relevance_union',
 		// Display.
-		'excerpt_length'             => 300,
-		'results_per_page'           => 10,
-		'max_pagefind_results'       => 50,
-		'ai_summary_top_n'           => 10,
-		'ai_summary_max_chars'       => 4000,
+		'excerpt_length'               => 300,
+		'results_per_page'             => 10,
+		'max_pagefind_results'         => 50,
+		'ai_summary_top_n'             => 10,
+		'ai_summary_max_chars'         => 4000,
 		// Prompt overrides.
-		'prompt_expand_query'        => '',
-		'prompt_summarize'           => '',
-		'prompt_follow_up'           => '',
+		'prompt_expand_query'          => '',
+		'prompt_summarize'             => '',
+		'prompt_follow_up'             => '',
 	);
 
 	// Ensure index directories exist in uploads (writable on all managed hosts).
@@ -210,14 +247,29 @@ function scolta_activate(): void {
 		);
 	}
 
-	// Queue initial index build and Amazee.ai provisioning if Action Scheduler
-	// is available. Both are deferred so activation does not block on HTTP calls.
+	// Queue the initial index build if Action Scheduler is available. The
+	// build is local-only (no outbound HTTP) and deferred so activation
+	// does not block.
 	if ( function_exists( 'as_schedule_single_action' ) ) {
-		as_schedule_single_action( time() + 5, 'scolta_amazee_provision', array(), 'scolta' );
 		as_schedule_single_action( time() + 10, 'scolta_rebuild_start', array(), 'scolta' );
-	} else {
-		// Without Action Scheduler, fall back to synchronous provisioning.
-		scolta_auto_provision_amazee();
+	}
+
+	if ( SCOLTA_AUTO_PROVISION_DEFAULT ) {
+		// Auto-provisioning builds: queue Amazee.ai provisioning via Action
+		// Scheduler so activation does not block on HTTP, or fall back to a
+		// synchronous call without it.
+		if ( function_exists( 'as_schedule_single_action' ) ) {
+			as_schedule_single_action( time() + 5, 'scolta_amazee_provision', array(), 'scolta' );
+		} else {
+			scolta_auto_provision_amazee();
+		}
+	} elseif ( ! scolta_has_explicit_api_key() ) {
+		// Opt-in builds (WordPress.org): activation contacts no remote
+		// service. Record that AI features are available but awaiting
+		// explicit admin consent; this drives the opt-in admin notice and
+		// the "Enable AI features" control on the settings page. An explicit
+		// API key is itself the consent act, so no opt-in flow is needed.
+		update_option( 'scolta_ai_optin_pending', true, false );
 	}
 
 	// Set transient for admin notice.
@@ -225,23 +277,115 @@ function scolta_activate(): void {
 }
 register_activation_hook( __FILE__, 'scolta_activate' );
 
-// Register the Action Scheduler callback for background provisioning.
-add_action( 'scolta_amazee_provision', 'scolta_auto_provision_amazee' );
+// Register the Action Scheduler callback for background provisioning. The
+// wrapper discards the bool result — scheduled actions have no caller to
+// report failure to; the opt-in flow calls scolta_auto_provision_amazee()
+// directly and surfaces failures in admin.
+add_action(
+	'scolta_amazee_provision',
+	function (): void {
+		scolta_auto_provision_amazee();
+	}
+);
 
 /**
- * Attempt Amazee.ai trial provisioning at plugin activation time.
+ * Attempt Amazee.ai trial provisioning.
  *
- * No-op when the user has an explicit API key configured, or when
- * credentials are already stored. Failures are silenced — activation
- * succeeds regardless.
+ * Called from the scolta_amazee_provision scheduled action, the synchronous
+ * activation fallback (auto-provisioning builds only), and the explicit
+ * opt-in flow. No-op when the user has an explicit API key configured, or
+ * when credentials are already stored. Failures are silenced — the caller
+ * decides how to surface them.
+ *
+ * @return bool True when provisioning succeeded; false when skipped or failed.
  */
-function scolta_auto_provision_amazee(): void {
+function scolta_auto_provision_amazee(): bool {
+	/**
+	 * Short-circuits Amazee.ai provisioning before any remote contact.
+	 *
+	 * Mirrors WordPress's pre_http_request pattern: return a non-null value
+	 * to skip the provisioning call entirely; the value (cast to bool) is
+	 * returned as the provisioning result. Used by tests to assert
+	 * provisioning attempts without network access.
+	 *
+	 * @param bool|null $pre Non-null to short-circuit provisioning.
+	 */
+	$pre = apply_filters( 'scolta_pre_auto_provision', null );
+	if ( null !== $pre ) {
+		return (bool) $pre;
+	}
+
 	$storage = new Scolta_Amazee_Config_Storage();
 
-	\Tag1\Scolta\AiProvider\Amazee\AutoProvisioner::ensureAiAvailable(
+	return \Tag1\Scolta\AiProvider\Amazee\AutoProvisioner::ensureAiAvailable(
 		$storage,
 		hasExplicitApiKey: scolta_has_explicit_api_key(),
+		// Persist the resolved model names so the LiteLLM gateway is driven with
+		// a real model rather than the shipped dated default (which it rejects
+		// with HTTP 400). Guarded so a user's explicit model choice is never
+		// clobbered — see scolta_amazee_persist_resolved_models().
+		onModelsResolved: 'scolta_amazee_persist_resolved_models',
+		// Report whether models are already resolved. When credentials are
+		// stored but resolution previously failed (only the dated default is
+		// persisted), this returns false and ensureAiAvailable() re-resolves
+		// against the ALREADY-STORED key — self-healing the half-provisioned
+		// state — instead of no-opping forever on the stored credentials.
+		hasResolvedModels: 'scolta_amazee_models_resolved',
 	);
+}
+
+/**
+ * Whether a genuinely resolved Amazee AI model name is persisted in settings.
+ *
+ * The provisioner stores credentials and resolves model names in two steps; a
+ * provision whose `/model/info` step failed leaves credentials with only the
+ * shipped dated default in `ai_model`. This predicate reports that
+ * half-provisioned state so AutoProvisioner re-resolves against the stored key.
+ *
+ * It MUST treat the shipped dated default (`AiClient::DEFAULT_MODEL`,
+ * `claude-sonnet-4-5-20250929`) as unresolved: settings seed `ai_model` to it
+ * out of the box, so a naive "is `ai_model` non-empty" check would always
+ * report resolved and the self-heal would never fire — shipping the bug.
+ *
+ * @return bool True only when a resolved (non-default) model name is stored.
+ */
+function scolta_amazee_models_resolved(): bool {
+	$settings = get_option( 'scolta_settings', array() );
+	$model    = $settings['ai_model'] ?? '';
+	return is_string( $model ) && $model !== '' && $model !== \Tag1\Scolta\AiClient::DEFAULT_MODEL;
+}
+
+/**
+ * Persist Amazee-resolved model names without clobbering admin configuration.
+ *
+ * Mirrors the admin Amazee connect flow (Scolta_Amazee_Admin_Page): only fills
+ * `ai_model` when it still equals the shipped dated default (or is unset), and
+ * only fills `ai_expansion_model` when it is empty, so an administrator's
+ * explicit model choice is never overwritten by auto-resolution.
+ *
+ * @param string $ai_model           Resolved primary model name.
+ * @param string $ai_expansion_model Resolved expansion model name.
+ */
+function scolta_amazee_persist_resolved_models(
+	string $ai_model,
+	string $ai_expansion_model
+): void {
+	$settings = get_option( 'scolta_settings', array() );
+	$default  = \Tag1\Scolta\AiClient::DEFAULT_MODEL;
+	$changed  = false;
+
+	if ( $ai_model !== '' && ( $settings['ai_model'] ?? $default ) === $default ) {
+		$settings['ai_model'] = $ai_model;
+		$changed              = true;
+	}
+	if ( $ai_expansion_model !== '' && ( $settings['ai_expansion_model'] ?? '' ) === '' ) {
+		$settings['ai_expansion_model'] = $ai_expansion_model;
+		$changed                        = true;
+	}
+
+	if ( $changed ) {
+		update_option( 'scolta_settings', $settings );
+	}
 }
 
 /**
@@ -286,19 +430,37 @@ add_action(
 		$settings          = get_option( 'scolta_settings', array() );
 		$using_php_indexer = ( $settings['indexer'] ?? 'auto' ) === 'php';
 		echo '<div class="notice notice-info"><p>';
-		echo 'Scolta activated!';
+		echo esc_html__( 'Scolta activated!', 'scolta-ai-search' );
 		if ( function_exists( 'as_schedule_single_action' ) ) {
-			echo ' Your search index will be built automatically in the background.';
+			echo ' ' . esc_html__(
+				'Your search index will be built automatically in the background.',
+				'scolta-ai-search'
+			);
 		} else {
-			echo ' Run <code>wp scolta build</code> to build your search index.';
-			echo ' Install <a href="https://actionscheduler.org/">Action Scheduler</a>'
-				. ' for automatic background indexing.';
+			echo ' ' . wp_kses_post(
+				sprintf(
+					/* translators: %s: shell command */
+					__( 'Run %s to build your search index.', 'scolta-ai-search' ),
+					'<code>wp scolta build</code>'
+				)
+			);
+			echo ' ' . wp_kses_post(
+				sprintf(
+					/* translators: %s: link to the Action Scheduler site */
+					__( 'Install %s for automatic background indexing.', 'scolta-ai-search' ),
+					'<a href="https://actionscheduler.org/">Action Scheduler</a>'
+				)
+			);
 		}
 		if ( $using_php_indexer ) {
-			echo ' Using the PHP indexer (Pagefind binary not found).';
+			echo ' ' . esc_html__(
+				'Using the PHP indexer (Pagefind binary not found).',
+				'scolta-ai-search'
+			);
 		}
-		$settings_url = esc_url( admin_url( 'options-general.php?page=scolta' ) );
-		echo wp_kses_post( ' <a href="' . $settings_url . '">View settings &rarr;</a>' );
+		$settings_url  = esc_url( admin_url( 'options-general.php?page=scolta' ) );
+		$settings_text = __( 'View settings &rarr;', 'scolta-ai-search' );
+		echo wp_kses_post( ' <a href="' . $settings_url . '">' . $settings_text . '</a>' );
 		echo '</p></div>';
 	}
 );
@@ -421,9 +583,9 @@ add_action(
  */
 add_action(
 	'update_option_scolta_settings',
-	function ( $old, $new ): void {
-		$site_name = $new['site_name'] ?? get_bloginfo( 'name' );
-		$site_desc = $new['site_description'] ?? 'website';
+	function ( $old, $new_value ): void {
+		$site_name = $new_value['site_name'] ?? get_bloginfo( 'name' );
+		$site_desc = $new_value['site_description'] ?? 'website';
 
 		$all = array();
 		foreach ( array( 'expand_query', 'summarize', 'follow_up' ) as $name ) {
@@ -433,7 +595,7 @@ add_action(
 				$site_desc,
 			);
 		}
-		update_option( 'scolta_resolved_prompts', $all );
+		update_option( 'scolta_resolved_prompts', $all, false );
 	},
 	10,
 	2
@@ -463,7 +625,14 @@ function scolta_refresh_prompt_cache_if_stale(): void {
 		);
 	}
 	update_option( 'scolta_resolved_prompts', $all, false );
-	update_option( 'scolta_prompt_cache_version', SCOLTA_VERSION, false );
+	// The version scalar is read on every request by the staleness check
+	// above, so it must autoload — otherwise it costs a DB query per page
+	// view on hosts without a persistent object cache. Existing installs
+	// converge without a migration: the value changes on every plugin
+	// update (exactly when this write fires), and update_option() applies
+	// a new autoload flag whenever the value changes. The resolved-prompts
+	// blob stays autoload=false — it is only read by AI endpoint requests.
+	update_option( 'scolta_prompt_cache_version', SCOLTA_VERSION, true );
 }
 add_action( 'plugins_loaded', 'scolta_refresh_prompt_cache_if_stale' );
 

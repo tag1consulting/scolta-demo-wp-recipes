@@ -54,6 +54,11 @@ if (!function_exists('add_option')) {
 if (!function_exists('update_option')) {
     function update_option(string $name, $value, $autoload = null): bool {
         $GLOBALS['wp_options'][$name] = $value;
+        // Record the autoload flag so tests can assert on it
+        // (initialize $GLOBALS['wp_options_autoload'] = [] in set_up).
+        if (isset($GLOBALS['wp_options_autoload'])) {
+            $GLOBALS['wp_options_autoload'][$name] = $autoload;
+        }
         return true;
     }
 }
@@ -116,7 +121,10 @@ if (!function_exists('wp_is_post_autosave')) {
     function wp_is_post_autosave($post): bool { return false; }
 }
 if (!function_exists('get_permalink')) {
-    function get_permalink($post = 0): string { return 'https://example.com/post/' . $post; }
+    function get_permalink($post = 0): string {
+        $id = $post instanceof WP_Post ? $post->ID : $post;
+        return 'https://example.com/post/' . $id;
+    }
 }
 if (!function_exists('get_bloginfo')) {
     function get_bloginfo(string $show = ''): string {
@@ -147,8 +155,26 @@ if (!function_exists('esc_html')) {
 if (!function_exists('esc_attr')) {
     function esc_attr(string $text): string { return htmlspecialchars($text, ENT_QUOTES, 'UTF-8'); }
 }
+if (!function_exists('esc_textarea')) {
+    function esc_textarea(string $text): string { return htmlspecialchars($text, ENT_QUOTES, 'UTF-8'); }
+}
 if (!function_exists('esc_url')) {
     function esc_url(string $url): string { return filter_var($url, FILTER_SANITIZE_URL) ?: ''; }
+}
+if (!function_exists('esc_url_raw')) {
+    // Mirrors WP behavior closely enough for tests: empty input stays empty,
+    // scheme-less input gets http://, disallowed schemes return ''.
+    function esc_url_raw(string $url, ?array $protocols = null): string {
+        if ($url === '') { return ''; }
+        $protocols = $protocols ?? ['http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'feed', 'telnet'];
+        $scheme = parse_url($url, PHP_URL_SCHEME);
+        if ($scheme === null) {
+            $url = 'http://' . ltrim($url, '/');
+            $scheme = 'http';
+        }
+        if (!in_array(strtolower((string) $scheme), $protocols, true)) { return ''; }
+        return $url;
+    }
 }
 
 // i18n stubs.
@@ -242,8 +268,12 @@ if (!function_exists('add_shortcode')) {
 }
 
 // User capability stubs.
+// Tests can simulate a low-privilege user by setting
+// $GLOBALS['scolta_test_user_can'] = false (reset it in tear_down).
 if (!function_exists('current_user_can')) {
-    function current_user_can(string $capability): bool { return true; }
+    function current_user_can(string $capability): bool {
+        return $GLOBALS['scolta_test_user_can'] ?? true;
+    }
 }
 if (!function_exists('wp_kses_post')) {
     function wp_kses_post(string $data): string { return $data; }
@@ -322,12 +352,30 @@ if (!function_exists('get_current_screen')) {
     function get_current_screen(): ?object { return null; }
 }
 
-// Action Scheduler stubs.
+// Action Scheduler stubs (with optional tracking for tests — initialize
+// $GLOBALS['scolta_as_scheduled'] / $GLOBALS['scolta_as_unscheduled'] in setUp).
 if (!function_exists('as_schedule_single_action')) {
-    function as_schedule_single_action($timestamp, $hook, $args = [], $group = '') { return 1; }
+    function as_schedule_single_action($timestamp, $hook, $args = [], $group = '') {
+        if (isset($GLOBALS['scolta_as_scheduled'])) {
+            $GLOBALS['scolta_as_scheduled'][] = [
+                'timestamp' => $timestamp,
+                'hook'      => $hook,
+                'args'      => $args,
+                'group'     => $group,
+            ];
+        }
+        return 1;
+    }
 }
 if (!function_exists('as_unschedule_all_actions')) {
-    function as_unschedule_all_actions($hook, $args = null, $group = '') {}
+    function as_unschedule_all_actions($hook, $args = null, $group = '') {
+        if (isset($GLOBALS['scolta_as_unscheduled'])) {
+            $GLOBALS['scolta_as_unscheduled'][] = [
+                'hook'  => $hook,
+                'group' => $group,
+            ];
+        }
+    }
 }
 
 // SSL / scheme stubs.
@@ -354,8 +402,19 @@ if (!function_exists('plugin_dir_url')) {
     function plugin_dir_url(string $file): string { return '/wp-content/plugins/' . basename(dirname($file)) . '/'; }
 }
 if (!function_exists('wp_count_posts')) {
+    // Tests can seed counts via $GLOBALS['scolta_test_post_counts'][$type].
     function wp_count_posts(string $type = 'post'): object {
-        return (object) ['publish' => 0, 'draft' => 0, 'trash' => 0];
+        $publish = (int) ($GLOBALS['scolta_test_post_counts'][$type] ?? 0);
+        return (object) ['publish' => $publish, 'draft' => 0, 'trash' => 0];
+    }
+}
+if (!function_exists('wp_strip_all_tags')) {
+    function wp_strip_all_tags(string $text, bool $remove_breaks = false): string {
+        $text = strip_tags($text);
+        if ($remove_breaks) {
+            $text = preg_replace('/[\r\n\t ]+/', ' ', $text);
+        }
+        return trim($text);
     }
 }
 
@@ -494,8 +553,16 @@ if (!function_exists('wp_upload_dir')) {
     }
 }
 if (!function_exists('wp_salt')) {
+    // Real WP salts are 64 chars; AuthenticatedCipher requires >= 32 bytes
+    // of key material, so the stub must be realistically long.
     function wp_salt(string $scheme = 'auth'): string {
-        return 'test-salt-' . $scheme;
+        return str_pad('test-salt-' . $scheme . '-', 64, 'x');
+    }
+}
+if (!function_exists('wp_set_script_translations')) {
+    function wp_set_script_translations(string $handle, string $domain = 'default', string $path = ''): bool {
+        $GLOBALS['scolta_script_translations'][$handle] = $domain;
+        return true;
     }
 }
 if (!function_exists('wp_cache_flush_group')) {
@@ -553,6 +620,9 @@ if (!class_exists('WP_Error')) {
     }
 }
 
+if (!defined('MINUTE_IN_SECONDS')) {
+    define('MINUTE_IN_SECONDS', 60);
+}
 if (!defined('DAY_IN_SECONDS')) {
     define('DAY_IN_SECONDS', 86400);
 }
@@ -610,6 +680,14 @@ if (!function_exists('wp_unslash')) {
 }
 if (!function_exists('check_ajax_referer')) {
     function check_ajax_referer(string $action = '', $query_arg = false, bool $die = true): bool { return true; }
+}
+if (!function_exists('check_admin_referer')) {
+    function check_admin_referer($action = -1, string $query_arg = '_wpnonce'): bool { return true; }
+}
+if (!function_exists('wp_die')) {
+    function wp_die($message = '', $title = '', $args = []): void {
+        throw new RuntimeException('wp_die: ' . (is_string($message) ? $message : ''));
+    }
 }
 if (!function_exists('wp_send_json_success')) {
     function wp_send_json_success($data = null, int $status_code = 200, int $flags = 0): void {

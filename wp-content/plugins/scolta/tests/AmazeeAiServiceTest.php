@@ -22,6 +22,11 @@ class AmazeeAiServiceTest extends TestCase {
         if ( defined( 'SCOLTA_API_KEY' ) && constant( 'SCOLTA_API_KEY' ) !== '' ) {
             $this->markTestSkipped( 'SCOLTA_API_KEY constant defined by a prior test; cannot test Amazee fallback in same process.' );
         }
+        // A real provisioned trial has a resolved (non-default) model persisted;
+        // only then does from_options() drive the LiteLLM gateway. (A credentials-
+        // stored-but-model-unresolved install degrades instead — see
+        // test_from_options_degrades_when_model_unresolved.)
+        update_option( 'scolta_settings', array( 'ai_model' => 'claude-sonnet-4-5' ) );
         $storage = new Scolta_Amazee_Config_Storage();
         $storage->store( 'litellm-token', 'https://api.amazee.test', 'us-east-1' );
 
@@ -31,6 +36,32 @@ class AmazeeAiServiceTest extends TestCase {
         $this->assertSame( 'openai', $config->aiProvider );
         $this->assertSame( 'litellm-token', $config->aiApiKey );
         $this->assertSame( 'https://api.amazee.test', $config->aiBaseUrl );
+    }
+
+    public function test_from_options_degrades_when_model_unresolved(): void {
+        // Regression: credentials stored but model resolution failed (only the
+        // shipped dated default is persisted). from_options() must NOT inject the
+        // Amazee key — a key-less client throws ApiKeyMissingException (degrade to
+        // HTTP 200) instead of sending the gateway the dated default (HTTP 400).
+        if ( defined( 'SCOLTA_API_KEY' ) && constant( 'SCOLTA_API_KEY' ) !== '' ) {
+            $this->markTestSkipped( 'SCOLTA_API_KEY constant defined by a prior test; cannot test the Amazee degrade path.' );
+        }
+        update_option( 'scolta_settings', array( 'ai_model' => 'claude-sonnet-4-5-20250929' ) );
+        $storage = new Scolta_Amazee_Config_Storage();
+        $storage->store( 'litellm-token', 'https://api.amazee.test', 'us-east-1' );
+
+        $service = Scolta_Ai_Service::from_options();
+        $config  = $service->get_config();
+
+        $this->assertSame(
+            '',
+            $config->aiApiKey,
+            'A model-unresolved Amazee install must degrade (no key) rather than send the gateway the dated default'
+        );
+        $this->assertTrue(
+            $service->is_amazee_active(),
+            'Credentials are still stored, so Amazee is active — only the client degrades'
+        );
     }
 
     public function test_from_options_uses_env_key_when_no_amazee_creds(): void {
@@ -72,17 +103,36 @@ class AmazeeAiServiceTest extends TestCase {
         putenv( 'SCOLTA_API_KEY' );
     }
 
-    public function test_has_message_override(): void {
+    public function test_ai_methods_available_via_inheritance(): void {
+        // message()/conversation()/messageForOperation() are no longer overridden
+        // here — the base AiServiceAdapter owns the budget try/catch — but they
+        // remain callable on the adapter through inheritance.
         $this->assertTrue( method_exists( 'Scolta_Ai_Service', 'message' ) );
-    }
-
-    public function test_has_conversation_override(): void {
         $this->assertTrue( method_exists( 'Scolta_Ai_Service', 'conversation' ) );
+        $this->assertTrue( method_exists( 'Scolta_Ai_Service', 'messageForOperation' ) );
     }
 
-    public function test_has_message_for_operation_override(): void {
+    public function test_overrides_budget_exception_hook(): void {
+        // The budget-conversion logic lives in a single protected hook that
+        // overrides AiServiceAdapter::handlePossibleBudgetException().
+        $ref    = new ReflectionClass( 'Scolta_Ai_Service' );
+        $method = $ref->getMethod( 'handlePossibleBudgetException' );
+        $this->assertSame( 'Scolta_Ai_Service', $method->getDeclaringClass()->getName() );
+        $this->assertTrue( $method->isProtected(), 'Hook must be protected to override the base method' );
+    }
+
+    public function test_no_redundant_ai_method_overrides_in_source(): void {
+        // The base now owns the budget try/catch; these overrides must not return.
         $content = file_get_contents( dirname( __DIR__ ) . '/includes/class-scolta-ai-service.php' );
-        $this->assertStringContainsString( 'public function messageForOperation(', $content );
+        $this->assertStringNotContainsString( 'public function messageForOperation(', $content );
+        $this->assertStringNotContainsString( 'public function message(', $content );
+        $this->assertStringNotContainsString( 'public function conversation(', $content );
+        // ...but the hook is still present, and the budget signal comes
+        // from scolta-php's isBudgetError() — the magic string must NOT
+        // be duplicated locally.
+        $this->assertStringContainsString( 'function handlePossibleBudgetException(', $content );
+        $this->assertStringContainsString( 'BudgetAwareProviderDecorator::isBudgetError(', $content );
+        $this->assertStringNotContainsString( 'Budget has been exceeded!', $content );
     }
 
     public function test_imports_amazee_budget_exception(): void {
