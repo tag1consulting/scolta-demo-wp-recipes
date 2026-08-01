@@ -26,6 +26,10 @@ define( 'WP_HOME', getenv( 'WP_HOME' ) );
 define( 'WP_SITEURL', getenv( 'WP_SITEURL' ) );
 define( 'WP_DEBUG', filter_var( getenv( 'WP_DEBUG' ), FILTER_VALIDATE_BOOLEAN ) );
 
+if ( getenv( 'MYSQL_ATTR_SSL_CA' ) ) {
+	define( 'MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL );
+}
+
 if ( ! isset( $table_prefix ) || empty( $table_prefix ) ) {
 	// phpcs:disable WordPress.WP.GlobalVariablesOverride.Prohibited
 	$table_prefix = 'wp_';
