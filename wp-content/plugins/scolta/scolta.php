@@ -3,7 +3,7 @@
  * Plugin Name:       Scolta AI Search
  * Plugin URI:        https://www.tag1.com/scolta
  * Description:       Zero-infrastructure AI search with Pagefind, query expansion, summarization.
- * Version:       1.0.7
+ * Version:       1.1.0
  * Requires at least: 6.1
  * Requires PHP:      8.1
  * Author:            Tag1 Consulting
@@ -15,23 +15,10 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'SCOLTA_VERSION', '1.0.7' );
+define( 'SCOLTA_VERSION', '1.1.0' );
 define( 'SCOLTA_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SCOLTA_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'SCOLTA_PLUGIN_FILE', __FILE__ );
-
-/*
- * Whether Amazee.ai trial provisioning may run automatically at activation
- * and AI features start enabled. The WordPress.org distribution build flips
- * this default to false (scripts/build-dist.sh): activation performs zero
- * outbound HTTP and all AI features stay off until an administrator
- * explicitly enables them or configures an API key. Self-distributed and
- * partner builds keep auto-provisioning. Sites can override via wp-config.php.
- */
-if ( ! defined( 'SCOLTA_AUTO_PROVISION_DEFAULT' ) ) {
-	// Flipped to false by scripts/build-dist.sh for the WordPress.org build.
-	define( 'SCOLTA_AUTO_PROVISION_DEFAULT', true );
-}
 
 // Composer autoloader (scolta-php).
 $scolta_autoloader = SCOLTA_PLUGIN_DIR . 'vendor/autoload.php';
@@ -160,6 +147,13 @@ function scolta_activate(): void {
 		'ai_provider'                  => 'anthropic',
 		'ai_model'                     => 'claude-sonnet-4-5-20250929',
 		'ai_expansion_model'           => '',
+		// Gateway-scoped model names, written only by Amazee model resolution
+		// and read only while Amazee credentials are the effective key. They
+		// are deliberately separate from ai_model / ai_expansion_model above,
+		// which hold operator-chosen, provider-native IDs — see
+		// scolta_amazee_persist_resolved_models().
+		'amazee_model'                 => '',
+		'amazee_expansion_model'       => '',
 		'ai_base_url'                  => '',
 		'site_name'                    => get_bloginfo( 'name' ),
 		'site_description'             => 'website',
@@ -174,8 +168,10 @@ function scolta_activate(): void {
 		'post_types'                   => array( 'post', 'page' ),
 		'cache_ttl'                    => 2592000,
 		'max_follow_ups'               => 3,
-		'ai_expand_query'              => SCOLTA_AUTO_PROVISION_DEFAULT,
-		'ai_summarize'                 => SCOLTA_AUTO_PROVISION_DEFAULT,
+		// AI features are turned on by the administrator, never by activation:
+		// see the opt-in flag set at the end of this function.
+		'ai_expand_query'              => false,
+		'ai_summarize'                 => false,
 		'ai_languages'                 => array( 'en' ),
 		// Scoring.
 		'title_match_boost'            => 2.0,
@@ -189,6 +185,25 @@ function scolta_activate(): void {
 		'cross_list_bonus'             => 0.05,
 		'expand_subword_max_frequency' => 0.05,
 		'expansion_combine_mode'       => 'relevance_union',
+		// Specificity and co-occurrence ranking.
+		'specificity_weighting'        => true,
+		'specificity_floor'            => 0.15,
+		'specificity_strong_match'     => 0.55,
+		'specificity_cooccurrence'     => 0.9,
+		'specificity_agreement_gate'   => 0.45,
+		'specificity_agreement_decay'  => 1.0,
+		'hide_empty_facets'            => true,
+		// Search as you type.
+		'sayt_enabled'                 => true,
+		'sayt_min_chars'               => 2,
+		'sayt_debounce_ms'             => 150,
+		'sayt_max_suggestions'         => 6,
+		'sayt_recent_searches'         => true,
+		'sayt_max_recent'              => 3,
+		'sayt_expand'                  => true,
+		'sayt_expand_per_minute'       => 6,
+		'sayt_expansion_delay_ms'      => 500,
+		'sayt_suggestion_action'       => 'navigate',
 		// Display.
 		'excerpt_length'               => 300,
 		'results_per_page'             => 10,
@@ -254,48 +269,26 @@ function scolta_activate(): void {
 		as_schedule_single_action( time() + 10, 'scolta_rebuild_start', array(), 'scolta' );
 	}
 
-	if ( SCOLTA_AUTO_PROVISION_DEFAULT ) {
-		// Auto-provisioning builds: queue Amazee.ai provisioning via Action
-		// Scheduler so activation does not block on HTTP, or fall back to a
-		// synchronous call without it.
-		if ( function_exists( 'as_schedule_single_action' ) ) {
-			as_schedule_single_action( time() + 5, 'scolta_amazee_provision', array(), 'scolta' );
-		} else {
-			scolta_auto_provision_amazee();
-		}
-	} elseif ( ! scolta_has_explicit_api_key() ) {
-		// Opt-in builds (WordPress.org): activation contacts no remote
-		// service. Record that AI features are available but awaiting
-		// explicit admin consent; this drives the opt-in admin notice and
-		// the "Enable AI features" control on the settings page. An explicit
-		// API key is itself the consent act, so no opt-in flow is needed.
-		update_option( 'scolta_ai_optin_pending', true, false );
-	}
+	// Activation contacts no remote service, on any build. Record that AI
+	// features are available but awaiting the administrator; this drives the
+	// opt-in admin notice and the "Enable AI features" control on the settings
+	// page. The flag is read through Scolta_Admin::ai_optin_pending(), which
+	// also treats an explicit API key as the consent act.
+	update_option( 'scolta_ai_optin_pending', true, false );
 
 	// Set transient for admin notice.
 	set_transient( 'scolta_activated', true, 60 );
 }
 register_activation_hook( __FILE__, 'scolta_activate' );
 
-// Register the Action Scheduler callback for background provisioning. The
-// wrapper discards the bool result — scheduled actions have no caller to
-// report failure to; the opt-in flow calls scolta_auto_provision_amazee()
-// directly and surfaces failures in admin.
-add_action(
-	'scolta_amazee_provision',
-	function (): void {
-		scolta_auto_provision_amazee();
-	}
-);
-
 /**
- * Attempt Amazee.ai trial provisioning.
+ * Establish the Amazee.ai connection.
  *
- * Called from the scolta_amazee_provision scheduled action, the synchronous
- * activation fallback (auto-provisioning builds only), and the explicit
- * opt-in flow. No-op when the user has an explicit API key configured, or
- * when credentials are already stored. Failures are silenced — the caller
- * decides how to surface them.
+ * Reachable from exactly one place: the administrator's "Enable AI features"
+ * action (Scolta_Admin::handle_enable_ai()). No request path and no scheduled
+ * action calls it, so nothing here runs without an explicit click. No-op when
+ * the user has an explicit API key configured, or when credentials are already
+ * stored. Failures are silenced — the caller decides how to surface them.
  *
  * @return bool True when provisioning succeeded; false when skipped or failed.
  */
@@ -322,8 +315,8 @@ function scolta_auto_provision_amazee(): bool {
 		hasExplicitApiKey: scolta_has_explicit_api_key(),
 		// Persist the resolved model names so the LiteLLM gateway is driven with
 		// a real model rather than the shipped dated default (which it rejects
-		// with HTTP 400). Guarded so a user's explicit model choice is never
-		// clobbered — see scolta_amazee_persist_resolved_models().
+		// with HTTP 400). They land in the gateway-scoped keys, never in the
+		// operator-facing ai_model — see scolta_amazee_persist_resolved_models().
 		onModelsResolved: 'scolta_amazee_persist_resolved_models',
 		// Report whether models are already resolved. When credentials are
 		// stored but resolution previously failed (only the dated default is
@@ -338,49 +331,63 @@ function scolta_auto_provision_amazee(): bool {
  * Whether a genuinely resolved Amazee AI model name is persisted in settings.
  *
  * The provisioner stores credentials and resolves model names in two steps; a
- * provision whose `/model/info` step failed leaves credentials with only the
- * shipped dated default in `ai_model`. This predicate reports that
- * half-provisioned state so AutoProvisioner re-resolves against the stored key.
+ * provision whose `/model/info` step failed leaves credentials with no
+ * gateway-scoped model at all. This predicate reports that half-provisioned
+ * state so AutoProvisioner re-resolves against the stored key.
  *
- * It MUST treat the shipped dated default (`AiClient::DEFAULT_MODEL`,
- * `claude-sonnet-4-5-20250929`) as unresolved: settings seed `ai_model` to it
- * out of the box, so a naive "is `ai_model` non-empty" check would always
- * report resolved and the self-heal would never fire — shipping the bug.
+ * It reads `amazee_model`, which is where resolution writes. Reading
+ * `ai_model` — as it did before the keys were split — would report "resolved"
+ * for any site whose administrator had simply named a model, and the
+ * half-provisioned self-heal would then stop firing on exactly the sites that
+ * need it.
+ *
+ * It still excludes the shipped dated default (`AiClient::DEFAULT_MODEL`). A
+ * site migrated by scolta_migrate_amazee_model_key() can be carrying one, and
+ * a value the gateway rejects with HTTP 400 is not a resolved model.
  *
  * @return bool True only when a resolved (non-default) model name is stored.
  */
 function scolta_amazee_models_resolved(): bool {
 	$settings = get_option( 'scolta_settings', array() );
-	$model    = $settings['ai_model'] ?? '';
+	$model    = $settings['amazee_model'] ?? '';
 	return is_string( $model ) && $model !== '' && $model !== \Tag1\Scolta\AiClient::DEFAULT_MODEL;
 }
 
 /**
- * Persist Amazee-resolved model names without clobbering admin configuration.
+ * Persist Amazee-resolved model names to their own gateway-scoped keys.
  *
- * Mirrors the admin Amazee connect flow (Scolta_Amazee_Admin_Page): only fills
- * `ai_model` when it still equals the shipped dated default (or is unset), and
- * only fills `ai_expansion_model` when it is empty, so an administrator's
- * explicit model choice is never overwritten by auto-resolution.
+ * The names this receives are Amazee LiteLLM **gateway aliases** (for example
+ * `claude-4-5-sonnet`), meaningful only against the Amazee gateway. They must
+ * never be written to `ai_model` / `ai_expansion_model`, which hold
+ * operator-chosen, provider-native IDs (`claude-sonnet-4-5-20250929`): a value
+ * written there survives a later switch to a direct Anthropic or OpenAI key,
+ * which does not recognise it, and AI then fails on every request with nothing
+ * to invalidate the stored name.
  *
- * @param string $ai_model           Resolved primary model name.
- * @param string $ai_expansion_model Resolved expansion model name.
+ * The previous `=== AiClient::DEFAULT_MODEL` guard is gone with the shared key
+ * it protected. It spared an explicit administrator choice but still parked an
+ * alias where a provider switch would find it, and there is no longer an
+ * operator-chosen value in these keys to protect.
+ *
+ * @param string $ai_model           Resolved primary model name (gateway alias).
+ * @param string $ai_expansion_model Resolved expansion model name (gateway alias).
  */
 function scolta_amazee_persist_resolved_models(
 	string $ai_model,
 	string $ai_expansion_model
 ): void {
 	$settings = get_option( 'scolta_settings', array() );
-	$default  = \Tag1\Scolta\AiClient::DEFAULT_MODEL;
 	$changed  = false;
 
-	if ( $ai_model !== '' && ( $settings['ai_model'] ?? $default ) === $default ) {
-		$settings['ai_model'] = $ai_model;
-		$changed              = true;
+	// Empty means "the gateway did not report one", which must not blank a
+	// name resolved by an earlier successful pass.
+	if ( $ai_model !== '' ) {
+		$settings['amazee_model'] = $ai_model;
+		$changed                  = true;
 	}
-	if ( $ai_expansion_model !== '' && ( $settings['ai_expansion_model'] ?? '' ) === '' ) {
-		$settings['ai_expansion_model'] = $ai_expansion_model;
-		$changed                        = true;
+	if ( $ai_expansion_model !== '' ) {
+		$settings['amazee_expansion_model'] = $ai_expansion_model;
+		$changed                            = true;
 	}
 
 	if ( $changed ) {
@@ -389,12 +396,97 @@ function scolta_amazee_persist_resolved_models(
 }
 
 /**
+ * Move a gateway alias out of the operator-facing model key on existing sites.
+ *
+ * Sites provisioned before the keys were split carry an Amazee LiteLLM alias
+ * in `ai_model`. Left there it breaks AI permanently the moment the trial
+ * expires or an operator configures a direct provider key. This runs once,
+ * flagged by its own option so it neither re-fires nor depends on the plugin
+ * version scalar.
+ *
+ * Scope is deliberately narrow, and worth a reviewer's eye:
+ *
+ * - A site with **no stored Amazee credentials is left strictly alone.** Its
+ *   `ai_model` may well be an explicit administrator choice; there is no way
+ *   after the fact to tell one from an orphaned alias, and resetting it would
+ *   recreate the bug being fixed. Those sites are covered by the
+ *   provider/model mismatch tripwire in scolta-php instead.
+ * - On a **credentialed** site the whole non-default value is treated as
+ *   gateway-resolved rather than sniffed for alias shape. The old callback
+ *   wrote there whenever the key held the default, so nothing an administrator
+ *   chose could have survived; and the names come from whatever the gateway's
+ *   `/model/info` returns, so no naming convention is stable enough to test
+ *   against.
+ *
+ * Nothing is discarded either way: the value moves, and both values are logged.
+ */
+function scolta_migrate_amazee_model_key(): void {
+	if ( get_option( 'scolta_amazee_model_key_migrated', false ) ) {
+		return;
+	}
+
+	$settings = get_option( 'scolta_settings', array() );
+	if ( ! is_array( $settings ) ) {
+		$settings = array();
+	}
+
+	// Backfill the new keys everywhere so reads never depend on ?? defaults.
+	$changed = false;
+	foreach ( array( 'amazee_model', 'amazee_expansion_model' ) as $key ) {
+		if ( ! array_key_exists( $key, $settings ) ) {
+			$settings[ $key ] = '';
+			$changed          = true;
+		}
+	}
+
+	$storage        = new Scolta_Amazee_Config_Storage();
+	$has_amazee_key = $storage->load() !== null;
+	$raw_model      = $settings['ai_model'] ?? '';
+	$stored_model   = is_string( $raw_model ) ? $raw_model : '';
+	$default        = \Tag1\Scolta\AiClient::DEFAULT_MODEL;
+
+	if ( $has_amazee_key && $stored_model !== '' && $stored_model !== $default
+		&& ( $settings['amazee_model'] ?? '' ) === '' ) {
+		$raw_expansion   = $settings['ai_expansion_model'] ?? '';
+		$moved_expansion = is_string( $raw_expansion ) ? $raw_expansion : '';
+
+		$settings['amazee_model']           = $stored_model;
+		$settings['amazee_expansion_model'] = $moved_expansion;
+		// The operator keys go back to shipped defaults: whatever was in them
+		// was written by auto-resolution, so there is nothing to preserve.
+		$settings['ai_model']           = $default;
+		$settings['ai_expansion_model'] = '';
+		$changed                        = true;
+
+		// Warning, not info: Scolta_Logger drops debug/info/notice entirely, and
+		// a migration that silently rewrote an administrator-visible setting
+		// with no record is exactly what this whole change set exists to stop.
+		( new Scolta_Logger() )->warning(
+			sprintf(
+				'Scolta: moved Amazee gateway model "%s" (expansion "%s") out of ai_model '
+					. 'into amazee_model, and reset ai_model to the shipped default "%s".',
+				$stored_model,
+				$moved_expansion,
+				$default
+			)
+		);
+	}
+
+	if ( $changed ) {
+		update_option( 'scolta_settings', $settings );
+	}
+
+	update_option( 'scolta_amazee_model_key_migrated', true, true );
+}
+add_action( 'plugins_loaded', 'scolta_migrate_amazee_model_key' );
+
+/**
  * Check whether the site has an explicit Scolta API key configured.
  *
  * Returns true when SCOLTA_API_KEY env var, $_ENV, $_SERVER, a
  * wp-config.php constant, or the database-stored legacy option is
- * non-empty, meaning the user has their own provider and
- * auto-provisioning should be skipped.
+ * non-empty, meaning the user has their own provider and the managed
+ * gateway must stay out of the way.
  *
  * @return bool True if an explicit API key is configured.
  */
@@ -416,6 +508,66 @@ function scolta_has_explicit_api_key(): bool {
 	}
 	return false;
 }
+
+/**
+ * Drop the stored Amazee.ai connection and everything that describes it.
+ *
+ * The same two steps the Disconnect button performs — the credential store's
+ * own clear(), then the re-authentication marker clear used after a successful
+ * reconnect — plus the gateway-scoped model aliases, which are meaningful only
+ * against the gateway that resolved them. Safe to call when nothing is stored.
+ */
+function scolta_clear_amazee_connection(): void {
+	( new Scolta_Amazee_Config_Storage() )->clear();
+	Scolta_Amazee_Reauth_Handler::clear();
+
+	$settings = get_option( 'scolta_settings', array() );
+	if ( ! is_array( $settings ) ) {
+		return;
+	}
+	$model     = $settings['amazee_model'] ?? '';
+	$expansion = $settings['amazee_expansion_model'] ?? '';
+	if ( '' === $model && '' === $expansion ) {
+		return;
+	}
+	$settings['amazee_model']           = '';
+	$settings['amazee_expansion_model'] = '';
+	update_option( 'scolta_settings', $settings );
+}
+
+/**
+ * Release the managed-gateway connection when the site has moved off it.
+ *
+ * Two ways a site moves off: an explicit API key is configured (it wins the
+ * key resolution outright, so stored credentials serve nothing), or the
+ * administrator picks a different AI provider. Either way the credentials and
+ * the reconnect marker are stale state, and a site running on its own key must
+ * not be told to re-authenticate a connection it does not use.
+ *
+ * Hooked to update_option_scolta_settings, and written as a named function so
+ * the decision can be exercised directly in tests.
+ *
+ * @param mixed $old_settings The settings array before the save.
+ * @param mixed $new_settings The settings array after the save.
+ */
+function scolta_sync_amazee_connection_state( $old_settings, $new_settings ): void {
+	if ( get_option( 'scolta_amazee_credentials', null ) === null ) {
+		// Nothing stored: nothing to release, and no recursion through the
+		// update_option() call scolta_clear_amazee_connection() may make.
+		return;
+	}
+
+	$provider_before = is_array( $old_settings ) ? ( $old_settings['ai_provider'] ?? '' ) : '';
+	$provider_after  = is_array( $new_settings ) ? ( $new_settings['ai_provider'] ?? '' ) : '';
+	$switched_away   = 'amazee' === $provider_before && 'amazee' !== $provider_after;
+
+	if ( ! $switched_away && ! scolta_has_explicit_api_key() ) {
+		return;
+	}
+
+	scolta_clear_amazee_connection();
+}
+add_action( 'update_option_scolta_settings', 'scolta_sync_amazee_connection_state', 10, 2 );
 
 /**
  * Show one-time admin notice after plugin activation.
@@ -486,6 +638,9 @@ function scolta_deactivate(): void {
 		as_unschedule_all_actions( 'scolta_process_chunk', null, 'scolta' );
 		as_unschedule_all_actions( 'scolta_finalize_build', array(), 'scolta' );
 		as_unschedule_all_actions( 'scolta_debounced_rebuild', array(), 'scolta' );
+		// Nothing schedules this any more; the sweep clears a leftover queued
+		// by a version that did, which would otherwise sit in the queue with
+		// no callback behind it.
 		as_unschedule_all_actions( 'scolta_amazee_provision', array(), 'scolta' );
 	}
 

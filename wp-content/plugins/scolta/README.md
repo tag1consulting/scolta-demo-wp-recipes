@@ -223,6 +223,12 @@ Configure at **Settings > Scolta > Scoring**.
 | Recency max penalty | `recency_max_penalty` | Maximum negative penalty for very old content |
 | Language | `language` | ISO 639-1 code for stop word filtering |
 | Custom stop words | `custom_stop_words` | Extra stop words beyond the language's built-in list |
+| Specificity-weighted ranking | `specificity_weighting` | On by default. Weight each partial match by how rare its term is in the corpus, so a match on a rare, intent-bearing term outranks a match on a ubiquitous one. This is what stops a common word, typed or leaked from an expansion phrase, from flooding the head of the result list. Turn off to restore flat sub-query weighting. |
+| Specificity floor | `specificity_floor` | Floor for the specificity weight of a ubiquitous term (`0`-`1`, default `0.15`). A term appearing in nearly every document is damped to this multiplier rather than to zero, so it still contributes to recall while ranking far below rare terms. Lower is more aggressive damping. |
+| Specificity strong-match threshold | `specificity_strong_match` | Specificity at or above which a matched term counts as a strong, on-intent hit (`0`-`1`, default `0.55`). When a term this specific matched, the partial-match banner and the AI summary stop framing the result set as a failure and attribute any gap to the search rather than the collection. |
+| Co-occurrence agreement bonus | `specificity_cooccurrence` | Multiplier on the bonus a result earns for agreeing with several query and expansion terms at once, rather than matching one term strongly (`0`-`5`, default `0.9`). A page that is on-topic across the whole query usually answers it better than one that spikes on a single rare word. Set to `0` to score each result purely by its single best-matching sub-query. |
+| Co-occurrence agreement gate | `specificity_agreement_gate` | Specificity a term must clear before it counts toward the agreement bonus (`0`-`1`, default `0.45`). Terms below the gate are too common for their presence to be evidence of topical agreement, so they are excluded rather than inflating the count. |
+| Co-occurrence agreement decay | `specificity_agreement_decay` | Geometric factor applied to each successive agreeing term (`0`-`5`, default `1.0`), so the second is worth this fraction of the first and so on. Values below `1` make the bonus saturate, which keeps a long page matching many mid-specificity terms from overtaking a focused page matching a genuinely rare one. |
 | Expansion combine mode | `expansion_combine_mode` | How a multi-term query expansion combines its per-sub-query results into the AI-summary candidate set: `relevance_union` (historical behavior) or `round_robin` (deal the top few from each sub-query so the summary sees breadth across sub-topics). Preset-defaulted — the Recipe & Content Catalog, Blog & Editorial, and E-commerce presets default it to `round_robin`; the others use `relevance_union` — and any value you set by hand overrides the preset. The visible result list stays relevance-sorted either way. |
 
 Defaults and the full reference: [scolta-php `docs/CONFIG_REFERENCE.md`](https://github.com/tag1consulting/scolta-php/blob/main/docs/CONFIG_REFERENCE.md).
@@ -257,6 +263,35 @@ $settings['title_match_boost']          = 1.5;
 $settings['title_all_terms_multiplier'] = 2.0;
 update_option('scolta_settings', $settings);
 ```
+
+### Search as you type
+
+Configure at **Settings > Scolta > Search as you type**.
+
+Typing in the search box populates a suggestions dropdown under it. The full search — AI query expansion, the AI summary, follow-up questions — still runs only on Enter, on the search button, or when someone picks a suggestion. It is on by default and needs no index rebuild: it reads the index you already have.
+
+| Setting | Option key | Default | Description |
+| ------- | ---------- | ------- | ----------- |
+| Suggestions | `sayt_enabled` | `true` | Master switch. Set to `false` to get the pre-1.1.0 search box back exactly: no dropdown, no combobox roles, no browser storage, no suggest searches |
+| Minimum characters | `sayt_min_chars` | `2` | Characters typed before suggestions are requested, counted as a person counts them (an emoji is one). CJK sites usually want `1` |
+| Typing debounce | `sayt_debounce_ms` | `150` | Milliseconds of pause before suggestions are fetched |
+| Max suggestions | `sayt_max_suggestions` | `6` | Most suggestions shown, and the cap on index reads per pass |
+| Recent searches | `sayt_recent_searches` | `true` | Offer the visitor's own recent searches, kept in their browser under a single Scolta key. `false` reads and writes nothing |
+| Max recent searches | `sayt_max_recent` | `3` | Most recent searches shown above the content suggestions |
+| AI enrichment | `sayt_expand` | `true` | Enrich suggestions with AI query expansion. Inert with no AI provider configured, or with AI Query Expansion off |
+| AI enrichment cap | `sayt_expand_per_minute` | `6` | Enrichment calls per visitor per minute. SAYT expansions spend the same per-visitor AI budget as committed searches, so an uncapped suggest path would starve the search someone actually ran. Over the cap the dropdown falls back to keyword suggestions |
+| AI enrichment delay | `sayt_expansion_delay_ms` | `500` | Idle milliseconds before an enrichment call. Longer than the typing debounce on purpose: keyword suggestions should appear while typing, an AI call should not |
+| Suggestion action | `sayt_suggestion_action` | `navigate` | `navigate` opens the result directly; `search` puts the title in the box and runs the full search. A recent search always runs the search |
+
+Turning it off site-wide, without visiting the settings screen:
+
+```php
+$settings = get_option('scolta_settings', []);
+$settings['sayt_enabled'] = false;
+update_option('scolta_settings', $settings);
+```
+
+Full behaviour, including the browser events and the theming custom properties: [scolta-php `docs/SAYT.md`](https://github.com/tag1consulting/scolta-php/blob/main/docs/SAYT.md).
 
 ### Display
 

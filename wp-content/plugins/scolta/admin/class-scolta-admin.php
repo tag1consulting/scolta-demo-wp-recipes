@@ -14,6 +14,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
+use Tag1\Scolta\Config\ApiKeySource;
+
 /**
  * Settings page, dashboard widget, and admin AJAX handlers for Scolta.
  */
@@ -261,6 +263,20 @@ class Scolta_Admin {
 		add_settings_field( 'sortable_field_descriptions', __( 'Sortable Field Descriptions', 'scolta-ai-search' ), array( self::class, 'render_sortable_field_descriptions_field' ), 'scolta', 'scolta_search_customization_section' );
 		add_settings_field( 'filter_fields', __( 'Filter Fields', 'scolta-ai-search' ), array( self::class, 'render_filter_fields_field' ), 'scolta', 'scolta_search_customization_section' );
 		add_settings_field( 'filter_field_descriptions', __( 'Filter Field Descriptions', 'scolta-ai-search' ), array( self::class, 'render_filter_field_descriptions_field' ), 'scolta', 'scolta_search_customization_section' );
+		add_settings_field( 'hide_empty_facets', __( 'Hide Empty Facets', 'scolta-ai-search' ), array( self::class, 'render_hide_empty_facets_field' ), 'scolta', 'scolta_search_customization_section' );
+
+		// --- Section: Search as you type ---
+		add_settings_section( 'scolta_sayt_section', __( 'Search as you type', 'scolta-ai-search' ), array( self::class, 'render_sayt_section' ), 'scolta' );
+		add_settings_field( 'sayt_enabled', __( 'Suggestions', 'scolta-ai-search' ), array( self::class, 'render_sayt_enabled_field' ), 'scolta', 'scolta_sayt_section' );
+		add_settings_field( 'sayt_min_chars', __( 'Minimum Characters', 'scolta-ai-search' ), array( self::class, 'render_sayt_min_chars_field' ), 'scolta', 'scolta_sayt_section' );
+		add_settings_field( 'sayt_debounce_ms', __( 'Typing Debounce (ms)', 'scolta-ai-search' ), array( self::class, 'render_sayt_debounce_field' ), 'scolta', 'scolta_sayt_section' );
+		add_settings_field( 'sayt_max_suggestions', __( 'Max Suggestions', 'scolta-ai-search' ), array( self::class, 'render_sayt_max_suggestions_field' ), 'scolta', 'scolta_sayt_section' );
+		add_settings_field( 'sayt_recent_searches', __( 'Recent Searches', 'scolta-ai-search' ), array( self::class, 'render_sayt_recent_searches_field' ), 'scolta', 'scolta_sayt_section' );
+		add_settings_field( 'sayt_max_recent', __( 'Max Recent Searches', 'scolta-ai-search' ), array( self::class, 'render_sayt_max_recent_field' ), 'scolta', 'scolta_sayt_section' );
+		add_settings_field( 'sayt_expand', __( 'AI Enrichment', 'scolta-ai-search' ), array( self::class, 'render_sayt_expand_field' ), 'scolta', 'scolta_sayt_section' );
+		add_settings_field( 'sayt_expand_per_minute', __( 'AI Enrichment Cap (per minute)', 'scolta-ai-search' ), array( self::class, 'render_sayt_expand_per_minute_field' ), 'scolta', 'scolta_sayt_section' );
+		add_settings_field( 'sayt_expansion_delay_ms', __( 'AI Enrichment Delay (ms)', 'scolta-ai-search' ), array( self::class, 'render_sayt_expansion_delay_field' ), 'scolta', 'scolta_sayt_section' );
+		add_settings_field( 'sayt_suggestion_action', __( 'Suggestion Action', 'scolta-ai-search' ), array( self::class, 'render_sayt_suggestion_action_field' ), 'scolta', 'scolta_sayt_section' );
 
 		// --- Section: Pagefind ---
 		add_settings_section( 'scolta_pagefind_section', __( 'Pagefind', 'scolta-ai-search' ), array( self::class, 'render_pagefind_section' ), 'scolta' );
@@ -288,6 +304,12 @@ class Scolta_Admin {
 		add_settings_field( 'recency_max_penalty', __( 'Recency Max Penalty', 'scolta-ai-search' ), array( self::class, 'render_recency_max_penalty_field' ), 'scolta', 'scolta_scoring_section' );
 		add_settings_field( 'expand_primary_weight', __( 'Expand Primary Weight', 'scolta-ai-search' ), array( self::class, 'render_expand_weight_field' ), 'scolta', 'scolta_scoring_section' );
 		add_settings_field( 'expand_subword_max_frequency', __( 'Search Breadth (advanced)', 'scolta-ai-search' ), array( self::class, 'render_subword_freq_field' ), 'scolta', 'scolta_scoring_section' );
+		add_settings_field( 'specificity_weighting', __( 'Specificity-weighted Ranking', 'scolta-ai-search' ), array( self::class, 'render_specificity_weighting_field' ), 'scolta', 'scolta_scoring_section' );
+		add_settings_field( 'specificity_floor', __( 'Specificity Floor', 'scolta-ai-search' ), array( self::class, 'render_specificity_floor_field' ), 'scolta', 'scolta_scoring_section' );
+		add_settings_field( 'specificity_strong_match', __( 'Specificity Strong-match Threshold', 'scolta-ai-search' ), array( self::class, 'render_specificity_strong_match_field' ), 'scolta', 'scolta_scoring_section' );
+		add_settings_field( 'specificity_cooccurrence', __( 'Co-occurrence Agreement Bonus', 'scolta-ai-search' ), array( self::class, 'render_specificity_cooccurrence_field' ), 'scolta', 'scolta_scoring_section' );
+		add_settings_field( 'specificity_agreement_gate', __( 'Co-occurrence Agreement Gate', 'scolta-ai-search' ), array( self::class, 'render_specificity_agreement_gate_field' ), 'scolta', 'scolta_scoring_section' );
+		add_settings_field( 'specificity_agreement_decay', __( 'Co-occurrence Agreement Decay', 'scolta-ai-search' ), array( self::class, 'render_specificity_agreement_decay_field' ), 'scolta', 'scolta_scoring_section' );
 		add_settings_field( 'language', __( 'Scoring Language', 'scolta-ai-search' ), array( self::class, 'render_language_field' ), 'scolta', 'scolta_scoring_section' );
 		add_settings_field( 'custom_stop_words', __( 'Custom Stop Words', 'scolta-ai-search' ), array( self::class, 'render_custom_stop_words_field' ), 'scolta', 'scolta_scoring_section' );
 		add_settings_field( 'expand_subword_deny_list', __( 'Sub-word Guard Denylist', 'scolta-ai-search' ), array( self::class, 'render_expand_subword_deny_list_field' ), 'scolta', 'scolta_scoring_section' );
@@ -350,6 +372,15 @@ class Scolta_Admin {
 	 */
 	public static function render_search_customization_section(): void {
 		echo '<p class="description">' . esc_html__( 'Optional. Configure sortable fields and filter dimensions so the AI can detect sort and filter intent in search queries.', 'scolta-ai-search' ) . '</p>';
+	}
+
+	/**
+	 * Render the Search as you type section description.
+	 *
+	 * @since 1.1.0
+	 */
+	public static function render_sayt_section(): void {
+		echo '<p class="description">' . esc_html__( 'Typing in the search box populates a suggestions dropdown. The full search — AI query expansion, the AI summary and follow-ups — still runs only when someone presses Enter, uses the search button, or picks a suggestion. On by default; no index rebuild is needed either way.', 'scolta-ai-search' ) . '</p>';
 	}
 
 	/**
@@ -471,8 +502,10 @@ class Scolta_Admin {
 		if ( '' !== $saved ) {
 			$value = $saved;
 		} else {
-			$source = Scolta_Ai_Service::get_api_key_source();
-			$value  = ( 'amazee' === $source ) ? 'amazee' : 'anthropic';
+			// "Is Amazee active" comes from the shared resolution, so stored
+			// credentials that lost to an explicit key cannot preselect Amazee
+			// (tag1consulting/scolta-php#252).
+			$value = Scolta_Ai_Service::resolve_api_key()->isAmazee() ? 'amazee' : 'anthropic';
 		}
 		?>
 		<select name="scolta_settings[ai_provider]" id="scolta_ai_provider">
@@ -495,26 +528,65 @@ class Scolta_Admin {
 	}
 
 	/**
+	 * A translated, operator-facing name for a resolved key source.
+	 *
+	 * @param ApiKeySource $source The resolved source.
+	 */
+	private static function api_key_source_label( ApiKeySource $source ): string {
+		switch ( $source ) {
+			case ApiKeySource::Env:
+				return __( 'the SCOLTA_API_KEY environment variable', 'scolta-ai-search' );
+
+			case ApiKeySource::Constant:
+				return __( 'the SCOLTA_API_KEY constant in wp-config.php', 'scolta-ai-search' );
+
+			case ApiKeySource::Database:
+				return __( 'the API key stored in the database', 'scolta-ai-search' );
+
+			default:
+				return __( 'an explicitly configured key', 'scolta-ai-search' );
+		}
+	}
+
+	/**
 	 * Render API key status (read-only — no input field).
 	 */
 	public static function render_api_key_status_field(): void {
-		$source = Scolta_Ai_Service::get_api_key_source();
+		// Derived from the one resolution the client performs, never from a
+		// second look at the credential store. This block claimed a site was
+		// connected to Amazee.ai whenever credentials were stored, including
+		// when an explicit key was serving every request — and said so in a
+		// success notice (tag1consulting/scolta-php#252).
+		$resolved = Scolta_Ai_Service::resolve_api_key();
+		$source   = $resolved->source->value;
 
-		switch ( $source ) {
-			case 'amazee':
-				echo '<div class="notice notice-success inline"><p>';
-				echo esc_html__( 'Connected to Amazee.ai (managed gateway).', 'scolta-ai-search' );
+		switch ( $resolved->source ) {
+			case ApiKeySource::AmazeeAuto:
+			case ApiKeySource::AmazeeOperator:
+				$notice = $resolved->awaitingAmazeeModelResolution ? 'notice-warning' : 'notice-success';
+				echo '<div class="notice ' . esc_attr( $notice ) . ' inline"><p>';
+				echo $resolved->source === ApiKeySource::AmazeeAuto
+					? esc_html__( 'Connected to Amazee.ai (auto-provisioned free trial).', 'scolta-ai-search' )
+					: esc_html__( 'Connected to Amazee.ai (managed gateway).', 'scolta-ai-search' );
 				echo ' <a href="' . esc_url( admin_url( 'admin.php?page=scolta-amazee' ) ) . '">' . esc_html__( 'Amazee.ai settings', 'scolta-ai-search' ) . '</a>';
+				if ( $resolved->awaitingAmazeeModelResolution ) {
+					echo '</p><p class="description">';
+					echo esc_html__( 'Model resolution has not completed, so AI features stay degraded until it does.', 'scolta-ai-search' );
+				}
 				echo '</p></div>';
 				break;
 
-			case 'env':
-				echo '<div class="notice notice-success inline"><p>';
+			case ApiKeySource::Env:
+				// severity() is what keeps this out of success green when
+				// stored Amazee.ai credentials were overridden: the key is
+				// fine, but the state as a whole is not one to sign off on
+				// without reading the second notice below.
+				echo '<div class="notice ' . esc_attr( $resolved->severity() === 'ok' ? 'notice-success' : 'notice-warning' ) . ' inline"><p>';
 				echo esc_html__( 'API key loaded from SCOLTA_API_KEY environment variable.', 'scolta-ai-search' );
 				echo '</p></div>';
 				break;
 
-			case 'constant':
+			case ApiKeySource::Constant:
 				echo '<div class="notice notice-info inline"><p>';
 				echo esc_html__( 'API key loaded from SCOLTA_API_KEY constant in wp-config.php.', 'scolta-ai-search' );
 				echo '</p><p class="description">';
@@ -522,7 +594,7 @@ class Scolta_Admin {
 				echo '</p></div>';
 				break;
 
-			case 'database':
+			case ApiKeySource::Database:
 				echo '<div class="notice notice-error inline"><p>';
 				echo '<strong>' . esc_html__( 'Security warning:', 'scolta-ai-search' ) . '</strong> ';
 				echo esc_html__( 'API key is stored in the database, which is insecure. Migrate it to an environment variable by setting SCOLTA_API_KEY on your hosting platform, then remove the key from the database.', 'scolta-ai-search' );
@@ -546,6 +618,21 @@ class Scolta_Admin {
 				);
 				echo '</p></div>';
 				break;
+		}
+
+		// Say what happened to credentials the operator knows they created,
+		// rather than leaving the override invisible — and never in a success
+		// notice, which is how the old message came to be read as proof that
+		// Amazee was serving traffic.
+		if ( $resolved->amazeeOverridden() ) {
+			echo '<div class="notice notice-warning inline"><p>';
+			printf(
+				/* translators: %s: the source that overrode the stored credentials */
+				esc_html__( 'Amazee.ai credentials stored but overridden by %s.', 'scolta-ai-search' ),
+				esc_html( self::api_key_source_label( $resolved->source ) )
+			);
+			echo ' <a href="' . esc_url( admin_url( 'admin.php?page=scolta-amazee' ) ) . '">' . esc_html__( 'Amazee.ai settings', 'scolta-ai-search' ) . '</a>';
+			echo '</p></div>';
 		}
 
 		if ( $source !== 'none' ) {
@@ -748,6 +835,167 @@ class Scolta_Admin {
 		?>
 		<textarea name="scolta_settings[filter_field_descriptions]" rows="4" class="large-text"><?php echo esc_textarea( $value ); ?></textarea>
 		<p class="description"><?php esc_html_e( 'One entry per line: filter_name|Human-readable description with valid values. e.g., topic|Subject area. Values: Science, History, Biography. Helps the AI map user language to filter values.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the "Hide Empty Facets" checkbox.
+	 *
+	 * @since 1.0.6
+	 */
+	public static function render_hide_empty_facets_field(): void {
+		$value = self::get_setting( 'hide_empty_facets', true );
+		?>
+		<label>
+			<input type="checkbox" name="scolta_settings[hide_empty_facets]" value="1" <?php checked( $value ); ?> />
+			<?php esc_html_e( 'Hide facet values with zero results for the current query', 'scolta-ai-search' ); ?>
+		</label>
+		<p class="description"><?php esc_html_e( 'Enabled by default: a zero-count facet value is hidden and a filter group whose values are all zero is dropped; an active (checked) value stays visible so it can be unchecked. Disable to show every value, rendering a zero-count one as a disabled "(0)" option.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the "Suggestions" master switch.
+	 *
+	 * @since 1.1.0
+	 */
+	public static function render_sayt_enabled_field(): void {
+		$value = self::get_setting( 'sayt_enabled', true );
+		?>
+		<label>
+			<input type="checkbox" name="scolta_settings[sayt_enabled]" value="1" <?php checked( $value ); ?> />
+			<?php esc_html_e( 'Show suggestions while someone types', 'scolta-ai-search' ); ?>
+		</label>
+		<p class="description"><?php esc_html_e( 'Enabled by default. Turn it off to get the pre-1.1.0 search box back exactly: no dropdown, no combobox roles on the input, no browser storage, and no searches until the visitor commits one.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the minimum characters number field.
+	 *
+	 * @since 1.1.0
+	 */
+	public static function render_sayt_min_chars_field(): void {
+		$value = self::get_setting( 'sayt_min_chars', 2 );
+		?>
+		<input type="number" name="scolta_settings[sayt_min_chars]" value="<?php echo esc_attr( (string) $value ); ?>" min="1" max="10" step="1" class="small-text" />
+		<p class="description"><?php esc_html_e( 'How many characters someone types before suggestions appear (1-10, default 2). Counted the way a person counts them, so an emoji or a Devanagari cluster is one character. Sites in Chinese, Japanese or Korean usually want 1 — a single character is already a real query.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the typing debounce number field.
+	 *
+	 * @since 1.1.0
+	 */
+	public static function render_sayt_debounce_field(): void {
+		$value = self::get_setting( 'sayt_debounce_ms', 150 );
+		?>
+		<input type="number" name="scolta_settings[sayt_debounce_ms]" value="<?php echo esc_attr( (string) $value ); ?>" min="0" max="2000" step="10" class="small-text" />
+		<p class="description"><?php esc_html_e( 'How long typing has to pause before suggestions are fetched, in milliseconds (0-2000, default 150). Raise it on a large index if suggestions feel busy; lower it for a snappier dropdown at the cost of more index reads.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the max suggestions number field.
+	 *
+	 * @since 1.1.0
+	 */
+	public static function render_sayt_max_suggestions_field(): void {
+		$value = self::get_setting( 'sayt_max_suggestions', 6 );
+		?>
+		<input type="number" name="scolta_settings[sayt_max_suggestions]" value="<?php echo esc_attr( (string) $value ); ?>" min="1" max="20" step="1" class="small-text" />
+		<p class="description"><?php esc_html_e( 'Most suggestions shown at once (1-20, default 6). This is also the hard cap on how many results the dropdown loads per keystroke pass, so a bigger number costs more per keystroke.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the recent searches checkbox.
+	 *
+	 * @since 1.1.0
+	 */
+	public static function render_sayt_recent_searches_field(): void {
+		$value = self::get_setting( 'sayt_recent_searches', true );
+		?>
+		<label>
+			<input type="checkbox" name="scolta_settings[sayt_recent_searches]" value="1" <?php checked( $value ); ?> />
+			<?php esc_html_e( "Offer the visitor's own recent searches in the dropdown", 'scolta-ai-search' ); ?>
+		</label>
+		<p class="description"><?php esc_html_e( 'Enabled by default. Recent searches are kept in the visitor\'s own browser storage under a single Scolta key and never leave their device. Turn it off and nothing is read from or written to storage at all.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the max recent searches number field.
+	 *
+	 * @since 1.1.0
+	 */
+	public static function render_sayt_max_recent_field(): void {
+		$value = self::get_setting( 'sayt_max_recent', 3 );
+		?>
+		<input type="number" name="scolta_settings[sayt_max_recent]" value="<?php echo esc_attr( (string) $value ); ?>" min="0" max="20" step="1" class="small-text" />
+		<p class="description"><?php esc_html_e( 'Most recent searches shown in the dropdown (0-20, default 3). They appear above the content suggestions. How many are stored is handled internally and is deliberately larger, so a typed prefix still has something to match.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the SAYT AI enrichment checkbox.
+	 *
+	 * @since 1.1.0
+	 */
+	public static function render_sayt_expand_field(): void {
+		$value = self::get_setting( 'sayt_expand', true );
+		?>
+		<label>
+			<input type="checkbox" name="scolta_settings[sayt_expand]" value="1" <?php checked( $value ); ?> />
+			<?php esc_html_e( 'Enrich suggestions with AI query expansion', 'scolta-ai-search' ); ?>
+		</label>
+		<p class="description"><?php esc_html_e( 'Enabled by default. Adds matches for terms the AI reads out of the prefix, so "brownie" can surface a chocolate traybake. Does nothing when no AI provider is configured or when AI Query Expansion is off.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the SAYT enrichment rate cap.
+	 *
+	 * @since 1.1.0
+	 */
+	public static function render_sayt_expand_per_minute_field(): void {
+		$value = self::get_setting( 'sayt_expand_per_minute', 6 );
+		?>
+		<input type="number" name="scolta_settings[sayt_expand_per_minute]" value="<?php echo esc_attr( (string) $value ); ?>" min="0" max="60" step="1" class="small-text" />
+		<p class="description"><?php esc_html_e( 'Most AI enrichment calls a single visitor can make per minute while typing (0-60, default 6). The cap exists because suggestion expansions spend the same per-visitor AI budget that expansion, summarization and follow-ups spend for searches people actually ran: without it, typing would exhaust the allowance and starve the real search. Over the cap the dropdown quietly falls back to keyword suggestions until the minute rolls over. Set it to 0 to never spend AI on typing.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the SAYT enrichment idle delay.
+	 *
+	 * @since 1.1.0
+	 */
+	public static function render_sayt_expansion_delay_field(): void {
+		$value = self::get_setting( 'sayt_expansion_delay_ms', 500 );
+		?>
+		<input type="number" name="scolta_settings[sayt_expansion_delay_ms]" value="<?php echo esc_attr( (string) $value ); ?>" min="0" max="5000" step="50" class="small-text" />
+		<p class="description"><?php esc_html_e( 'How long typing has to stop before an AI enrichment call is made, in milliseconds (0-5000, default 500). Deliberately longer than the typing debounce above: keyword suggestions should appear while someone types, an AI call should wait until they pause.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the suggestion action select.
+	 *
+	 * @since 1.1.0
+	 */
+	public static function render_sayt_suggestion_action_field(): void {
+		$value = self::get_setting( 'sayt_suggestion_action', 'navigate' );
+		if ( ! in_array( $value, \Tag1\Scolta\Config\ScoltaConfig::SAYT_SUGGESTION_ACTIONS, true ) ) {
+			$value = 'navigate';
+		}
+		?>
+		<select name="scolta_settings[sayt_suggestion_action]" id="scolta_sayt_suggestion_action">
+			<option value="navigate" <?php selected( $value, 'navigate' ); ?>><?php esc_html_e( 'Go to the page (default)', 'scolta-ai-search' ); ?></option>
+			<option value="search" <?php selected( $value, 'search' ); ?>><?php esc_html_e( 'Run a search for it', 'scolta-ai-search' ); ?></option>
+		</select>
+		<p class="description"><?php esc_html_e( 'What happens when someone picks a content suggestion. "Go to the page" opens that result directly, which is what most people expect from a title they recognize. "Run a search for it" puts the title in the box and runs the full search instead, which suits a site where one title usually has neighbours worth seeing. A recent search always runs the search, whichever option is selected here.', 'scolta-ai-search' ); ?></p>
 		<?php
 	}
 
@@ -993,6 +1241,87 @@ class Scolta_Admin {
 		?>
 		<input type="number" name="scolta_settings[expand_subword_max_frequency]" value="<?php echo esc_attr( $value ); ?>" min="0" max="1" step="0.01" class="small-text" />
 		<p class="description"><?php esc_html_e( 'Advanced: how aggressively multi-word searches broaden. Higher returns more results but can pull in loosely-related matches; lower keeps results tight. Most sites should pick a Site Type preset above instead of changing this by hand. Default: 0.05 (the Recipe & Content Catalog preset raises it to 0.10).', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the specificity-weighted ranking toggle.
+	 *
+	 * @since 1.0.6
+	 */
+	public static function render_specificity_weighting_field(): void {
+		$value = self::get_setting( 'specificity_weighting', true );
+		?>
+		<label>
+			<input type="checkbox" name="scolta_settings[specificity_weighting]" value="1" <?php checked( $value ); ?> />
+			<?php esc_html_e( 'Weight partial matches by how rare each term is', 'scolta-ai-search' ); ?>
+		</label>
+		<p class="description"><?php esc_html_e( 'Enabled by default: a match on a rare, intent-bearing term outranks a match on a ubiquitous one instead of counting the same. This is what stops a common word, typed or leaked from an expansion phrase, from flooding the head of the result list. Disable to restore flat sub-query weighting.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the specificity floor field.
+	 *
+	 * @since 1.0.6
+	 */
+	public static function render_specificity_floor_field(): void {
+		$value = self::get_setting( 'specificity_floor', 0.15 );
+		?>
+		<input type="number" name="scolta_settings[specificity_floor]" value="<?php echo esc_attr( $value ); ?>" min="0" max="1" step="0.01" class="small-text" />
+		<p class="description"><?php esc_html_e( 'Floor for the specificity weight of a ubiquitous term. A term appearing in nearly every document is damped to this multiplier rather than to zero, so it still contributes to recall while ranking far below rare terms. Lower is more aggressive damping. Default: 0.15.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the specificity strong-match threshold field.
+	 *
+	 * @since 1.0.6
+	 */
+	public static function render_specificity_strong_match_field(): void {
+		$value = self::get_setting( 'specificity_strong_match', 0.55 );
+		?>
+		<input type="number" name="scolta_settings[specificity_strong_match]" value="<?php echo esc_attr( $value ); ?>" min="0" max="1" step="0.01" class="small-text" />
+		<p class="description"><?php esc_html_e( 'Specificity at or above which a matched term counts as a strong, on-intent hit. When a term this specific matched, the partial-match banner and the AI summary stop framing the result set as a failure and attribute any gap to the search rather than the collection. Default: 0.55.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the co-occurrence agreement bonus field.
+	 *
+	 * @since 1.0.6
+	 */
+	public static function render_specificity_cooccurrence_field(): void {
+		$value = self::get_setting( 'specificity_cooccurrence', 0.9 );
+		?>
+		<input type="number" name="scolta_settings[specificity_cooccurrence]" value="<?php echo esc_attr( $value ); ?>" min="0" max="5" step="0.05" class="small-text" />
+		<p class="description"><?php esc_html_e( 'Scales the bonus a result earns for agreeing with several query and expansion terms at once, rather than matching one term strongly. A page that is on-topic across the whole query usually answers it better than one that spikes on a single rare word. Default: 0.9. Set to 0 to score each result purely by its single best-matching sub-query.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the co-occurrence agreement gate field.
+	 *
+	 * @since 1.0.6
+	 */
+	public static function render_specificity_agreement_gate_field(): void {
+		$value = self::get_setting( 'specificity_agreement_gate', 0.45 );
+		?>
+		<input type="number" name="scolta_settings[specificity_agreement_gate]" value="<?php echo esc_attr( $value ); ?>" min="0" max="1" step="0.01" class="small-text" />
+		<p class="description"><?php esc_html_e( 'Specificity a term must clear before it counts toward the agreement bonus. Terms below the gate are too common for their presence to be evidence of topical agreement, so they are excluded rather than inflating the count. Default: 0.45.', 'scolta-ai-search' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Render the co-occurrence agreement decay field.
+	 *
+	 * @since 1.0.6
+	 */
+	public static function render_specificity_agreement_decay_field(): void {
+		$value = self::get_setting( 'specificity_agreement_decay', 1.0 );
+		?>
+		<input type="number" name="scolta_settings[specificity_agreement_decay]" value="<?php echo esc_attr( $value ); ?>" min="0" max="5" step="0.05" class="small-text" />
+		<p class="description"><?php esc_html_e( 'Geometric factor applied to each successive agreeing term, so the second is worth this fraction of the first and so on. Values below 1 make the bonus saturate, which keeps a long page matching many mid-specificity terms from overtaking a focused page matching a genuinely rare one. Default: 1.0 (every agreeing term weighted equally).', 'scolta-ai-search' ); ?></p>
 		<?php
 	}
 
@@ -1365,15 +1694,26 @@ class Scolta_Admin {
 		$clean['ai_model']           = sanitize_text_field( $input['ai_model'] ?? 'claude-sonnet-4-5-20250929' );
 		$clean['ai_expansion_model'] = sanitize_text_field( $input['ai_expansion_model'] ?? '' );
 
+		// Gateway-resolved models are carried over from the stored option, not
+		// read from $input: they have no settings field on purpose (there is
+		// nothing for an administrator to choose, and offering one would
+		// recreate the alias-versus-native-ID confusion this split fixes).
+		// $clean replaces the option wholesale, so without this a routine
+		// settings save would silently wipe them and the next AI request would
+		// fall back to the shipped default the gateway rejects.
+		$clean['amazee_model']           = sanitize_text_field( (string) ( $existing['amazee_model'] ?? '' ) );
+		$clean['amazee_expansion_model'] = sanitize_text_field( (string) ( $existing['amazee_expansion_model'] ?? '' ) );
+
 		// Base URL must be an http(s) URL — it is the endpoint AI requests
 		// are sent to, so a non-URL or non-http scheme is dropped entirely.
 		$raw_base_url         = esc_url_raw( trim( (string) ( $input['ai_base_url'] ?? '' ) ), array( 'http', 'https' ) );
 		$clean['ai_base_url'] = $raw_base_url;
 
 		// AI feature toggles.
-		$clean['ai_expand_query'] = ! empty( $input['ai_expand_query'] );
-		$clean['ai_summarize']    = ! empty( $input['ai_summarize'] );
-		$clean['max_follow_ups']  = max( 0, min( 10, (int) ( $input['max_follow_ups'] ?? 3 ) ) );
+		$clean['ai_expand_query']   = ! empty( $input['ai_expand_query'] );
+		$clean['ai_summarize']      = ! empty( $input['ai_summarize'] );
+		$clean['hide_empty_facets'] = ! empty( $input['hide_empty_facets'] );
+		$clean['max_follow_ups']    = max( 0, min( 10, (int) ( $input['max_follow_ups'] ?? 3 ) ) );
 
 		// AI languages.
 		$languages_raw = $input['ai_languages'] ?? 'en';
@@ -1463,6 +1803,16 @@ class Scolta_Admin {
 		$clean['expand_primary_weight']        = max( 0.0, min( 1.0, (float) ( $input['expand_primary_weight'] ?? 0.5 ) ) );
 		$clean['expand_subword_max_frequency'] = max( 0.0, min( 1.0, (float) ( $input['expand_subword_max_frequency'] ?? 0.05 ) ) );
 
+		// Specificity and co-occurrence ranking. The floor, strong-match and
+		// agreement gate are specificity values in 0..1; the co-occurrence bonus
+		// and the agreement decay are multipliers, clamped to 0..5.
+		$clean['specificity_weighting']       = ! empty( $input['specificity_weighting'] );
+		$clean['specificity_floor']           = max( 0.0, min( 1.0, (float) ( $input['specificity_floor'] ?? 0.15 ) ) );
+		$clean['specificity_strong_match']    = max( 0.0, min( 1.0, (float) ( $input['specificity_strong_match'] ?? 0.55 ) ) );
+		$clean['specificity_cooccurrence']    = max( 0.0, min( 5.0, (float) ( $input['specificity_cooccurrence'] ?? 0.9 ) ) );
+		$clean['specificity_agreement_gate']  = max( 0.0, min( 1.0, (float) ( $input['specificity_agreement_gate'] ?? 0.45 ) ) );
+		$clean['specificity_agreement_decay'] = max( 0.0, min( 5.0, (float) ( $input['specificity_agreement_decay'] ?? 1.0 ) ) );
+
 		$valid_languages   = array( 'ar', 'ca', 'da', 'de', 'el', 'en', 'es', 'et', 'eu', 'fi', 'fr', 'ga', 'hi', 'hu', 'hy', 'id', 'it', 'lt', 'ne', 'nl', 'no', 'pl', 'pt', 'ro', 'ru', 'sr', 'sv', 'ta', 'tr', 'yi' );
 		$clean['language'] = in_array( $input['language'] ?? '', $valid_languages, true )
 			? $input['language']
@@ -1506,6 +1856,27 @@ class Scolta_Admin {
 		$clean['ai_summary_top_n']     = max( 1, min( 20, (int) ( $input['ai_summary_top_n'] ?? 10 ) ) );
 		$clean['ai_summary_max_chars'] = max( 500, min( 10000, (int) ( $input['ai_summary_max_chars'] ?? 4000 ) ) );
 		$clean['show_attribution']     = ! empty( $input['show_attribution'] );
+
+		// Search as you type — three checkboxes, six bounded integers and one
+		// select. Every key must be written here: sanitize_settings() rebuilds
+		// the option from scratch, so a key it skips is dropped on every save.
+		$clean['sayt_enabled']            = ! empty( $input['sayt_enabled'] );
+		$clean['sayt_min_chars']          = max( 1, min( 10, (int) ( $input['sayt_min_chars'] ?? 2 ) ) );
+		$clean['sayt_debounce_ms']        = max( 0, min( 2000, (int) ( $input['sayt_debounce_ms'] ?? 150 ) ) );
+		$clean['sayt_max_suggestions']    = max( 1, min( 20, (int) ( $input['sayt_max_suggestions'] ?? 6 ) ) );
+		$clean['sayt_recent_searches']    = ! empty( $input['sayt_recent_searches'] );
+		$clean['sayt_max_recent']         = max( 0, min( 20, (int) ( $input['sayt_max_recent'] ?? 3 ) ) );
+		$clean['sayt_expand']             = ! empty( $input['sayt_expand'] );
+		$clean['sayt_expand_per_minute']  = max( 0, min( 60, (int) ( $input['sayt_expand_per_minute'] ?? 6 ) ) );
+		$clean['sayt_expansion_delay_ms'] = max( 0, min( 5000, (int) ( $input['sayt_expansion_delay_ms'] ?? 500 ) ) );
+
+		$clean['sayt_suggestion_action'] = in_array(
+			$input['sayt_suggestion_action'] ?? '',
+			\Tag1\Scolta\Config\ScoltaConfig::SAYT_SUGGESTION_ACTIONS,
+			true
+		)
+			? $input['sayt_suggestion_action']
+			: 'navigate';
 
 		// Cache.
 		$clean['cache_ttl'] = max( 0, min( 7776000, (int) ( $input['cache_ttl'] ?? 2592000 ) ) );
@@ -1814,10 +2185,17 @@ class Scolta_Admin {
 			echo '<tr><td>' . esc_html__( 'AI Provider', 'scolta-ai-search' ) . '</td>';
 			echo '<td>' . esc_html__( 'WordPress AI Client SDK (WP 7.0+)', 'scolta-ai-search' ) . '</td></tr>';
 		} else {
-			$provider = $settings['ai_provider'] ?? 'anthropic';
-			$source   = Scolta_Ai_Service::get_api_key_source();
+			// The effective provider, from the resolution, rather than the
+			// saved one: an active Amazee.ai gateway is what requests go to,
+			// whatever the settings row says (tag1consulting/scolta-php#252).
+			$resolved = Scolta_Ai_Service::resolve_api_key();
+			$source   = $resolved->source->value;
+			$provider = $resolved->isAmazee() ? 'Amazee.ai' : ucfirst( $resolved->provider );
 			echo '<tr><td>' . esc_html__( 'AI Provider', 'scolta-ai-search' ) . '</td>';
-			echo '<td>' . esc_html( ucfirst( $provider ) );
+			echo '<td>' . esc_html( $provider );
+			if ( $resolved->amazeeOverridden() ) {
+				echo ' <span style="color: #dba617;">(' . esc_html__( 'Amazee.ai credentials stored but overridden', 'scolta-ai-search' ) . ')</span>';
+			}
 			if ( $source === 'none' ) {
 				echo ' <span style="color: #d63638;">(' . esc_html__( 'no API key', 'scolta-ai-search' ) . ')</span>';
 			} elseif ( $source === 'database' ) {
@@ -1935,16 +2313,14 @@ class Scolta_Admin {
 	}
 
 	// -----------------------------------------------------------------
-	// AI features opt-in (builds with auto-provisioning disabled)
+	// AI features opt-in
 	// -----------------------------------------------------------------
 
 	/**
 	 * Whether the AI features opt-in is pending admin consent.
 	 *
-	 * True only when activation recorded the pending flag (builds with
-	 * SCOLTA_AUTO_PROVISION_DEFAULT false, e.g. the WordPress.org
-	 * distribution) and no explicit API key has been configured since —
-	 * configuring a key is itself the consent act.
+	 * True when activation recorded the pending flag and no explicit API key
+	 * has been configured since — configuring a key is itself the consent act.
 	 *
 	 * @return bool True when the opt-in notice and control should be offered.
 	 */
@@ -1981,7 +2357,7 @@ class Scolta_Admin {
 		echo wp_kses_post(
 			sprintf(
 				/* translators: %s: URL of the Scolta settings page */
-				__( '<strong>Scolta AI Search:</strong> AI features (query expansion and result summaries) are available — <a href="%s">enable them in Scolta settings</a>. Scolta makes no remote requests until you enable them.', 'scolta-ai-search' ),
+				__( '<strong>Scolta AI Search:</strong> enable Amazee.ai to add AI-powered search (query expansion and result summaries) with a free trial — <a href="%s">enable it in Scolta settings</a>. If it works well for you, sign up with Amazee to keep it running when the trial ends. Scolta makes no remote requests until you enable it.', 'scolta-ai-search' ),
 				esc_url( admin_url( 'options-general.php?page=scolta' ) )
 			)
 		);
@@ -2005,7 +2381,7 @@ class Scolta_Admin {
 			echo '</p></div>';
 		} else {
 			echo '<div class="notice notice-error is-dismissible"><p>';
-			echo esc_html__( 'Scolta could not provision the Amazee.ai trial — AI features remain off. Check your site’s outbound connectivity and try again, or configure your own API key.', 'scolta-ai-search' );
+			echo esc_html__( 'Scolta could not start the Amazee.ai free trial — AI features remain off. Check your site’s outbound connectivity and try again, or configure your own API key.', 'scolta-ai-search' );
 			echo '</p></div>';
 		}
 	}
@@ -2014,7 +2390,7 @@ class Scolta_Admin {
 	 * Render the explicit "Enable AI features" opt-in control.
 	 *
 	 * Shown above the settings form while the opt-in recorded at activation
-	 * is pending. States exactly what enabling does — provisioning a free
+	 * is pending. States exactly what enabling does — connecting a free
 	 * Amazee.ai trial sends the site admin email address to api.amazee.ai —
 	 * with links to Amazee.ai's terms and privacy policy.
 	 */
@@ -2025,13 +2401,14 @@ class Scolta_Admin {
 		?>
 		<div class="notice notice-info inline" style="margin: 1em 0 1.5em; padding: 0.5em 1em 1em;">
 			<h2><?php esc_html_e( 'Enable AI features?', 'scolta-ai-search' ); ?></h2>
+			<p><?php esc_html_e( 'Enable Amazee.ai to add AI-powered search with a free trial. If it works well for you, sign up with Amazee to keep it running when the trial ends.', 'scolta-ai-search' ); ?></p>
 			<p><?php esc_html_e( 'AI query expansion and result summaries are currently OFF, and Scolta makes no remote requests of any kind.', 'scolta-ai-search' ); ?></p>
 			<p>
 				<?php
 				echo wp_kses_post(
 					sprintf(
 						/* translators: 1: Amazee.ai terms of service URL, 2: Amazee.ai privacy policy URL */
-						__( 'Enabling AI features provisions a free Amazee.ai trial: your site admin email address will be sent to amazee.ai (api.amazee.ai), and AI search queries plus result excerpts will be processed by the Amazee.ai gateway. See the Amazee.ai <a href="%1$s">Terms of Service</a> and <a href="%2$s">Privacy Policy</a>.', 'scolta-ai-search' ),
+						__( 'Enabling AI features starts a free Amazee.ai trial: your site admin email address will be sent to amazee.ai (api.amazee.ai), and AI search queries plus result excerpts will be processed by the Amazee.ai gateway. See the Amazee.ai <a href="%1$s">Terms of Service</a> and <a href="%2$s">Privacy Policy</a>.', 'scolta-ai-search' ),
 						'https://amazee.ai/terms',
 						'https://amazee.ai/privacy'
 					)
@@ -2043,7 +2420,7 @@ class Scolta_Admin {
 				echo wp_kses_post(
 					sprintf(
 						/* translators: %s: wp-config.php constant example */
-						__( 'Prefer your own provider? Configure an API key instead (e.g. %s in wp-config.php) and turn on the AI settings below — no trial is provisioned and nothing is sent to amazee.ai when a key is present.', 'scolta-ai-search' ),
+						__( 'Prefer your own provider? Configure an API key instead (e.g. %s in wp-config.php) and turn on the AI settings below — no trial is started and nothing is sent to amazee.ai when a key is present.', 'scolta-ai-search' ),
 						'<code>SCOLTA_API_KEY</code>'
 					)
 				);
@@ -2061,11 +2438,12 @@ class Scolta_Admin {
 	/**
 	 * Handle the explicit "Enable AI features" opt-in action.
 	 *
-	 * Provisions the Amazee.ai trial (unless an explicit API key or stored
-	 * credentials already provide AI access), then enables the AI feature
-	 * settings and clears the pending flag. On provisioning failure the AI
-	 * features stay off, the pending flag is kept, and an error notice is
-	 * queued for the next admin page load.
+	 * The one path that establishes the Amazee.ai connection, and it runs only
+	 * on the administrator's click. An explicit API key (or credentials already
+	 * stored) is used as-is; otherwise the connection is established here.
+	 * Either way the AI feature settings are turned on and the pending flag is
+	 * cleared. On failure the AI features stay off, the pending flag is kept,
+	 * and an error notice is queued for the next admin page load.
 	 */
 	public static function handle_enable_ai(): void {
 		if ( ! current_user_can( 'manage_options' ) ) {
@@ -2073,16 +2451,28 @@ class Scolta_Admin {
 		}
 		check_admin_referer( 'scolta_enable_ai' );
 
-		$success = scolta_has_explicit_api_key();
+		// "Is AI available at all" comes from the shared resolution: an
+		// explicit key, or credentials already stored. Asking the credential
+		// store directly here would be a second derivation of the same fact.
+		$resolved = Scolta_Ai_Service::resolve_api_key();
+		$own_key  = $resolved->isConfigured() && ! $resolved->isAmazee();
+		$success  = $resolved->isConfigured() || $resolved->amazeeCredentialsStored;
 		if ( ! $success ) {
-			$storage = new Scolta_Amazee_Config_Storage();
-			$success = $storage->load() !== null || scolta_auto_provision_amazee();
+			$success = scolta_auto_provision_amazee();
 		}
 
 		if ( $success ) {
 			$settings                    = get_option( 'scolta_settings', array() );
 			$settings['ai_expand_query'] = true;
 			$settings['ai_summarize']    = true;
+			if ( ! $own_key ) {
+				// The managed gateway is what this click turned on, so record it
+				// as the site's provider: the settings screen shows the operator
+				// what is actually serving AI, and switching the select away from
+				// it is what releases the stored connection
+				// (scolta_sync_amazee_connection_state()).
+				$settings['ai_provider'] = 'amazee';
+			}
 			update_option( 'scolta_settings', $settings );
 			delete_option( 'scolta_ai_optin_pending' );
 			delete_option( 'scolta_ai_optin_notice_dismissed' );

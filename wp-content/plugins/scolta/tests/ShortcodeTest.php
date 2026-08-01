@@ -185,6 +185,143 @@ class ShortcodeTest extends TestCase {
         $this->assertArrayHasKey('siteName', $config);
         $this->assertArrayHasKey('container', $config);
         $this->assertArrayHasKey('nonce', $config);
+        // hideEmptyFacets is bridged top-level (default true) so scolta.js can
+        // read the facet-visibility opt-out.
+        $this->assertArrayHasKey('hideEmptyFacets', $config);
+        $this->assertTrue($config['hideEmptyFacets']);
+        // filterFieldDescriptions is bridged top-level so scolta.js can label
+        // filter groups. The admin field, renderer, sanitizer and the AI
+        // expansion prompt all consumed this setting already; only the browser
+        // bridge was missing, so the feature was dead client-side.
+        $this->assertArrayHasKey('filterFieldDescriptions', $config);
+    }
+
+    /**
+     * A configured filter-field description map must reach the browser config.
+     *
+     * Guards the bridge specifically: an empty default array is indistinguishable
+     * from a missing bridge, so the round-trip needs a non-empty value.
+     */
+    public function test_filter_field_descriptions_round_trip_into_localized_config(): void {
+        $settings = get_option('scolta_settings', []);
+        $settings['filter_field_descriptions'] = [
+            'topic'  => 'Subject area',
+            'author' => 'Who wrote it',
+        ];
+        update_option('scolta_settings', $settings);
+
+        Scolta_Shortcode::render();
+
+        $config = $GLOBALS['scolta_localized_scripts']['scolta-search'];
+        $this->assertSame(
+            ['topic' => 'Subject area', 'author' => 'Who wrote it'],
+            $config['filterFieldDescriptions']
+        );
+    }
+
+    /**
+     * The ten search-as-you-type keys, with the defaults the browser bundle
+     * falls back to when a key is absent.
+     *
+     * @return array<string, bool|int|string>
+     */
+    private function saytDefaults(): array {
+        return [
+            'saytEnabled'          => true,
+            'saytMinChars'         => 2,
+            'saytDebounceMs'       => 150,
+            'saytMaxSuggestions'   => 6,
+            'saytRecentSearches'   => true,
+            'saytMaxRecent'        => 3,
+            'saytExpand'           => true,
+            'saytExpandPerMinute'  => 6,
+            'saytExpansionDelayMs' => 500,
+            'saytSuggestionAction' => 'navigate',
+        ];
+    }
+
+    /**
+     * All ten SAYT keys must be bridged top-level with their documented values.
+     *
+     * This plugin is where the fleet's one live parity bug happened:
+     * filterFieldDescriptions had a full admin surface and a browser-side
+     * consumer, and the localize array simply omitted it, so the feature was
+     * dead on arrival with nothing red. Ten new keys with a full admin surface
+     * are exactly that shape again, so the emission gets asserted directly and
+     * by value, not merely by presence.
+     */
+    public function test_sayt_keys_are_bridged_to_the_browser_with_their_defaults(): void {
+        Scolta_Shortcode::render();
+
+        $config = $GLOBALS['scolta_localized_scripts']['scolta-search'];
+
+        foreach ($this->saytDefaults() as $key => $expected) {
+            $this->assertArrayHasKey(
+                $key,
+                $config,
+                "scolta.js reads instanceConfig.$key; the localize array must emit it."
+            );
+            $this->assertSame(
+                $expected,
+                $config[$key],
+                "$key must reach the browser as its documented default."
+            );
+        }
+    }
+
+    /**
+     * A saved value must reach the browser, not just the default.
+     *
+     * Defaults alone cannot distinguish a working bridge from a bundle fallback:
+     * both produce the same page. Every key is overridden to something other
+     * than its default, and the emitted config has to show all ten.
+     */
+    public function test_saved_sayt_settings_round_trip_into_localized_config(): void {
+        $settings = get_option('scolta_settings', []);
+        $settings = array_merge($settings, [
+            'sayt_enabled'            => false,
+            'sayt_min_chars'          => 1,
+            'sayt_debounce_ms'        => 400,
+            'sayt_max_suggestions'    => 10,
+            'sayt_recent_searches'    => false,
+            'sayt_max_recent'         => 5,
+            'sayt_expand'             => false,
+            'sayt_expand_per_minute'  => 2,
+            'sayt_expansion_delay_ms' => 800,
+            'sayt_suggestion_action'  => 'search',
+        ]);
+        update_option('scolta_settings', $settings);
+
+        Scolta_Shortcode::render();
+
+        $config = $GLOBALS['scolta_localized_scripts']['scolta-search'];
+
+        $this->assertFalse($config['saytEnabled']);
+        $this->assertSame(1, $config['saytMinChars']);
+        $this->assertSame(400, $config['saytDebounceMs']);
+        $this->assertSame(10, $config['saytMaxSuggestions']);
+        $this->assertFalse($config['saytRecentSearches']);
+        $this->assertSame(5, $config['saytMaxRecent']);
+        $this->assertFalse($config['saytExpand']);
+        $this->assertSame(2, $config['saytExpandPerMinute']);
+        $this->assertSame(800, $config['saytExpansionDelayMs']);
+        $this->assertSame('search', $config['saytSuggestionAction']);
+    }
+
+    /**
+     * A stored suggestion action the bundle does not recognize is normalized
+     * here rather than shipped to the browser, so the clamp happens once and in
+     * one place instead of being rediscovered client-side.
+     */
+    public function test_an_unknown_suggestion_action_reaches_the_browser_as_navigate(): void {
+        $settings = get_option('scolta_settings', []);
+        $settings['sayt_suggestion_action'] = 'teleport';
+        update_option('scolta_settings', $settings);
+
+        Scolta_Shortcode::render();
+
+        $config = $GLOBALS['scolta_localized_scripts']['scolta-search'];
+        $this->assertSame('navigate', $config['saytSuggestionAction']);
     }
 
     public function test_localized_config_container_matches_output(): void {

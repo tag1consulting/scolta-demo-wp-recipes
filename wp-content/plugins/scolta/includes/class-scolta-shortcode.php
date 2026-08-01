@@ -143,22 +143,39 @@ class Scolta_Shortcode {
 			'scolta-search',
 			'scolta',
 			array(
-				'scoring'            => $config->toJsScoringConfig(),
-				'wasmPath'           => SCOLTA_PLUGIN_URL . 'assets/wasm/scolta_core.js',
-				'endpoints'          => array(
+				'scoring'                 => $config->toJsScoringConfig(),
+				'wasmPath'                => SCOLTA_PLUGIN_URL . 'assets/wasm/scolta_core.js',
+				'endpoints'               => array(
 					'expand'    => rest_url( 'scolta/v1/expand-query' ),
 					'summarize' => rest_url( 'scolta/v1/summarize' ),
 					'followup'  => rest_url( 'scolta/v1/followup' ),
 				),
-				'pagefindPath'       => $pagefind_url . '/pagefind.js',
-				'siteName'           => ! empty( $config->siteName )
+				'pagefindPath'            => $pagefind_url . '/pagefind.js',
+				'siteName'                => ! empty( $config->siteName )
 					? $config->siteName
 					: get_bloginfo( 'name' ),
-				'container'          => '#scolta-search',
-				'allowedLinkDomains' => array(),
-				'disclaimer'         => '',
-				'nonce'              => wp_create_nonce( 'wp_rest' ),
-				'currentLanguage'    => strtolower( explode( '_', get_locale() )[0] ),
+				'hideEmptyFacets'         => $config->hideEmptyFacets,
+				'filterFieldDescriptions' => $config->filterFieldDescriptions,
+				// Search as you type. Ten top-level keys, not scoring keys:
+				// scolta.js reads each as instanceConfig.<camelCase>, the same
+				// bridging hideEmptyFacets uses. The suggestion action is read
+				// through the normalizer so an unrecognized stored value reaches
+				// the browser as 'navigate' rather than as itself.
+				'saytEnabled'             => $config->saytEnabled,
+				'saytMinChars'            => $config->saytMinChars,
+				'saytDebounceMs'          => $config->saytDebounceMs,
+				'saytMaxSuggestions'      => $config->saytMaxSuggestions,
+				'saytRecentSearches'      => $config->saytRecentSearches,
+				'saytMaxRecent'           => $config->saytMaxRecent,
+				'saytExpand'              => $config->saytExpand,
+				'saytExpandPerMinute'     => $config->saytExpandPerMinute,
+				'saytExpansionDelayMs'    => $config->saytExpansionDelayMs,
+				'saytSuggestionAction'    => $config->normalizedSaytSuggestionAction(),
+				'container'               => '#scolta-search',
+				'allowedLinkDomains'      => array(),
+				'disclaimer'              => '',
+				'nonce'                   => wp_create_nonce( 'wp_rest' ),
+				'currentLanguage'         => strtolower( explode( '_', get_locale() )[0] ),
 			)
 		);
 
