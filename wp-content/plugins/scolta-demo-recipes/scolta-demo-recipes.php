@@ -305,7 +305,69 @@ function scolta_recipes_enrich_index( $item, $post ) {
 		}
 	}
 
-	if ( $taxonomy_text === '' && empty( $filters ) ) {
+	// Per-recipe data the search result cards paint: the dish photograph and
+	// the badges under the title. It rides along in the fragment's meta map, so
+	// a card and a search-as-you-type suggestion each cost zero per-result
+	// server calls.
+	//
+	// Metadata costs only the bytes of its own keys in each fragment, unlike
+	// sortable, which writes a corpus-wide pf_meta entry. The keys "title" and
+	// "date" are deliberately avoided: they lose to the built-in values on a
+	// collision.
+	$metadata = $item->metadata;
+
+	$image = scolta_recipes_card_image( $post->ID );
+	if ( null !== $image ) {
+		$metadata['image'] = $image['url'];
+		if ( '' !== $image['alt'] ) {
+			$metadata['image_alt'] = $image['alt'];
+		}
+	}
+
+	// A display-only copy of the facet values the card badges, in the order it
+	// paints them: what meal it is, whose kitchen it comes from, and how hard
+	// it is. Taken from the filters resolved just above rather than re-read
+	// from the taxonomy, so a badge's text is character-for-character the facet
+	// value it corresponds to — click that facet and this recipe is in the set.
+	//
+	// Only the first three present are kept, and duplicates are dropped:
+	// recipe_course and recipe_type overlap on this corpus (both contain
+	// "Dessert"), and a card that badged the same word twice would spend a slot
+	// saying nothing. Coverage of 3743 recipes: difficulty 3091, type 1758,
+	// technique 1571, cuisine 1550, course 1516, diet 758.
+	//
+	// There is no cook-time badge because there is no cook time. The Wikibooks
+	// import carries source_url and license and nothing else; no prep, cook or
+	// total time exists on any recipe, so a time badge would have been an empty
+	// chip on all 3743.
+	//
+	// JSON rather than a delimited string: a term name is free text, and this
+	// corpus already contains "Meat, Poultry and Seafood".
+	$badges = array();
+	foreach ( array( 'course', 'cuisine', 'difficulty', 'diet' ) as $key ) {
+		foreach ( (array) ( $filters[ $key ] ?? array() ) as $value ) {
+			$value = is_string( $value ) ? trim( $value ) : '';
+			if ( '' === $value || count( $badges ) >= SCOLTA_RECIPES_CARD_BADGE_LIMIT ) {
+				continue;
+			}
+			if ( in_array( mb_strtolower( $value ), array_map( 'mb_strtolower', $badges ), true ) ) {
+				continue;
+			}
+			$badges[] = $value;
+			// One value per taxonomy on the card. A recipe tagged with three
+			// cuisines would otherwise fill the whole row with cuisines and
+			// never reach its difficulty.
+			break;
+		}
+	}
+	if ( ! empty( $badges ) ) {
+		$encoded = wp_json_encode( $badges );
+		if ( is_string( $encoded ) ) {
+			$metadata['badges'] = $encoded;
+		}
+	}
+
+	if ( $taxonomy_text === '' && empty( $filters ) && $metadata === $item->metadata ) {
 		return $item;
 	}
 
@@ -313,7 +375,67 @@ function scolta_recipes_enrich_index( $item, $post ) {
 		array(
 			'bodyHtml' => $item->bodyHtml . $taxonomy_text,
 			'filters'  => $filters,
+			'metadata' => $metadata,
 		)
+	);
+}
+
+/**
+ * How many badges a search result card paints.
+ *
+ * Three is what fits on one row beside the 130px thumbnail without wrapping
+ * the card taller than its photograph.
+ */
+const SCOLTA_RECIPES_CARD_BADGE_LIMIT = 3;
+
+/**
+ * Image size the search result card's thumbnail uses.
+ *
+ * "medium" is the 300px-bounded size WordPress generates for every upload, so
+ * the card introduces no new derivative and every image it asks for is already
+ * on disk. It is roughly twice the 130px box the card paints, which keeps it
+ * sharp on a 2x display.
+ */
+const SCOLTA_RECIPES_CARD_IMAGE_SIZE = 'medium';
+
+/**
+ * Resolves a recipe's featured image to a card thumbnail URL and alt text.
+ *
+ * The URL is made root-relative. WordPress stores an absolute one built from
+ * home_url(), and the committed index has to work on the DDEV site and in the
+ * container image, which do not share a hostname; a root-relative path is the
+ * same string on both.
+ *
+ * 3515 of the 3743 recipes carry a photograph. The 228 without one get the
+ * same card minus the thumbnail rather than a placeholder or Scolta's built-in
+ * card.
+ *
+ * @param int $post_id The recipe.
+ * @return array{url: string, alt: string}|null Thumbnail data, or null when the
+ *   recipe has no usable featured image.
+ */
+function scolta_recipes_card_image( int $post_id ): ?array {
+	$attachment_id = get_post_thumbnail_id( $post_id );
+	if ( ! $attachment_id ) {
+		return null;
+	}
+
+	$src = wp_get_attachment_image_src( $attachment_id, SCOLTA_RECIPES_CARD_IMAGE_SIZE );
+	if ( ! is_array( $src ) || empty( $src[0] ) ) {
+		return null;
+	}
+
+	$url  = (string) $src[0];
+	$home = wp_parse_url( home_url(), PHP_URL_HOST );
+	$path = wp_parse_url( $url, PHP_URL_PATH );
+	$host = wp_parse_url( $url, PHP_URL_HOST );
+	if ( is_string( $path ) && '' !== $path && ( null === $host || $host === $home ) ) {
+		$url = $path;
+	}
+
+	return array(
+		'url' => $url,
+		'alt' => trim( (string) get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ) ),
 	);
 }
 
