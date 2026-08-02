@@ -216,3 +216,48 @@ add_action( 'wp_footer', function () {
 	</script>
 	<?php
 } );
+
+/**
+ * Loads the Scolta result-card renderer and its stylesheet.
+ *
+ * Hooked to wp_footer rather than wp_enqueue_scripts, and gated on the Scolta
+ * handle actually being enqueued. The plugin's shortcode enqueues scolta.js
+ * while the page content renders, which is after wp_enqueue_scripts has run,
+ * so at that earlier hook the handle does not exist yet and a dependency on it
+ * would be silently dropped. By wp_footer it is registered, the dependency
+ * takes, and both the script and the stylesheet land after the bundle's own —
+ * which is what the renderer needs (window.Scolta must exist when this file
+ * executes) and what the stylesheet needs (it redeclares Scolta's documented
+ * custom properties at the same specificity, so it has to be second).
+ *
+ * Priority 5 puts it before wp_print_footer_scripts at 20.
+ */
+add_action( 'wp_footer', function (): void {
+	if ( ! wp_script_is( 'scolta-search', 'enqueued' ) ) {
+		return;
+	}
+
+	$dir = get_stylesheet_directory();
+	$uri = get_stylesheet_directory_uri();
+
+	$js = $dir . '/js/scolta-rich-results.js';
+	if ( file_exists( $js ) ) {
+		wp_enqueue_script(
+			'recipe-scolta-rich-results',
+			$uri . '/js/scolta-rich-results.js',
+			[ 'scolta-search' ],
+			(string) filemtime( $js ),
+			true
+		);
+	}
+
+	$css = $dir . '/css/scolta-rich-results.css';
+	if ( file_exists( $css ) ) {
+		wp_enqueue_style(
+			'recipe-scolta-rich-results',
+			$uri . '/css/scolta-rich-results.css',
+			[ 'scolta-search' ],
+			(string) filemtime( $css )
+		);
+	}
+}, 5 );

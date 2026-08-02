@@ -1,0 +1,257 @@
+/**
+ * Recipe styling for Scolta's result cards and search-as-you-type dropdown.
+ *
+ * Loaded after the plugin's scolta.css, which is never edited. Two techniques
+ * only: override the documented custom properties, and style the theme's own
+ * recipe-* classes on the markup its renderers emit. No selector here is more
+ * specific than one class.
+ *
+ * The card keeps Scolta's scolta-result-card, scolta-result-title and
+ * scolta-result-excerpt classes, so everything style.css already gives a
+ * result — the rounded panel, the green hover rule, the Playfair title —
+ * still applies, and this file adds only the layout the thumbnail and the
+ * badge row need.
+ */
+
+/* The seven documented search-as-you-type knobs, nothing more. scolta.css
+   declares these on :root; this file loads after it, so a same-specificity
+   redeclaration is all it takes. The rest of Scolta's palette is already
+   retuned by style.css. */
+:root {
+  --scolta-sayt-bg: var(--r-white);
+  --scolta-sayt-border: var(--r-border);
+  --scolta-sayt-shadow: 0 8px 26px rgba(37, 31, 24, 0.14);
+  --scolta-sayt-radius: 12px;
+  --scolta-sayt-max-height: 26rem;
+  --scolta-sayt-active-bg: var(--r-green-light);
+  --scolta-sayt-z-index: 60;
+}
+
+/* --------------------------------------------------------------------------
+ * Recipe card
+ * ----------------------------------------------------------------------- */
+
+.recipe-result {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+/* Fixed box, so the card's height is settled before the photograph arrives
+   and nothing below it moves when it does. */
+.recipe-result__thumb {
+  flex: 0 0 auto;
+  display: block;
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  border: 1px solid var(--r-border);
+  border-radius: 10px;
+  background: var(--r-cream);
+}
+
+.recipe-result__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* A photograph that fails to load takes its own box with it rather than
+   leaving a hole; the rest of the card is already laid out as text, so
+   nothing else moves. */
+.recipe-result--thumb-failed .recipe-result__thumb {
+  display: none;
+}
+
+.recipe-result__body {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.recipe-result__title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+/* scolta.css highlights an excerpt's <mark> and leaves a title's to the
+   browser default, so a hit was warm cream in the body and vivid yellow in the
+   heading right above it. Same treatment in both places, at one class deep. */
+.recipe-result__title mark {
+  background: var(--scolta-highlight, #FFF4E6);
+  color: inherit;
+  padding: 0.05em 0.15em;
+  border-radius: 2px;
+}
+
+.recipe-result__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.4rem 0 0.5rem;
+}
+
+/* Outlined pill, matching the expanded-query chips the search already draws
+   above the list, so the two kinds of chip on one page read as one family. */
+.recipe-result__badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.16rem 0.65rem;
+  border: 1px solid var(--r-border);
+  border-radius: 20px;
+  background: var(--r-cream);
+  color: var(--r-muted);
+  white-space: nowrap;
+}
+
+.recipe-result__excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  overflow: hidden;
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .recipe-result {
+    gap: 0.75rem;
+  }
+
+  .recipe-result__thumb {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * Search-as-you-type dropdown
+ *
+ * Layout and rhythm only. The dropdown stays absolutely positioned inside
+ * .scolta-search-input-wrap, so opening and updating it shifts nothing.
+ * ----------------------------------------------------------------------- */
+
+.scolta-sayt {
+  font-family: 'Inter', sans-serif;
+  padding: 0.25rem 0;
+}
+
+.scolta-sayt-option {
+  padding: 0.5rem 0.85rem;
+  border-bottom: none;
+  border-left: 3px solid transparent;
+  transition: background-color 0.12s ease, border-color 0.12s ease;
+}
+
+.scolta-sayt-option:hover {
+  background: var(--r-cream);
+}
+
+.scolta-sayt-option-active {
+  border-left-color: var(--r-green);
+}
+
+.scolta-sayt-kind {
+  color: var(--r-green);
+  font-size: 0.95rem;
+}
+
+.scolta-sayt-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.98rem;
+  color: var(--r-dark);
+}
+
+/* A recent search is history, not a recipe: sans-serif and italic, so the two
+   kinds of row are told apart without reading the glyph. */
+.scolta-sayt-option-recent .scolta-sayt-kind {
+  color: var(--r-muted);
+}
+
+.scolta-sayt-option-recent .scolta-sayt-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.scolta-sayt-excerpt {
+  font-size: 0.8rem;
+  color: var(--r-muted);
+  margin-top: 0.1rem;
+}
+
+/* --------------------------------------------------------------------------
+ * Thumbnailed suggestion row
+ *
+ * Inner markup emitted by the suggestion renderer in
+ * js/scolta-rich-results.js for title suggestions. The option element around
+ * it stays the bundle's, so the rules below never reach past the row's inside.
+ *
+ * Title and excerpt carry the scolta-* class as well as the recipe-* one, so
+ * they inherit the typography set above and these rules add only layout. Same
+ * specificity, resolved by source order — this block is last.
+ * ----------------------------------------------------------------------- */
+
+.recipe-sayt {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+/* Fixed box, sized before the image arrives, so a row settles its height at
+   render and the rows under it never move as photographs load. */
+.recipe-sayt__thumb {
+  flex: 0 0 auto;
+  display: block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border: 1px solid var(--r-border);
+  border-radius: 8px;
+  background: var(--r-cream);
+}
+
+.recipe-sayt__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sized, not drawn: a suggestion with no photograph keeps the box so every
+   row's title starts on the same line, without painting an empty square for
+   the roughly one recipe in sixteen that has none. */
+.recipe-sayt__thumb--empty {
+  border-color: transparent;
+  background: none;
+}
+
+.recipe-sayt__text {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+/* One line each, ellipsised. A suggestion is a pointer, not a summary, and a
+   row that wrapped would resize the dropdown on every keystroke. */
+.recipe-sayt__title {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Overrides the glyph gutter scolta.css gives an excerpt: in this row the
+   thumbnail is the gutter, and the text column is already indented. */
+.recipe-sayt__excerpt {
+  display: block;
+  margin-top: 0.05rem;
+  margin-left: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
