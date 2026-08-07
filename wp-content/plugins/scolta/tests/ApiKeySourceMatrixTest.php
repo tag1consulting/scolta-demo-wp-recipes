@@ -69,7 +69,11 @@ class ApiKeySourceMatrixTest extends TestCase {
 			$this->markTestSkipped( 'SCOLTA_API_KEY constant defined by a prior test in this process.' );
 		}
 
-		$settings = array();
+		// Every row in this matrix is about which key wins and how each surface
+		// reports it, not about provider selection — so each fixture selects a
+		// provider. Without one, AI is off whatever key is present, which is
+		// asserted separately in ManualProviderAndTwoActionConnectTest.
+		$settings = array( 'ai_provider' => $amazeeStored ? 'amazee' : 'anthropic' );
 		if ( $databaseKey !== '' ) {
 			$settings['ai_api_key'] = $databaseKey;
 		}
@@ -106,7 +110,7 @@ class ApiKeySourceMatrixTest extends TestCase {
 		$expectedKey = match ( $expected ) {
 			'env' => $envKey,
 			'database' => $databaseKey,
-			'amazee:auto' => 'amazee-token',
+			'amazee' => 'amazee-token',
 			default => '',
 		};
 		$this->assertSame( $expectedKey, $service->get_config()->aiApiKey );
@@ -183,9 +187,9 @@ class ApiKeySourceMatrixTest extends TestCase {
 			'database, no amazee'     => array( '', 'sk-db-key', false, 'database' ),
 			'database, amazee stored' => array( '', 'sk-db-key', true, 'database' ),
 			'amazee, no amazee'       => array( '', '', false, 'none' ),
-			'amazee, amazee stored'   => array( '', '', true, 'amazee:auto' ),
+			'amazee, amazee stored'   => array( '', '', true, 'amazee' ),
 			'none, no amazee'         => array( '', '', false, 'none' ),
-			'none, amazee stored'     => array( '', '', true, 'amazee:auto' ),
+			'none, amazee stored'     => array( '', '', true, 'amazee' ),
 		);
 	}
 
@@ -203,7 +207,7 @@ class ApiKeySourceMatrixTest extends TestCase {
 
 		$resolved = Scolta_Ai_Service::resolve_api_key();
 
-		$this->assertSame( 'amazee:auto', $resolved->source->value );
+		$this->assertSame( 'amazee', $resolved->source->value );
 		$this->assertTrue( $resolved->awaitingAmazeeModelResolution );
 		$this->assertSame( '', $resolved->key, 'The gateway rejects the dated default with HTTP 400; degrade instead' );
 		$this->assertSame( '', Scolta_Ai_Service::from_options()->get_config()->aiApiKey );

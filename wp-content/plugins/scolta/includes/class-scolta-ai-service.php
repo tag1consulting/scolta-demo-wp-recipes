@@ -263,13 +263,22 @@ class Scolta_Ai_Service extends AiServiceAdapter {
 	public static function resolve_api_key(): ResolvedApiKey {
 		$settings = get_option( 'scolta_settings', array() );
 		$provider = $settings['ai_provider'] ?? '';
-		$provider = ( is_string( $provider ) && $provider !== '' ) ? $provider : 'anthropic';
+		// No coalescing. An empty provider means AI is off, not that it is
+		// Anthropic; substituting one here would put the assumption back a
+		// layer down, where every reporting surface reads it.
+		$provider = is_string( $provider ) ? $provider : '';
 
 		return ApiKeyResolver::resolve(
 			self::explicit_key_candidates(),
 			AmazeeCredentials::fromStorage(
 				new Scolta_Amazee_Config_Storage(),
-				operatorChosen: $provider === 'amazee',
+				// No operatorChosen: which action established the connection
+				// is now a recorded fact, read from the credential store by
+				// fromStorage() rather than derived from a local expression
+				// that merely correlated with it. On WordPress that expression
+				// was permanently false, so every deliberately connected
+				// account was announced as a free trial (scolta-php#273).
+				//
 				// A half-provisioned install — credentials stored, model
 				// resolution never completed — reports Amazee as its source
 				// but hands back no key.
@@ -283,10 +292,12 @@ class Scolta_Ai_Service extends AiServiceAdapter {
 	 * Detect where the API key is coming from, for status display.
 	 *
 	 * @return string The resolved source: 'env', 'constant', 'database',
-	 *   'amazee:operator', 'amazee:auto', or 'none'. The two Amazee cases
-	 *   replace the former single 'amazee' — a provider the operator selected
-	 *   and a free trial that provisioned itself mean different things to
-	 *   somebody reading a status line.
+	 *   'amazee', or 'none'. One Amazee case, not the 'amazee:operator' /
+	 *   'amazee:auto' pair it briefly had: a selected provider and a
+	 *   self-provisioned trial would mean different things to somebody
+	 *   reading a status line, but nothing records which one produced a
+	 *   stored token, so the distinction was invented rather than reported
+	 *   (scolta-php#273).
 	 */
 	public static function get_api_key_source(): string {
 		return self::resolve_api_key()->source->value;

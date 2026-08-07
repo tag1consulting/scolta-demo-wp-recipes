@@ -5,7 +5,7 @@ Tags: search, ai, pagefind, artificial intelligence, semantic search
 Requires at least: 6.1
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable Tag: 1.1.0
+Stable Tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,7 +57,7 @@ No. The base search tier works without any API key. AI features are enabled expl
 
 = What AI providers are supported? =
 
-Anthropic (Claude), OpenAI, and any OpenAI-compatible endpoint (including self-hosted Ollama). If no API key is configured, an administrator can enable Amazee.ai in Settings > Scolta to add AI-powered search with a free trial. If it works well for you, sign up with Amazee to keep it running when the trial ends. Enabling is always an explicit administrator action.
+Anthropic (Claude), OpenAI, and any OpenAI-compatible endpoint (including self-hosted Ollama). No provider is selected by default: until an administrator picks one in Settings > Scolta, AI features are off and search works exactly as it does now. An administrator can also try Amazee.ai from that screen, either with a free demo (one click, no email and no account) or by signing in with the email address on an amazee.ai account. Connecting is always an explicit administrator action, and nothing is provisioned until one of those two is chosen.
 
 = What happens when I enable AI features? =
 
@@ -82,6 +82,14 @@ Scolta defaults to a conservative search breadth so generic words don't flood yo
 3. WP-CLI status output showing tracker and index state
 
 == Changelog ==
+
+= 1.2.0 =
+* Facet counts now match the filtered result list after AI query expansion has run. This resolves the known limitation noted in 1.1.0: the count is computed from the same collapsed set the result list shows, so it no longer reads high when near duplicate results are folded together.
+* A facet value that no visible result carries is no longer offered as a clickable option. Clicking such a value used to land on "No results found" while the expansion chips stayed on screen; those values now show as zero and are hidden or shown according to your "hide empty facets" setting.
+* No AI provider is selected when the plugin is activated. AI query expansion and summaries stay off until you choose a provider and connect it. An existing site keeps whatever provider it already has configured.
+* Connecting Amazee.ai is two clearly labelled actions: try the demo, which asks for nothing at all, or enter your own Amazee.ai credentials. The demo no longer requires an email address before you can evaluate AI search.
+* The status line reports how a connection was established, the free demo or your own account, from a recorded fact rather than a guess. A connection made before this release reports neither and claims nothing.
+* The bundled library is now scolta-php 1.2.0, resolved from a released version rather than a development branch.
 
 = 1.1.0 =
 * AI features are enabled explicitly by the administrator instead of being configured automatically on activation, on every build. Activation contacts no remote service and stores no credentials; AI query expansion and summaries stay off until you click "Enable AI features" in Settings > Scolta or configure your own API key. Configuring your own key, or switching the AI provider away from Amazee.ai, now clears the stored Amazee.ai connection and its reconnect prompt.
